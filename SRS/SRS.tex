@@ -136,6 +136,151 @@
   \hline
 \end{tabularx}
 
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-03 執行命令 \\
+  \hline
+  故事:作為一個使用者,我能夠進入CLI介面並在此輸入我想要的指令，像是使用init來初始化專案。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 指令有固定的格式規範
+    \item 有help指令可以查看指令的說明
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 輸入指令時,輸入錯誤的指令,確認是否有錯誤訊息
+    \item 輸入指令時,輸入正確的指令,確認是否有正確執行
+    \item 輸入指令時,輸入 help,確認是否有列出所有指令
+    \item 輸入指令時,輸入 help 指令,確認是否有列出該指令的說明
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-04 添加開發工具 \\
+  \hline
+  故事:作為一個使用者,我能夠在專案開始時(或是後續開發階段)， 選擇系統的選項，並查看系統所推薦的開發工具，或者自行添加開發工具。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 系統會有幾個固定選項，使用者可以選擇其中一個
+    \item 若不滿意系統推薦的選項，使用者可以自行添加開發工具
+    \item 後續的開發階段，使用者可以選擇更換開發工具
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 在專案開始時，使用者可以選擇其中一個固定選項
+    \item 添加完開發工具後，進入專案，確認是否有正確添加
+    \item 移除開發工具後，進入專案，確認是否有正確移除
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-05 開發流程Q\&A \\
+  \hline
+  故事:作為一個使用者，當我對於開發流程有所疑惑時，可以打開開發流程Q\&A文件，查看自己的疑惑是否在常見問題中，或是需要自行上網查詢。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 文件會條列出開發流程階段的常見問題
+    \item 提供關鍵字搜尋功能
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 點開文件，確認是否有列出開發流程階段的常見問題
+    \item 輸入不存在的關鍵字，確認是否有顯示沒有找到相關問題
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-06 需求分析 以文件形式儲存分析結果 \\
+  \hline
+  故事:作為一個使用者，當我在撰寫需求文件時，我能夠將我的需求分析文件處存在此軟體中，並在我需要時叫出它做修改。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
+    \item 需求分析文件會有一個獨立的頁面
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 新增一個需求分析文件
+    \item 編輯需求分析文件
+    \item 刪除需求分析文件
+    \item 在其他開發階段開啟需求分析文件
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-07 設計階段 以文件形式儲存分析結果 \\
+  \hline
+  故事:作為一個使用者，當我在撰寫設計文件時，我能夠將我的需求分析文件處存在此軟體中，並可以加入線框圖之類的img，並在我需要時叫出它做修改。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
+    \item 設計文件會有一個獨立的頁面
+    \item 可以加入圖片
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 新增一個設計文件
+    \item 編輯需求設計文件
+    \item 刪除需求設計文件
+    \item 在其他開發階段開啟設計文件
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-08 開發環境設定文件 \\
+  \hline
+  故事:作為一個使用者，我可以將自己使用的程式語言版本，或是測試使用的軟體，寫入到開發環境設定文件中，或是查看他人使用的是甚麼環境，來確保整個專案的環境統一。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
+    \item 更改文件後，可以讓更改者決定是否發文件通知所有人
+    \item 開發環境設定文件會有一個獨立的頁面
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 新增一個開發環境設定文件
+    \item 編輯開發環境設定文件
+    \item 刪除開發環境設定文件
+    \item 更改文件後，選擇發送通知，確認每一個人都有收到通知
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+
 \subsection*{3. 操作概念(Operation
  Concept)}
 
