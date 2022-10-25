@@ -280,6 +280,200 @@
   \hline
 \end{tabularx}
 
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-09 命名規範文件 \\
+  \hline
+  故事:作為一個使用者，我可以將團隊訂定的命名規則，寫入到命名規範文件中，或是查看團隊訂定的是命名規範是
+  如何，來確保整個專案的易讀性、程式效率以及可維護性。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
+    \item 更改文件後，可以讓更改者決定是否發文件通知所有人
+    \item 命名規範文件會有一個獨立的頁面
+    \item 文件可放格式與風格的設定檔(如:prettier, eslint)
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 新增一個命名規範文件
+    \item 編輯命名規範文件
+    \item 刪除命名規範文件
+    \item 更改文件後，選擇發送通知，確認每一個人都有收到通知
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-10 formatter規範文件 \\
+  \hline
+  故事:作為一個使用者，我可以將團隊訂定的formatter規範，寫入到formatter規範文件中，或是查看團隊訂定的
+  是formatter規範是如何，來確保大家都看得懂各自做了什麼以及清楚記錄專案開發進度。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
+    \item 更改文件後，可以讓更改者決定是否發文件通知所有人
+    \item formatter規範文件會有一個獨立的頁面
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 新增一個formatter規範文件
+    \item 編輯formatter規範文件
+    \item 刪除formatter規範文件
+    \item 更改文件後，選擇發送通知，確認每一個人都有收到通知
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-11 看板 \\
+  \hline
+  故事:作為一個使用者，我可以利用看板功能來紀錄與查看專案各個任務的開發進度，使團隊的協作與交付流程更加
+  順暢。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 任務可設定標籤、進度、成員、描述、時間排程
+    \item 將任務放入看板中並依照任務的狀態分類，如:待處理、進行中、已完成
+    \item 可對任務進行篩選查看
+    \item 會發送訊息通知所有人，當有人將任務拖曳至看板中或任務狀態改變時
+    \item 不同標籤的任務會以顏色區分
+    \item 看板功能會有一個獨立的頁面
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 新增一個任務至看板中，確認是否有顯示與發送通知
+    \item 更變任務狀態，確認是否有顯示與發送通知
+    \item 刪除一個任務，確認是否有顯示與發送通知
+    \item 新增兩個不同標籤的任務，確認顏色是否相異
+    \item 新增兩個相同標籤的任務，確認顏色是否相同
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-12 google日曆API接口 \\
+  \hline
+  故事:作為一個使用者，我可以將看板任務的時間排程，同步到google日曆中，以便查看與管理時間。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 可輸入gmail，電子郵件驗證完成後，將看板中所負責的任務同步到google日曆中
+    \item 可更變已儲存的gmail，更變gmail後，將看板中所負責的任務同步到google日曆中
+    \item 新增或變更任務時間排程後，會自動寄信至信箱中提醒負責人，並同步到負責人的google日曆中
+    \item google日曆API接口功能會有一個獨立的頁面
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 輸入不合法的電子郵件，確認是否有顯示錯誤訊息
+    \item 輸入合法的電子郵件，確認是否有驗證信
+    \item 驗證過後，確認是否有將所負責的任務同步到google日曆中，有無非負責的任務
+    \item 更變gmail後，確認是否有將所負責的任務同步到google日曆中，有無非負責的任務
+    \item 新增任務，確認是否有寄信提醒負責人並同步到google日曆中
+    \item 更變任務時間排程，確認是否有寄信提醒負責人並同步到google日曆中
+    \item 刪除任務，確認是否有寄信提醒負責人
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-13 測試 顯示在Q\&A中 \\
+  \hline
+  故事:作為一個使用者，當我對於測試流程有所疑惑時，可以打開測試流程的Q\&A文件，查看自己的疑惑是否在常見
+  問題中，或是需要自行上網查詢。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 文件會條列出測試流程階段的常見問題
+    \item 文件會條列出測試流程階段的相關測試原則
+    \item 文件會條列出自動化測試工具的相關資料
+    \item 提供關鍵字搜尋功能
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 點開文件，確認是否有列出測試流程階段的常見問題、相關測試原則、自動化測試工具的相關資料
+    \item 輸入不存在的關鍵字，確認是否有顯示沒有找到相關問題
+    \item 點開相關測試原則資料，確認是否有列出相關測試原則的相關資料
+    \item 點開自動化測試工具的相關資料，確認是否有列出自動化測試工具的相關資料
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-14 發布\&部屬 顯示在Q\&A中 \\
+  \hline
+  故事:作為一個使用者，當我對於發布\&部屬流程有所疑惑時，可以打開發布\&部屬流程的Q\&A文件，查看自己的疑
+  惑是否在常見問題中，或是需要自行上網查詢。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 文件會條列出發布\&部屬流程階段的常見問題
+    \item 文件會條列出CI/CD工具的相關資料
+    \item 提供關鍵字搜尋功能
+    \item 提供連結到CI/CD工具的功能
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 點開文件，確認是否有列出發布\&部屬流程階段的常見問題、CI/CD工具的相關資料
+    \item 輸入不存在的關鍵字，確認是否有顯示沒有找到相關問題
+    \item 點開CI/CD工具的相關資料，確認是否有列出CI/CD工具的相關資料
+    \item 點開連結到CI/CD工具的功能，確認是否有連結到CI/CD工具
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-15 Q\&A 文件顯示與導航 \\
+  \hline
+  故事:作為一個使用者，當我在Q\&A文件中，可以點選連結，導航到不同項目的Q\&A文件中，或是透過搜尋功能，找
+  到相關的資料。 \\
+  \hline
+  註記:
+  \begin{enumerate}
+    \item 目錄中的連結可以導航到不同項目的Q\&A文件中
+    \item 提供關鍵字搜尋功能
+    \item 提供模糊搜尋功能
+  \end{enumerate} \\
+  \hline
+  測試方案:
+  \begin{enumerate}
+    \item 點開Q\&A文件，確認是否有列出目錄
+    \item 點開目錄中的連結，確認是否有導航到不同項目的Q\&A文件中
+    \item 輸入空白的關鍵字，確認是否有顯示請輸入關鍵字
+    \item 關鍵字搜尋輸入存在的關鍵字，確認是否有顯示相關資料
+    \item 關鍵字搜尋輸入不存在的關鍵字，確認是否有顯示沒有找到相關資料
+    \item 模糊搜尋輸入關鍵字，確認是否有顯示相似的相關問題
+  \end{enumerate} \\
+  \hline
+\end{tabularx}
+
 
 \subsection*{3. 操作概念(Operation
  Concept)}
