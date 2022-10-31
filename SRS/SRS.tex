@@ -90,22 +90,19 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-01 登入/註冊 \\ \hline
-  故事:作為一個使用者
-  我可以註冊帳號或連動第三方應用程式,讓我可以登入這個系統。 \\ \hline
+  代號:SCAF-US-01 登入\\ \hline
+  故事:作為一個使用者我可以輸入已註冊的帳號登入這個系統。 \\ \hline
   註記:
   \begin{enumerate}
-    \item 使用者須先註冊才能使用
-    \item 使用者也可以使用第三方登入 
+    \item 登入要輸入電子郵件和密碼
+    \item 登入失敗會出現錯誤訊息
+    \item 使用者可以使用第三方登入 
   \end{enumerate} \\ \hline
   測試方案:
   \begin{enumerate}
-    \item 若註冊時輸入不存在的 email,確認是否有 email 不存在的錯誤訊息
-    \item 若 email 未註冊登入,確認是否有 email 未註冊的錯誤訊息。
-    \item 若密碼輸入錯誤,確認是否有密碼錯誤的錯誤訊息
+    \item 輸入未註冊的電子郵件與密碼,確認是否失敗與顯示錯誤訊息
     \item 辦完帳號以後,輸入電子郵件以及密碼看是否能登入
-    \item 使用 Google 帳號登入,確認是否能夠連動
-    \item 使用 Github 帳號登入,確認是否能夠連動
+    \item 使用第三方登入,確認是否能夠連動
   \end{enumerate} \\ \hline
 \end{tabularx}
 
@@ -113,26 +110,46 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-02 修改個人資料 \\
+  代號:SCAF-US-02 註冊 \\ \hline
+  故事:作為一個使用者我可以註冊新帳戶或連動第三方應用程式,讓我可以登入這個系統。 \\ \hline
+  註記:
+  \begin{enumerate}
+    \item 註冊時需輸入電子郵件、用戶名、密碼
+    \item 註冊電子郵件為無效的電子郵件,出現錯誤訊息
+  \end{enumerate} \\ \hline
+  測試方案:
+  \begin{enumerate}
+    \item 若註冊時輸入無效的 email,確認是否有錯誤訊息
+  \end{enumerate} \\ \hline
+\end{tabularx}
+
+\subsection*{}
+\fontsize{12}{20}\selectfont
+\begin{tabularx}{\textwidth}{|X|}
+  \hline
+  代號:SCAF-US-03 修改個人資料 \\
   \hline
   故事:作為一個使用者,我要能夠修改自己的個人資料,像是使用者名稱太中二
 想修改、密碼取得太簡單想改困難一點、想取消第三方的應用程式連動。 \\
   \hline
   註記:
   \begin{enumerate}
-    \item 使用者可以修改名稱
-    \item 使用者可以修改密碼
-    \item 使用者可以新增或取消第三方應用程式連動
+    \item 使用者可以修改名稱,並自動登出
+    \item 使用者可以修改密碼,並自動登出
+    \item 使用者可以新增或取消第三方應用程式連動,並自動登出
     \item 系統提醒使用者確認變更
+    \item 修改名稱或密碼時,未輸入字元送出,出現錯誤訊息
   \end{enumerate} \\
   \hline
   測試方案:
   \begin{enumerate}
-    \item 修改名稱或密碼時,未輸入字元送出,系統顯示不能為空的錯誤訊息
-    \item 修改使用名稱後,進入系統看是否為新名稱
-    \item 修改密碼後,再用新密碼登入,確認是否能成功登入
-    \item 修改密碼後,確認是否自動登出
+    \item 修改名稱或密碼時,未輸入字元送出,確認是否有錯誤訊息
+    \item 修改使用名稱後,重新登入,進入系統看是否為新名稱
     \item 新增或取消第三方應用程式連動後,重新登入,查看是否可以正常登入
+    \item 修改密碼後,再用新密碼登入,確認是否能成功登入
+    \item 修改名稱後,確認是否自動登出
+    \item 修改密碼後,確認是否自動登出
+    \item 新增或取消第三方應用程式連動後,確認是否自動登出
   \end{enumerate} \\
   \hline
 \end{tabularx}
@@ -141,7 +158,7 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-03 執行命令 \\
+  代號:SCAF-US-04 執行命令 \\
   \hline
   故事:作為一個使用者,我能夠進入CLI介面並在此輸入我想要的指令，像是使用init來初始化專案。 \\
   \hline
@@ -150,6 +167,7 @@
     \item 指令有固定的格式規範
     \item 有help指令可以查看指令的說明
     \item 所有網站的功能都可以透過指令來執行
+    \item 輸入指令時,輸入錯誤的指令,會出現錯誤訊息
   \end{enumerate} \\
   \hline
   測試方案:
@@ -166,7 +184,7 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-04 添加開發工具 \\
+  代號:SCAF-US-05 添加開發工具 \\
   \hline
   故事:作為一個使用者,我能夠在專案開始時(或是後續開發階段)， 選擇系統的選項，並查看系統所推薦的開發工具，或者自行添加開發工具。 \\
   \hline
@@ -190,7 +208,7 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-05 開發 測試 發布\&部屬 Q\&A \\
+  代號:SCAF-US-06 開發、測試、發布\&部屬 Q\&A \\
   \hline
   故事:作為一個使用者，當我對於開發、測試、發布\&部屬流程有所疑惑時，可以打開開發流程Q\&A文件，查看自己的疑惑是否在常見問題中。 \\
   \hline
@@ -218,71 +236,23 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-06 需求分析 以文件形式儲存分析結果 \\
+  代號:SCAF-US-07 需求分析、設計階段、開發環境設定、命名規範、git commit format規範 以文件形式儲存分析結果 \\
   \hline
-  故事:作為一個使用者，當我在撰寫需求文件時，我能夠將我的需求分析文件處存在此軟體中，並在我需要時叫出它做修改。 \\
-  \hline
-  註記:
-  \begin{enumerate}
-    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
-    \item 需求分析文件會有一個獨立的頁面
-  \end{enumerate} \\
-  \hline
-  測試方案:
-  \begin{enumerate}
-    \item 新增一個需求分析文件
-    \item 編輯需求分析文件
-    \item 刪除需求分析文件
-    \item 在其他開發階段開啟需求分析文件
-  \end{enumerate} \\
-  \hline
-\end{tabularx}
-
-\subsection*{}
-\fontsize{12}{20}\selectfont
-\begin{tabularx}{\textwidth}{|X|}
-  \hline
-  代號:SCAF-US-07 設計階段 以文件形式儲存分析結果 \\
-  \hline
-  故事:作為一個使用者，當我在撰寫設計文件時，我能夠將我的需求分析文件處存在此軟體中，並可以加入線框圖之類的img，並在我需要時叫出它做修改。 \\
+  故事:作為一個使用者，當我在撰寫需求文件時，我能夠將我的文件處存在此軟體中，並在我需要時叫出它做修改。 \\
   \hline
   註記:
   \begin{enumerate}
-    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
-    \item 設計文件會有一個獨立的頁面
-    \item 可以加入圖片
-  \end{enumerate} \\
-  \hline
-  測試方案:
-  \begin{enumerate}
-    \item 新增一個設計文件
-    \item 編輯需求設計文件
-    \item 刪除需求設計文件
-    \item 在其他開發階段開啟設計文件
-  \end{enumerate} \\
-  \hline
-\end{tabularx}
-
-\subsection*{}
-\fontsize{12}{20}\selectfont
-\begin{tabularx}{\textwidth}{|X|}
-  \hline
-  代號:SCAF-US-08 開發環境設定文件 \\
-  \hline
-  故事:作為一個使用者，我可以將自己使用的程式語言版本，或是測試使用的軟體，寫入到開發環境設定文件中，或是查看他人使用的是甚麼環境，來確保整個專案的環境統一。 \\
-  \hline
-  註記:
-  \begin{enumerate}
-    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
+    \item 將使用hackmd撰寫的文件，儲存在此軟體中
     \item 更改文件後，可以讓更改者決定是否發文件通知所有人
-    \item 開發環境設定文件會有一個獨立的頁面
+    \item 規範文件會有一個獨立的頁面
   \end{enumerate} \\
   \hline
   測試方案:
   \begin{enumerate}
-    \item 新增一個開發環境設定文件
-    \item 編輯開發環境設定文件
-    \item 刪除開發環境設定文件
+    \item 點開文件，確認是否內容相同
+    \item 新增一個文件
+    \item 編輯文件
+    \item 刪除文件
     \item 更改文件後，選擇發送通知，確認每一個人都有收到通知
   \end{enumerate} \\
   \hline
@@ -292,59 +262,7 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-09 命名規範文件 \\
-  \hline
-  故事:作為一個使用者，我可以將團隊訂定的命名規則，寫入到命名規範文件中，或是查看團隊訂定的是命名規範是
-  如何，來確保整個專案的易讀性、程式效率以及可維護性。 \\
-  \hline
-  註記:
-  \begin{enumerate}
-    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
-    \item 更改文件後，可以讓更改者決定是否發文件通知所有人
-    \item 命名規範文件會有一個獨立的頁面
-  \end{enumerate} \\
-  \hline
-  測試方案:
-  \begin{enumerate}
-    \item 新增一個命名規範文件
-    \item 編輯命名規範文件
-    \item 刪除命名規範文件
-    \item 更改文件後，選擇發送通知，確認每一個人都有收到通知
-  \end{enumerate} \\
-  \hline
-\end{tabularx}
-
-\subsection*{}
-\fontsize{12}{20}\selectfont
-\begin{tabularx}{\textwidth}{|X|}
-  \hline
-  代號:SCAF-US-10 formatter規範文件 \\
-  \hline
-  故事:作為一個使用者，我可以將團隊訂定的formatter規範，寫入到formatter規範文件中，或是查看團隊訂定的
-  是formatter規範是如何，來確保大家都看得懂各自做了什麼以及清楚記錄專案開發進度。 \\
-  \hline
-  註記:
-  \begin{enumerate}
-    \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
-    \item 更改文件後，可以讓更改者決定是否發文件通知所有人
-    \item formatter規範文件會有一個獨立的頁面
-  \end{enumerate} \\
-  \hline
-  測試方案:
-  \begin{enumerate}
-    \item 新增一個formatter規範文件
-    \item 編輯formatter規範文件
-    \item 刪除formatter規範文件
-    \item 更改文件後，選擇發送通知，確認每一個人都有收到通知
-  \end{enumerate} \\
-  \hline
-\end{tabularx}
-
-\subsection*{}
-\fontsize{12}{20}\selectfont
-\begin{tabularx}{\textwidth}{|X|}
-  \hline
-  代號:SCAF-US-11 看板 \\
+  代號:SCAF-US08 看板 \\
   \hline
   故事:作為一個使用者，我可以利用看板功能來紀錄與查看專案各個任務的開發進度，使團隊的協作與交付流程更加
   順暢。 \\
@@ -374,27 +292,25 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-12 google日曆API接口 \\
+  代號:SCAF-US-09 google日曆API接口 \\
   \hline
   故事:作為一個使用者，我可以將看板任務的時間排程，同步到google日曆中，以便查看與管理時間。 \\
   \hline
   註記:
   \begin{enumerate}
-    \item 可輸入gmail，電子郵件驗證完成後，將看板中所負責的任務同步到google日曆中
-    \item 可變更已儲存的gmail，變更gmail後，將看板中所負責的任務同步到google日曆中
+    \item 可點擊授權按鈕，驗證完成後，將看板中所負責的任務同步到google日曆中
     \item 新增或變更任務時間排程後，會自動寄信至信箱中提醒負責人，並同步到負責人的google日曆中
     \item google日曆API接口功能會有一個獨立的頁面
+    \item 輸入不合法的電子郵件，會出現錯誤訊息
   \end{enumerate} \\
   \hline
   測試方案:
   \begin{enumerate}
-    \item 輸入不合法的電子郵件，確認是否有顯示錯誤訊息
-    \item 輸入合法的電子郵件，確認是否有驗證信
-    \item 驗證過後，確認是否有將所負責的任務同步到google日曆中，有無非負責的任務
-    \item 變更gmail後，確認是否有將所負責的任務同步到google日曆中，有無非負責的任務
-    \item 新增任務，確認是否有寄信提醒負責人並同步到google日曆中
-    \item 變更任務時間排程，確認是否有寄信提醒負責人並同步到google日曆中
-    \item 刪除任務，確認是否有寄信提醒負責人
+    \item 點擊授權按鈕，確認是否有成功授權
+    \item 驗證過後，確認是否有將所負責的任務同步到google日曆中
+    \item 新增任務，確認是否同步到google日曆中
+    \item 變更任務時間排程，確認是否有同步到google日曆中
+    \item 刪除任務，確認是否有同步到google日曆中
   \end{enumerate} \\
   \hline
 \end{tabularx}
@@ -403,61 +319,7 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-13 測試 顯示在Q\&A中 \\
-  \hline
-  故事:作為一個使用者，當我對於測試流程有所疑惑時，可以打開測試流程的Q\&A文件，查看自己的疑惑是否在常見
-  問題中，或是需要自行上網查詢。 \\
-  \hline
-  註記:
-  \begin{enumerate}
-    \item 文件會條列出測試流程階段的常見問題
-    \item 文件會條列出測試流程階段的相關測試原則
-    \item 文件會條列出自動化測試工具的相關資料
-    \item 提供關鍵字搜尋功能
-  \end{enumerate} \\
-  \hline
-  測試方案:
-  \begin{enumerate}
-    \item 點開文件，確認是否有列出測試流程階段的常見問題、相關測試原則、自動化測試工具的相關資料
-    \item 輸入不存在的關鍵字，確認是否有顯示沒有找到相關問題
-    \item 點開相關測試原則資料，確認是否有列出相關測試原則的相關資料
-    \item 點開自動化測試工具的相關資料，確認是否有列出自動化測試工具的相關資料
-  \end{enumerate} \\
-  \hline
-\end{tabularx}
-
-\subsection*{}
-\fontsize{12}{20}\selectfont
-\begin{tabularx}{\textwidth}{|X|}
-  \hline
-  代號:SCAF-US-14 發布\&部屬 顯示在Q\&A中 \\
-  \hline
-  故事:作為一個使用者，當我對於發布\&部屬流程有所疑惑時，可以打開發布\&部屬流程的Q\&A文件，查看自己的疑
-  惑是否在常見問題中，或是需要自行上網查詢。 \\
-  \hline
-  註記:
-  \begin{enumerate}
-    \item 文件會條列出發布\&部屬流程階段的常見問題
-    \item 文件會條列出CI/CD工具的相關資料
-    \item 提供關鍵字搜尋功能
-    \item 提供連結到CI/CD工具的功能
-  \end{enumerate} \\
-  \hline
-  測試方案:
-  \begin{enumerate}
-    \item 點開文件，確認是否有列出發布\&部屬流程階段的常見問題、CI/CD工具的相關資料
-    \item 輸入不存在的關鍵字，確認是否有顯示沒有找到相關問題
-    \item 點開CI/CD工具的相關資料，確認是否有列出CI/CD工具的相關資料
-    \item 點開連結到CI/CD工具的功能，確認是否有連結到CI/CD工具
-  \end{enumerate} \\
-  \hline
-\end{tabularx}
-
-\subsection*{}
-\fontsize{12}{20}\selectfont
-\begin{tabularx}{\textwidth}{|X|}
-  \hline
-  代號:SCAF-US-15 Q\&A 文件顯示與導航 \\
+  代號:SCAF-US-10 Q\&A 文件顯示與導航 \\
   \hline
   故事:作為一個使用者，當我在Q\&A文件中，可以點選連結，導航到不同項目的Q\&A文件中，或是透過搜尋功能，找
   到相關的資料。 \\
