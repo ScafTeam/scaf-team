@@ -96,7 +96,7 @@
   註記:
   \begin{enumerate}
     \item 使用者須先註冊才能使用
-    \item 使用者也可以使用 Google 或 Github 登入
+    \item 使用者也可以使用第三方登入 
   \end{enumerate} \\ \hline
   測試方案:
   \begin{enumerate}
@@ -130,7 +130,8 @@
   \begin{enumerate}
     \item 修改名稱或密碼時,未輸入字元送出,系統顯示不能為空的錯誤訊息
     \item 修改使用名稱後,進入系統看是否為新名稱
-    \item 修改密碼後,登出系統再用新密碼登入,確認是否能成功
+    \item 修改密碼後,再用新密碼登入,確認是否能成功登入
+    \item 修改密碼後,確認是否自動登出
     \item 新增或取消第三方應用程式連動後,重新登入,查看是否可以正常登入
   \end{enumerate} \\
   \hline
@@ -148,6 +149,7 @@
   \begin{enumerate}
     \item 指令有固定的格式規範
     \item 有help指令可以查看指令的說明
+    \item 所有網站的功能都可以透過指令來執行
   \end{enumerate} \\
   \hline
   測試方案:
@@ -294,7 +296,6 @@
     \item 將使用hackmd撰寫的需求分析文件，儲存在此軟體中
     \item 更改文件後，可以讓更改者決定是否發文件通知所有人
     \item 命名規範文件會有一個獨立的頁面
-    \item 文件可放格式與風格的設定檔(如:prettier, eslint)
   \end{enumerate} \\
   \hline
   測試方案:
@@ -355,7 +356,7 @@
   測試方案:
   \begin{enumerate}
     \item 新增一個任務至看板中，確認是否有顯示與發送通知
-    \item 更變任務狀態，確認是否有顯示與發送通知
+    \item 變更任務狀態，確認是否有顯示與發送通知
     \item 刪除一個任務，確認是否有顯示與發送通知
     \item 新增兩個不同標籤的任務，確認顏色是否相異
     \item 新增兩個相同標籤的任務，確認顏色是否相同
@@ -374,7 +375,7 @@
   註記:
   \begin{enumerate}
     \item 可輸入gmail，電子郵件驗證完成後，將看板中所負責的任務同步到google日曆中
-    \item 可更變已儲存的gmail，更變gmail後，將看板中所負責的任務同步到google日曆中
+    \item 可變更已儲存的gmail，變更gmail後，將看板中所負責的任務同步到google日曆中
     \item 新增或變更任務時間排程後，會自動寄信至信箱中提醒負責人，並同步到負責人的google日曆中
     \item google日曆API接口功能會有一個獨立的頁面
   \end{enumerate} \\
@@ -384,9 +385,9 @@
     \item 輸入不合法的電子郵件，確認是否有顯示錯誤訊息
     \item 輸入合法的電子郵件，確認是否有驗證信
     \item 驗證過後，確認是否有將所負責的任務同步到google日曆中，有無非負責的任務
-    \item 更變gmail後，確認是否有將所負責的任務同步到google日曆中，有無非負責的任務
+    \item 變更gmail後，確認是否有將所負責的任務同步到google日曆中，有無非負責的任務
     \item 新增任務，確認是否有寄信提醒負責人並同步到google日曆中
-    \item 更變任務時間排程，確認是否有寄信提醒負責人並同步到google日曆中
+    \item 變更任務時間排程，確認是否有寄信提醒負責人並同步到google日曆中
     \item 刪除任務，確認是否有寄信提醒負責人
   \end{enumerate} \\
   \hline
@@ -423,14 +424,14 @@
 \fontsize{12}{20}\selectfont
 \begin{tabularx}{\textwidth}{|X|}
   \hline
-  代號:SCAF-US-14 發布\&部屬 顯示在Q\&A中 \\
+  代號:SCAF-US-14 發布\&部署 顯示在Q\&A中 \\
   \hline
-  故事:作為一個使用者，當我對於發布\&部屬流程有所疑惑時，可以打開發布\&部屬流程的Q\&A文件，查看自己的疑
+  故事:作為一個使用者，當我對於發布\&部署流程有所疑惑時，可以打開發布\&部署流程的Q\&A文件，查看自己的疑
   惑是否在常見問題中，或是需要自行上網查詢。 \\
   \hline
   註記:
   \begin{enumerate}
-    \item 文件會條列出發布\&部屬流程階段的常見問題
+    \item 文件會條列出發布\&部署流程階段的常見問題
     \item 文件會條列出CI/CD工具的相關資料
     \item 提供關鍵字搜尋功能
     \item 提供連結到CI/CD工具的功能
@@ -438,7 +439,7 @@
   \hline
   測試方案:
   \begin{enumerate}
-    \item 點開文件，確認是否有列出發布\&部屬流程階段的常見問題、CI/CD工具的相關資料
+    \item 點開文件，確認是否有列出發布\&部署流程階段的常見問題、CI/CD工具的相關資料
     \item 輸入不存在的關鍵字，確認是否有顯示沒有找到相關問題
     \item 點開CI/CD工具的相關資料，確認是否有列出CI/CD工具的相關資料
     \item 點開連結到CI/CD工具的功能，確認是否有連結到CI/CD工具
@@ -459,17 +460,19 @@
   \begin{enumerate}
     \item 目錄中的連結可以導航到不同項目的Q\&A文件中
     \item 提供關鍵字搜尋功能
-    \item 提供模糊搜尋功能
+    % \item 提供模糊搜尋功能
+    \item Q\&A文件是階層式的架構
   \end{enumerate} \\
   \hline
   測試方案:
   \begin{enumerate}
     \item 點開Q\&A文件，確認是否有列出目錄
     \item 點開目錄中的連結，確認是否有導航到不同項目的Q\&A文件中
-    \item 輸入空白的關鍵字，確認是否有顯示請輸入關鍵字
+    % \item 輸入空白的關鍵字，確認是否有顯示請輸入關鍵字
+    \item 未輸入關鍵字就點擊搜尋，要顯示「請輸入關鍵字」
     \item 關鍵字搜尋輸入存在的關鍵字，確認是否有顯示相關資料
     \item 關鍵字搜尋輸入不存在的關鍵字，確認是否有顯示沒有找到相關資料
-    \item 模糊搜尋輸入關鍵字，確認是否有顯示相似的相關問題
+    % \item 模糊搜尋輸入關鍵字，確認是否有顯示相似的相關問題
   \end{enumerate} \\
   \hline
 \end{tabularx}
@@ -508,7 +511,7 @@
   SCAF-FR-13 & 工作計畫排程 & 使用者可以利用看板、行事曆、留言板,來觀察專案的排程。 \\ \hline
   SCAF-FR-14 & 整合其他工具 & 使用者可以加入自己想要的模組或是平台。 \\ \hline
   SCAF-FR-15 & 自動化測試 & 使用者可以寫相關測試程式碼,commit 時能夠自動測試。 \\ \hline
-  SCAF-FR-16 & 自動化部屬 & 使用者可以用 CI/CD 工具 \\ \hline
+  SCAF-FR-16 & 自動化部署 & 使用者可以用 CI/CD 工具 \\ \hline
   SCAF-FR-17 & 產生規範文件 & 依據設計文件產生說明文件 \\ \hline
   SCAF-FR-18 & 問答 & 使用者可以問題提交上來,系統引導使用者排解問題 \\ \hline
 \end{tabularx}
@@ -521,7 +524,12 @@
 }
   \hline
   功能編號 &  功能說明 \\ \hline
-  SCAF-NFR-01 & 使用 yaml 格式儲存文件 \\ \hline
+  SCAF-NFP-01 & 系統人數同時負荷 1000 人 \\ \hline
+  SCAF-NFP-02 & 回應時間在 1 秒內 \\ \hline
+  SCAF-NFP-03 & 使用 Https 加密傳輸 \\ \hline
+  SCAF-NFP-04 & CSRF 防護 \\ \hline
+  SCAF-NFP-05 & 防止 DDoS 攻擊 \\ \hline
+  SCAF-NFP-06 & Q\&A 搜尋結果在 1 秒內回應 \\ \hline
 \end{tabularx}
 
 \subsection*{6. 使用者介面分析(User Interface Analysis)}
