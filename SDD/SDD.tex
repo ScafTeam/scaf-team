@@ -1,0 +1,134 @@
+\documentclass{report}
+\usepackage[margin=2cm, bottom=1.5cm]{geometry}
+\usepackage{type1cm}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[shortlabels]{enumitem}
+\setlength{\columnsep}{1pt}
+\setlist[enumerate]{nosep}
+
+\makeatletter
+\newenvironment{myalign*}{\ifvmode\else\hfil\null\linebreak\fi
+  \hspace*{-\leftmargin}\minipage\textwidth
+  \setlength{\abovedisplayskip}{0pt}%
+  \setlength{\abovedisplayshortskip}{\abovedisplayskip}%
+  \start@align\@ne\st@rredtrue\m@ne}%
+{\endalign\endminipage\linebreak}
+
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans TC}
+
+\begin{document}
+\title{%
+  \fontsize{40}{60}\selectfont
+  SCAF  \\ % 
+  \vspace*{2cm}%
+  \fontsize{24}{30}\selectfont
+  設計文件
+}
+
+\author{
+  \fontsize{18}{28}\selectfont
+  \begin{tabularx}{0.9\textwidth}{
+    |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+    |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+    \hline
+    \centering 專案名稱 & SCAF 開發輔助工具 \\
+    \hline
+    \centering 撰寫日期 & 2022 / 11 / 21 \\
+    \hline
+    \centering 發展者 & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+    \hline
+  \end{tabularx}
+}
+\date{}
+\usetikzlibrary{automata, positioning, arrows}
+\maketitle
+\tikzset{every state, accepting/.style={double distance=2pt}}
+
+\fontsize{12}{18}\selectfont
+
+\section*{1. 系統模型與架構(System Model/System Architecture)}
+
+\begin{obeylines}
+\parindent=0pt
+描述系統之架構。可用C4 model的Container diagram + Component diagram、UML之Component diagram或單純的Block diagram (方塊圖)表達此系統包含的模組，以及與模組之間的關係。
+架構圖應與SRS一致，但可特別強調介面(Interface)與實際佈署之環境。
+放C4所有的圖片
+鄧
+\end{obeylines}
+
+\section*{2. 介面需求與設計(Interface Requirement and Design)}
+
+\begin{obeylines}
+\parindent=0pt
+根據架構圖，描述模組間的介面資訊，包含介面名稱、介面提供者、介面使用者、連結方式、輸入資料、輸出資料與介面描述等。
+APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+簡
+\end{obeylines}
+
+\section*{3. 流程設計(Process Design)}
+
+\begin{obeylines}
+\parindent=0pt
+可用UML之Activity diagram / State Transition diagram或一般的程式流程圖描述所開發的系統流程，目的是運用流程圖或狀態圖設計整個系統的完整運作。
+此部份應是操作概念的細部設計。
+使用者的使用流程 之前的流程圖+細部設計
+唐
+\end{obeylines}
+
+\section*{4. 使用者畫面設計(User Interface Design)}
+
+\begin{obeylines}
+\parindent=0pt
+可用各種畫面設計方式，如發展網頁prototype、繪製PowerPoint投影片等，去設計你的主要系統畫面。此部份應是SRS中使用者介面分析的進階設計版本。
+線框圖? 包含所有UI設計 版型顏色等等
+CLI工具UI設計
+何
+\end{obeylines}
+
+\section*{5. 資料設計(Data Design)}
+
+\begin{obeylines}
+\parindent=0pt
+設計此系統的資料庫schema、檔案結構、XML schema、JSON (JavaScript Object Notation)物件等。
+NoSQL 類似json格式
+簡
+\end{obeylines}
+
+\section*{6. 類別圖設計(Class Diagram)}
+
+\begin{obeylines}
+\parindent=0pt
+發展UML之class diagram (可對應C4 model中的Code diagram)，明確設計系統中包含哪些類別，以及這些類別之間的關係。
+若遇到非一般物件類別或特殊物件類別，如HTML、JavaScript、JSP、Servlet等，可用stereotype表達，如<<JavaScript>>、<<Servlet>>。
+可把重點放在定義程式結構：訂出所有類別名稱、拉出所有類別關係，再加入重要的attibute/operation即可。而特殊的類別職責設計可加上文字說明。
+	StarUML
+	前後端都要
+\end{obeylines}
+
+\section*{7. 實作方案(Implementation Languages and Platforms)}
+
+\begin{obeylines}
+\parindent=0pt
+說明系統之平台(如網站或行動App)
+說明預計採用的程式語言或技術(如後端Java、node.js、PHP等，前端JS+Boostrap、Android、iOS等)
+說明預計採用的框架(Framework，如前端React、Angular、Vue，後端Spring、SpringBoot等)、函式庫(如前端jQuery、d3.js，後端jsoup、iText)、Servless服務(Firebase)等。
+輕輕鬆酥
+\end{obeylines}
+
+\section*{8. 設計議題(Design Issue)}
+
+\begin{obeylines}
+\parindent=0pt
+將設計此系統過程中遭遇的議題紀錄下來，包含(1)議題內容、(2)可能解決方案(alternative solutions)、(3)最後解決方案(final solution)與理由(rationale)。
+唐劭賢輕輕鬆酥
+大家有問題都丟這邊ㄛ
+\end{obeylines}
+
+\end{document}
