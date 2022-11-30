@@ -177,7 +177,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-01 & /signin & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
       \{ \\
         "email": "Email (string)", \\
@@ -203,7 +203,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-02 & /signup & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
       \{ \\
         "email": "Email (string)", \\
@@ -229,7 +229,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-03 & /forget & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
       \{ \\
         "email": "Email (string)", \\
@@ -253,7 +253,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-04 & /person & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  HTTP EDIT & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ PUT & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
       \{ \\
         "JWT": "JWT token (string, cookie)", \\
@@ -280,7 +280,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-05 & /person & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  HTTP GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
       \{ \\
         "JWT": "JWT token (string, cookie)", \\
@@ -305,7 +305,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-06 & /person/reset & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
       \{ \\
        "JWT": "JWT token (string, cookie)", \\
@@ -331,7 +331,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-07 & /person/calendar & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
       \{ \\
         "JWT": "JWT token (string, cookie)", \\
@@ -355,7 +355,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-08 & /notify & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  HTTP GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
       \{ \\
         "JWT": "JWT token (string, cookie)", \\
@@ -455,7 +455,268 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     } \\ \hline
 \end{tabularx}
 
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-EI-05 & 邀請加入專案 & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      User Mail
+    }
+   } & 
+   \makecell[X]{
+    % 
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-EI-06 & 移除成員 & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      User Mail
+    }
+   } & 
+   \makecell[X]{
+    %  
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-EI-07 & 刪除專案 & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+    %  
+    }
+   } & 
+   \makecell[X]{
+     刪除完專案，跳回到專案列表。
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    } \\ \hline
+\end{tabularx}
+
 \subsubsection*{2.2.2 內部介面}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-II-01 & /projects & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+ GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+    %  
+    }
+   } & 
+   \makecell[X]{
+     \{
+      "projects": "專案列表 (Array<{string, projectid}>)"
+     \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  獲取專案列表
+  } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-II-02 & /project & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+ POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "projectname": "project name (string)", \\
+        "developmentmode": "development mode (string)", \\
+      \}
+    }
+   } & 
+   \makecell[X]{
+    %  \{
+    %   "projects": "專案列表"
+    %  \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  新建專案  
+  } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-II-03 & /project/readme & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+ POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+    %  
+    }
+   } & 
+   \makecell[X]{
+    %  \{
+    %   "projects": "專案列表"
+    %  \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  加 readme  
+  } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-II-04 & /project & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+ PUT & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "projectname": "project name (string)", \\
+        "developmentmode": "development mode (string)", \\
+      \}
+    }
+   } & 
+   \makecell[X]{
+    %  \{
+    %   "projects": "專案列表"
+    %  \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  修改專案設定 
+  } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-II-05 & /project/member & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+ GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      % \{
+      %   "projectname": "project name (string)",
+      %   "developmentmode": "development mode (string)",
+      % \}
+    }
+   } & 
+   \makecell[X]{
+    %  \{
+    %   "projects": "專案列表"
+    %  \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    獲取此專案的成員資料
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-II-06 & /project/member & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+ POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "mail": "User mail (string)", \\
+      \}
+    }
+   } & 
+   \makecell[X]{
+    %  \{
+    %   "projects": "專案列表"
+    %  \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  邀請成員 
+  } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-II-07 & /project/member & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+ DELETE & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "usermail": "User mail (string)", \\
+      \}
+    }
+   } & 
+   \makecell[X]{
+    %  \{
+    %   "projects": "專案列表"
+    %  \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  刪除成員 
+  } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-II-03 & /project & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+ DELETE & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      % \{
+      %   "projectname": "project name (string)",
+      %   "developmentmode": "development mode (string)",
+      % \}
+    }
+   } & 
+   \makecell[X]{
+    %  \{
+    %   "projects": "專案列表"
+    %  \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+   
+  移除專案
+  } \\ \hline
+\end{tabularx}
 
 \section*{3. 流程設計(Process Design)}
 
