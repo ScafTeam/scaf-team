@@ -301,7 +301,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    獲取資料} \\ \hline
+    從firebase獲得使用者資料} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -327,7 +327,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    改密碼} \\ \hline
+    Firebase確認oldPassword後，更新Firebase中password資訊。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -351,7 +351,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    ??} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -375,7 +375,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    ??} \\ \hline
 \end{tabularx}
 
 \subsection*{2.2 專案管理子系統}
@@ -397,7 +397,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    } \\ \hline
+    根據登入的帳戶，回傳對應的專案資訊} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -417,7 +417,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    } \\ \hline
+    接收Project Name、Development mode，將資料丟給firebase儲存，並跳轉頁面} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -437,7 +437,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    } \\ \hline
+    當有選則要建立Readme時，會自動建立Readme} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -457,7 +457,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    } \\ \hline
+    接收Project Name、Development Mode，交給firebase，跳轉頁面} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -477,7 +477,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    } \\ \hline
+    透過Firebase寄送訊息給User Mail} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -497,7 +497,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    } \\ \hline
+    接收User Mail並交給Firebase，Firebase移除專案中成員。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -517,7 +517,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    } \\ \hline
+    刪除使用者點擊的專案，並跳回專案列表。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{2.2.2 內部介面}
@@ -541,7 +541,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-  獲取專案列表
+  根據登入的帳戶，取得firebase回傳的專案列表。
   } \\ \hline
 \end{tabularx}
 
@@ -567,7 +567,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-  新建專案  
+    傳projectname、developmentmode給firebase，firebase新增專案資訊。
   } \\ \hline
 \end{tabularx}
 
@@ -590,7 +590,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-  加 readme  
+  若有選擇加入readme，則在firebase中建立readme資訊
   } \\ \hline
 \end{tabularx}
 
@@ -616,7 +616,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-  修改專案設定 
+    傳projectname、developmentmode給firebase，firebase更新專案資訊。
   } \\ \hline
 \end{tabularx}
 
@@ -642,7 +642,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    獲取此專案的成員資料
+    ??
     } \\ \hline
 \end{tabularx}
 
@@ -667,7 +667,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-  邀請成員 
+    傳mail給firebase，firebase發送邀請決定。，是否讓firebase新增專案成員資訊。 
   } \\ \hline
 \end{tabularx}
 
@@ -692,7 +692,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-  刪除成員 
+  根據usermail，刪除firebase專案中成員資訊。
   } \\ \hline
 \end{tabularx}
 
@@ -718,8 +718,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-   
-  移除專案
+   ??
   } \\ \hline
 \end{tabularx}
 
@@ -742,7 +741,8 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    } \\ \hline
+    根據專案資訊，列出專案中所有REPO  
+  } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -763,6 +763,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
+    接收reponame, repourl，新增REPO，回傳repoid
     } \\ \hline
 \end{tabularx}
 
@@ -775,6 +776,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    & \multicolumn{2}{|T|}{
     \makecell[l]{
       repoid
+      
     }
    } & 
    \makecell[X]{
@@ -783,7 +785,9 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    } \\ \hline
+    ???
+    % /使用者不會輸入吧???
+  } \\ \hline
 \end{tabularx}
 
 \subsubsection*{2.3.2 內部介面}
@@ -809,6 +813,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
+    接收projectid，傳projectid給firebase，並接收repos
     } \\ \hline
 \end{tabularx}
 
@@ -835,7 +840,8 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-   新增 repo } \\ \hline
+   傳projectid給firebase找到對應的project，並把reponame, repourl給firebase儲存，並回傳repoid
+  } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -861,7 +867,8 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-   修改repo } \\ \hline
+    傳projectid給firebase找到對應的project，並把reponame, repourl給firebase更新，並回傳repoid
+   } \\ \hline
 \end{tabularx}
 
 
@@ -887,7 +894,8 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-   刪除repo } \\ \hline
+    傳projectid、repoid給firebase找到對應的repo，最後刪除repo
+   } \\ \hline
 \end{tabularx}
 
 \subsection*{2.4 文件管理子系統}
@@ -909,6 +917,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
+    firebase根據projectid找到對應的project，並回傳所有文件
     } \\ \hline
 \end{tabularx}
 
@@ -929,6 +938,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
+    firebase根據文件類型找到對應的文件
     } \\ \hline
 \end{tabularx}
 
@@ -949,6 +959,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
+    firebase根據文件類型找到對應的文件，更新內容
     } \\ \hline
 \end{tabularx}
 
@@ -969,6 +980,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
+    firebase根據文件類型找到對應的文件，並刪除後更新頁面
     } \\ \hline
 \end{tabularx}
 
