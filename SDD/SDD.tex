@@ -65,27 +65,10 @@
 
 \section*{2. 介面需求與設計(Interface Requirement and Design)}
 
-\begin{obeylines}
-\parindent=0pt
-根據架構圖，描述模組間的介面資訊，包含介面名稱、介面提供者、介面使用者、連結方式、輸入資料、輸出資料與介面描述等。
-APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-簡
-\end{obeylines}
-
 % \newcolumntype{R}{>{\raggedleft}X}
 \newcolumntype{R}{X}
 \newcolumntype{T}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}
 \newcolumntype{F}{>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X}
-
-\begin{tabularx}{\textwidth}{|l|R|R|R|}
-  \hline
-  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  [介面編號] & [XXX] & [介面提供者] & [介面使用者] \\ \hline
-  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  [連結方式] & \multicolumn{2}{|T|}{[輸入資料]} & [輸出資料] \\ \hline
-  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|F|}{[對應介面之要求]} \\ \hline
-\end{tabularx}
 
 \subsection*{2.1 會員子系統}
 
@@ -132,10 +115,10 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-04 & 修改個人資料 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|T|}{avatar url, nickname, bio} & 顯示新的個人資料 \\ \hline
+   & \multicolumn{2}{|T|}{avatar, nickname, bio} & 顯示新的個人資料 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收收avatar url、nickname、bio，將資料交給firebase儲存。} \\ \hline
+    接收收avatar、nickname、bio，將資料交給firebase儲存。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -156,7 +139,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-06 & Google 日曆授權 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|T|}{} &  \\ \hline
+   & \multicolumn{2}{|T|}{} &  授權結果 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
     透過Google日曆 API 管理授權} \\ \hline
@@ -168,7 +151,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-07 & 取得通知 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|T|}{} &  \\ \hline
+   & \multicolumn{2}{|T|}{} &  顯示通知訊息 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
     系統上顯示傳給使用者的通知} \\ \hline
@@ -243,7 +226,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    } & 
    \makecell[X]{
     \{ \\
-      "status": "Status (string, 200)",
+      "status": "Status (string, 200)" \\
     \}
     }
    \\ \hline
@@ -270,13 +253,13 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    } & 
    \makecell[X]{
     \{ \\
-      "status": "Status (string, 200)",
+      "status": "Status (string, 200)" \\
     \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    將個人資訊傳給firebase，根據avatar找到帳戶進行儲存，回傳狀態} \\ \hline
+    將個人資訊傳給firebase，根據 JWT 找到帳戶進行儲存，回傳狀態} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -295,7 +278,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    } & 
    \makecell[X]{
     \{ \\
-      "status": "Status (string, 200)",
+      "status": "Status (string, 200)", \\
     \}
     }
    \\ \hline
@@ -321,7 +304,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    } & 
    \makecell[X]{
     \{ \\
-      "status": "Status (string, 200)",
+      "status": "Status (string, 200)", \\
     \}
     }
    \\ \hline
@@ -345,13 +328,13 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    } & 
    \makecell[X]{
     \{ \\
-      "status": "Status (string, 200)",
+      "status": "Status (string, 200)", \\
     \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    ??} \\ \hline
+    透過Google日曆 API 管理授權} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -369,13 +352,13 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    } & 
    \makecell[X]{
     \{ \\
-      "status": "Status (string, 200)",
+      "status": "Status (string, 200)", \\
     \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    ??} \\ \hline
+    系統上顯示傳給使用者的通知} \\ \hline
 \end{tabularx}
 
 \subsection*{2.2 專案管理子系統}
@@ -472,7 +455,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    } & 
    \makecell[X]{
-    % 
+      邀請成功後，跳出成功邀請通知。
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -492,7 +475,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    } & 
    \makecell[X]{
-    %  
+      移除成功後，跳出成功移除通知。
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -530,12 +513,15 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
  GET & \multicolumn{2}{|T|}{
     \makecell[l]{
-    %  
+    \{ \\
+      "JWT": "JWT token (string, cookie)"  \\
+    \} 
     }
    } & 
    \makecell[X]{
-     \{
-      "projects": "專案列表 (Array<{string, projectid}>)"
+     \{ \\
+      "status" : "Status (string)", \\
+      "projects": "專案列表 (Array<{string, projectid}>)" \\
      \}
     }
    \\ \hline
@@ -554,15 +540,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
  POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
-        "projectname": "project name (string)", \\
-        "developmentmode": "development mode (string)", \\
+        "JWT": "JWT token (string, cookie)"  \\
+        "Name": "project name (string)", \\
+        "DevMode": "development mode (string)", \\
+        "DevTools": "development tools (string)", \\
       \}
     }
    } & 
    \makecell[X]{
-    %  \{
-    %   "projects": "專案列表"
-    %  \}
+     \{ \\
+      "status": "Status (string)", \\
+      "message": "訊息 (string)" \\
+     \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -579,13 +568,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
  POST & \multicolumn{2}{|T|}{
     \makecell[l]{
-    %  
+    \{ \\
+      "JWT": "JWT token (string, cookie)",  \\  
+      "ProjectID": "專案ID (string)", \\
+    \}
     }
    } & 
    \makecell[X]{
-    %  \{
-    %   "projects": "專案列表"
-    %  \}
+    \{ \\
+    "status": "Status (string)", \\
+    "message": "訊息 (string)" \\
+   \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -603,15 +596,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
  PUT & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
-        "projectname": "project name (string)", \\
-        "developmentmode": "development mode (string)", \\
+      "JWT": "JWT token (string, cookie)"  \\
+      "Name": "project name (string)", \\
+      "DevMode": "development mode (string)", \\
+      "DevTools": "development tools (string)", \\
       \}
     }
    } & 
    \makecell[X]{
-    %  \{
-    %   "projects": "專案列表"
-    %  \}
+    \{ \\
+    "status": "Status (string)", \\
+    "message": "訊息 (string)" \\
+   \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -628,21 +624,22 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
  GET & \multicolumn{2}{|T|}{
     \makecell[l]{
-      % \{
-      %   "projectname": "project name (string)",
-      %   "developmentmode": "development mode (string)",
-      % \}
+      \{ \\
+      "JWT": "JWT token (string, cookie)",  \\  
+      "ProjectID": "專案ID (string)", \\
+    \}
     }
    } & 
    \makecell[X]{
-    %  \{
-    %   "projects": "專案列表"
-    %  \}
+    \{ \\
+      "status": "Status (string)", \\
+      "message": "訊息 (string)" \\
+     \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    ??
+    獲取專案成員列表
     } \\ \hline
 \end{tabularx}
 
@@ -655,15 +652,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
  POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
+      "JWT": "JWT token (string, cookie)",  \\  
+      "ProjectID": "專案ID (string)", \\
         "mail": "User mail (string)", \\
       \}
     }
    } & 
    \makecell[X]{
-    %  \{
-    %   "projects": "專案列表"
-    %  \}
-    }
+    \{ \\
+    "status": "Status (string)", \\
+    "message": "訊息 (string)" \\
+   \}
+  }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
@@ -680,14 +680,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
  DELETE & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
-        "usermail": "User mail (string)", \\
+      "JWT": "JWT token (string, cookie)",  \\  
+      "ProjectID": "專案ID (string)", \\
+        "mail": "User mail (string)", \\
       \}
     }
    } & 
    \makecell[X]{
-    %  \{
-    %   "projects": "專案列表"
-    %  \}
+    \{ \\
+    "status": "Status (string)", \\
+    "message": "訊息 (string)" \\
+   \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -704,21 +707,22 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
  DELETE & \multicolumn{2}{|T|}{
     \makecell[l]{
-      % \{
-      %   "projectname": "project name (string)",
-      %   "developmentmode": "development mode (string)",
-      % \}
+      \{ \\
+      "JWT": "JWT token (string, cookie)",  \\  
+      "ProjectID": "專案ID (string)", \\
+      \}
     }
    } & 
    \makecell[X]{
-    %  \{
-    %   "projects": "專案列表"
-    %  \}
+    \{ \\
+    "status": "Status (string)", \\
+    "message": "訊息 (string)" \\
+   \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-   ??
+  刪除專案資訊，並刪除firebase專案資訊。
   } \\ \hline
 \end{tabularx}
 
@@ -758,12 +762,13 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    } & 
    \makecell[X]{
     %  列出所有REPO
-    repoid
+    % repoid
+    顯示新增成功，並回到REPO列表頁面
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收reponame, repourl，新增REPO，回傳repoid
+    接收reponame, repourl，新增REPO，回傳repoid到前端。
     } \\ \hline
 \end{tabularx}
 
@@ -779,13 +784,12 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    } & 
    \makecell[X]{
-    %  列出所有REPO
+     顯示刪除成功，並回到REPO列表頁面
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    ???
-    % 使用者不會輸入吧???
+    接收repoid，刪除REPO。
   } \\ \hline
 \end{tabularx}
 
@@ -799,13 +803,16 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   GET & \multicolumn{2}{|T|}{
     \makecell[l]{
-      \{ \\
-        "projectid": "Project ID (string)" \\
+      \{ \\ 
+      "JWT": "JWT token (string, cookie)",  \\  
+      "ProjectID": "專案ID (string)", \\
       \}
     }
    } & 
    \makecell[X]{
     \{ \\
+    "status": "Status (string)", \\
+    "message": "訊息 (string)", \\
       "repos": "REPO列表" \\
     \}
     }
@@ -825,7 +832,8 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
-        "projectid": "Project ID (string)" \\
+      "JWT": "JWT token (string, cookie)",  \\  
+      "projectid": "Project ID (string)" \\
         "reponame": "REPO名稱 (string)" \\
         "repourl": "REPO URL (string)" \\
       \}
@@ -833,6 +841,8 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    } & 
    \makecell[X]{
     \{ \\
+    "status": "Status (string)", \\
+    "message": "訊息 (string)", \\
       "repoid": "REPO ID (string)" \\
     \}
     }
@@ -852,6 +862,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   PUT & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
+      "JWT": "JWT token (string, cookie)",  \\  
         "projectid": "Project ID (string)" \\
         "repoid": "REPO ID (string)" \\
         "reponame": "REPO名稱 (string)" \\
@@ -860,6 +871,8 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    } & 
    \makecell[X]{
     \{ \\
+    "status": "Status (string)", \\
+    "message": "訊息 (string)", \\
       "repoid": "REPO ID (string)" \\
     \}
     }
@@ -880,15 +893,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   DELETE & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
+      "JWT": "JWT token (string, cookie)",  \\  
         "projectid": "Project ID (string)" \\
         "repoid": "Project ID (string)" \\
       \}
     }
    } & 
    \makecell[X]{
-    % \{ \\
-    %   "repos": "REPO列表" \\
-    % \}
+    \{ \\
+    "status": "Status (string)", \\
+    "message": "訊息 (string)", \\
+    \}
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -932,12 +947,12 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    } & 
    \makecell[X]{
-    % 列出所有文件
+     顯示新增成功，並顯示新開的文件
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    firebase根據文件類型找到對應的文件
+    根據文件類型，開啟新的文件
     } \\ \hline
 \end{tabularx}
 
@@ -953,12 +968,12 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    } & 
    \makecell[X]{
-    % 列出所有文件
+    顯示編輯成功，並顯示編輯後的文件
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    firebase根據文件類型找到對應的文件，更新內容
+    firebase根據文件類型找到對應的文件，並更新內容。
     } \\ \hline
 \end{tabularx}
 
@@ -974,12 +989,12 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    } & 
    \makecell[X]{
-    % 列出所有文件
+    顯示刪除成功，並回到文件列表。
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    firebase根據文件類型找到對應的文件，並刪除後更新頁面
+    firebase根據文件類型找到對應的文件，並刪除後更新頁面。
     } \\ \hline
 \end{tabularx}
 
