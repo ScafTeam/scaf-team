@@ -25,7 +25,7 @@
 \begin{document}
 \title{%
   \fontsize{40}{60}\selectfont
-  SCAF  \\ % 
+  AMM  \\ % 
   \vspace*{2cm}%
   \fontsize{24}{30}\selectfont
   設計文件
@@ -38,7 +38,7 @@
     |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
   }
     \hline
-    \centering 專案名稱 & SCAF 開發輔助工具 \\
+    \centering 專案名稱 & AMM 開發輔助工具 \\
     \hline
     \centering 撰寫日期 & 2022 / 11 / 21 \\
     \hline
@@ -82,14 +82,14 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{[對應介面之要求]} \\ \hline
 \end{tabularx}
 
-\subsection*{2.1. 會員子系統}
+\subsection*{2.1 會員子系統}
 
 \subsubsection*{2.1.1 外部介面}
 
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-EI-01 & 登入帳號 & Account Management Module & User \\ \hline
+  AMM-EI-01 & 登入帳號 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
    & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{email, password} & 登入成功後跳轉頁面 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -101,7 +101,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-EI-02 & 註冊帳號 & Account Management Module & Any \\ \hline
+  AMM-EI-02 & 註冊帳號 & Account Management Module & Any \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
    & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{email, password} & 註冊成功後跳轉頁面 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -113,7 +113,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-EI-03 & 忘記密碼 & Account Management Module & User \\ \hline
+  AMM-EI-03 & 忘記密碼 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
    & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{email} & 驗證完後跳回登入頁 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -125,7 +125,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-EI-04 & 修改個人資料 & Account Management Module & User \\ \hline
+  AMM-EI-04 & 修改個人資料 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
    & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{avatar url, nickname, bio} & 顯示新的個人資料 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -137,7 +137,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-EI-05 & 修改密碼 & Account Management Module & User \\ \hline
+  AMM-EI-05 & 修改密碼 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
    & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{old password, new password} & 跳到登入畫面 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -149,7 +149,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-EI-06 & Google 日曆授權 & Account Management Module & User \\ \hline
+  AMM-EI-06 & Google 日曆授權 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
    & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{} &  \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -161,7 +161,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-EI-07 & 取得通知 & Account Management Module & User \\ \hline
+  AMM-EI-07 & 取得通知 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
    & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{} &  \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -175,7 +175,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-II-01 & /signin & Account Management Module & User \\ \hline
+  AMM-II-01 & /signin & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
@@ -185,9 +185,9 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
       \}      
     }
    } & 
-   \makecell[l]{
+   \makecell[X]{
     \{ \\
-      "status": \\ "Status (string, 200)", \\
+      "status": "Status (string, 200)", \\
       "JWT": "JWT token (string)" \\
     \}
     }
@@ -201,7 +201,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-II-02 & /signup & Account Management Module & User \\ \hline
+  AMM-II-02 & /signup & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
@@ -211,9 +211,9 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
       \}      
     }
    } & 
-   \makecell[l]{
+   \makecell[X]{
     \{ \\
-      "status": \\ "Status (string, 200)", \\
+      "status": "Status (string, 200)", \\
       "JWT": "JWT token (string)" \\
     \}
     }
@@ -227,7 +227,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-II-03 & /forget & Account Management Module & User \\ \hline
+  AMM-II-03 & /forget & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
@@ -236,9 +236,9 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
       \}      
     }
    } & 
-   \makecell[l]{
+   \makecell[X]{
     \{ \\
-      "status": \\ "Status (string, 200)",
+      "status": "Status (string, 200)",
     \}
     }
    \\ \hline
@@ -251,7 +251,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-II-04 & /person & Account Management Module & User \\ \hline
+  AMM-II-04 & /person & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   HTTP EDIT & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
@@ -263,9 +263,9 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
       \}      
     }
    } & 
-   \makecell[l]{
+   \makecell[X]{
     \{ \\
-      "status": \\ "Status (string, 200)",
+      "status": "Status (string, 200)",
     \}
     }
    \\ \hline
@@ -278,7 +278,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-II-05 & /person & Account Management Module & User \\ \hline
+  AMM-II-05 & /person & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   HTTP GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
@@ -288,9 +288,9 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
       \}      
     }
    } & 
-   \makecell[l]{
+   \makecell[X]{
     \{ \\
-      "status": \\ "Status (string, 200)",
+      "status": "Status (string, 200)",
     \}
     }
    \\ \hline
@@ -303,7 +303,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-II-06 & /person/reset & Account Management Module & User \\ \hline
+  AMM-II-06 & /person/reset & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
@@ -314,9 +314,9 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
       \}      
     }
    } & 
-   \makecell[l]{
+   \makecell[X]{
     \{ \\
-      "status": \\ "Status (string, 200)",
+      "status": "Status (string, 200)",
     \}
     }
    \\ \hline
@@ -329,7 +329,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-II-07 & /person/calendar & Account Management Module & User \\ \hline
+  AMM-II-07 & /person/calendar & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
@@ -338,9 +338,9 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
         \}      
     }
    } & 
-   \makecell[l]{
+   \makecell[X]{
     \{ \\
-      "status": \\ "Status (string, 200)",
+      "status": "Status (string, 200)",
     \}
     }
    \\ \hline
@@ -353,7 +353,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \begin{tabularx}{\textwidth}{|l|X|X|X|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  SCAF-II-08 & /notify & Account Management Module & User \\ \hline
+  AMM-II-08 & /notify & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   HTTP GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
     \makecell[l]{
@@ -362,9 +362,9 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
       \}      
     }
    } & 
-   \makecell[l]{
+   \makecell[X]{
     \{ \\
-      "status": \\ "Status (string, 200)",
+      "status": "Status (string, 200)",
     \}
     }
    \\ \hline
@@ -372,6 +372,90 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
     接收資料後} \\ \hline
 \end{tabularx}
+
+\subsection*{2.2 專案管理子系統}
+
+\subsubsection*{2.2.1 外部介面}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-EI-01 & 列出所有專案 & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+     列出所有專案的資料
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-EI-02 & 建立新專案 & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      Project Name, Development Mode
+    }
+   } & 
+   \makecell[X]{
+     新增完專案後，跳到專案畫面。
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-EI-03 & 新建 Readme & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      % 
+    }
+   } & 
+   \makecell[X]{
+     建立 Readme 檔案
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  PMM-EI-04 & 專案設定修改 & Project Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      Project Name, Development Mode
+    }
+   } & 
+   \makecell[X]{
+     修改完專案設定後，跳到專案畫面。
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{2.2.2 內部介面}
 
 \section*{3. 流程設計(Process Design)}
 
