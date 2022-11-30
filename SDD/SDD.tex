@@ -135,7 +135,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    & \multicolumn{2}{|T|}{avatar url, nickname, bio} & 顯示新的個人資料 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    接收收avatar url、nickname、bio，將資料交給firebase儲存。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -147,7 +147,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    & \multicolumn{2}{|T|}{old password, new password} & 跳到登入畫面 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    接收old password、new password，old password與firebase驗證過後，將new password交給firebase做更新。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -159,7 +159,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    & \multicolumn{2}{|T|}{} &  \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    透過Google日曆 API 管理授權} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -171,7 +171,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    & \multicolumn{2}{|T|}{} &  \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    系統上顯示傳給使用者的通知} \\ \hline
 \end{tabularx}
 
 \subsubsection*{2.1.2 內部介面}
@@ -199,7 +199,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    將登入資訊傳給firebase進行資料驗證，接收回傳結果} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -225,7 +225,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    將註冊資訊傳給firebase，驗證後加入資料庫} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -249,7 +249,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    傳送email，交給firebase寄信重設密碼} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -276,7 +276,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
-    接收資料後} \\ \hline
+    將個人資訊傳給firebase，根據avatar找到帳戶進行儲存，回傳狀態} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
