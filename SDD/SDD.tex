@@ -72,112 +72,117 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 簡
 \end{obeylines}
 
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+% \newcolumntype{R}{>{\raggedleft}X}
+\newcolumntype{R}{X}
+\newcolumntype{T}{>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X}
+\newcolumntype{F}{>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X}
+
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   [介面編號] & [XXX] & [介面提供者] & [介面使用者] \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  [連結方式] & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{[輸入資料]} & [輸出資料] \\ \hline
+  [連結方式] & \multicolumn{2}{|T|}{[輸入資料]} & [輸出資料] \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{[對應介面之要求]} \\ \hline
+  \multicolumn{4}{|F|}{[對應介面之要求]} \\ \hline
 \end{tabularx}
 
 \subsection*{2.1 會員子系統}
 
 \subsubsection*{2.1.1 外部介面}
 
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-01 & 登入帳號 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{email, password} & 登入成功後跳轉頁面 \\ \hline
+   & \multicolumn{2}{|T|}{email, password} & 登入成功後跳轉頁面 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收email及password，交由firebase驗證。驗證成功後，回傳token到前端。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-02 & 註冊帳號 & Account Management Module & Any \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{email, password} & 註冊成功後跳轉頁面 \\ \hline
+   & \multicolumn{2}{|T|}{email, password} & 註冊成功後跳轉頁面 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收email及password，交由firebase註冊。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-03 & 忘記密碼 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{email} & 驗證完後跳回登入頁 \\ \hline
+   & \multicolumn{2}{|T|}{email} & 驗證完後跳回登入頁 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收email，交由firebase驗證，並由firebase寄送驗證信到使用者上。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-04 & 修改個人資料 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{avatar url, nickname, bio} & 顯示新的個人資料 \\ \hline
+   & \multicolumn{2}{|T|}{avatar url, nickname, bio} & 顯示新的個人資料 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-05 & 修改密碼 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{old password, new password} & 跳到登入畫面 \\ \hline
+   & \multicolumn{2}{|T|}{old password, new password} & 跳到登入畫面 \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-06 & Google 日曆授權 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{} &  \\ \hline
+   & \multicolumn{2}{|T|}{} &  \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-EI-07 & 取得通知 & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{} &  \\ \hline
+   & \multicolumn{2}{|T|}{} &  \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
 \subsubsection*{2.1.2 內部介面}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-01 & /signin & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "email": "Email (string)", \\
@@ -193,17 +198,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-02 & /signup & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "email": "Email (string)", \\
@@ -219,17 +224,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-03 & /forget & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "email": "Email (string)", \\
@@ -243,17 +248,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-04 & /person & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- PUT & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ PUT & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "JWT": "JWT token (string, cookie)", \\
@@ -270,17 +275,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-05 & /person & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ GET & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "JWT": "JWT token (string, cookie)", \\
@@ -295,17 +300,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     獲取資料} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-06 & /person/reset & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
        "JWT": "JWT token (string, cookie)", \\
@@ -321,17 +326,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     改密碼} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-07 & /person/calendar & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "JWT": "JWT token (string, cookie)", \\
@@ -345,17 +350,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   AMM-II-08 & /notify & Account Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ GET & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "JWT": "JWT token (string, cookie)", \\
@@ -369,7 +374,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     接收資料後} \\ \hline
 \end{tabularx}
 
@@ -378,12 +383,12 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \subsubsection*{2.2.1 外部介面}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-EI-01 & 列出所有專案 & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+   & \multicolumn{2}{|T|}{
     \makecell[l]{}
    } & 
    \makecell[X]{
@@ -391,17 +396,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-EI-02 & 建立新專案 & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+   & \multicolumn{2}{|T|}{
     \makecell[l]{
       Project Name, Development Mode
     }
@@ -411,17 +416,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-EI-03 & 新建 Readme & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+   & \multicolumn{2}{|T|}{
     \makecell[l]{
       % 
     }
@@ -431,17 +436,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-EI-04 & 專案設定修改 & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+   & \multicolumn{2}{|T|}{
     \makecell[l]{
       Project Name, Development Mode
     }
@@ -451,17 +456,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-EI-05 & 邀請加入專案 & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+   & \multicolumn{2}{|T|}{
     \makecell[l]{
       User Mail
     }
@@ -471,17 +476,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-EI-06 & 移除成員 & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+   & \multicolumn{2}{|T|}{
     \makecell[l]{
       User Mail
     }
@@ -491,17 +496,17 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-EI-07 & 刪除專案 & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+   & \multicolumn{2}{|T|}{
     \makecell[l]{
     %  
     }
@@ -511,19 +516,19 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     } \\ \hline
 \end{tabularx}
 
 \subsubsection*{2.2.2 內部介面}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-II-01 & /projects & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ GET & \multicolumn{2}{|T|}{
     \makecell[l]{
     %  
     }
@@ -535,18 +540,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
   獲取專案列表
   } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-II-02 & /project & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "projectname": "project name (string)", \\
@@ -561,18 +566,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
   新建專案  
   } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-II-03 & /project/readme & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|T|}{
     \makecell[l]{
     %  
     }
@@ -584,18 +589,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
   加 readme  
   } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-II-04 & /project & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- PUT & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ PUT & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "projectname": "project name (string)", \\
@@ -610,18 +615,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
   修改專案設定 
   } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-II-05 & /project/member & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ GET & \multicolumn{2}{|T|}{
     \makecell[l]{
       % \{
       %   "projectname": "project name (string)",
@@ -636,18 +641,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
     獲取此專案的成員資料
     } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-II-06 & /project/member & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ POST & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "mail": "User mail (string)", \\
@@ -661,18 +666,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
   邀請成員 
   } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-II-07 & /project/member & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- DELETE & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ DELETE & \multicolumn{2}{|T|}{
     \makecell[l]{
       \{ \\
         "usermail": "User mail (string)", \\
@@ -686,18 +691,18 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
   刪除成員 
   } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   PMM-II-03 & /project & Project Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
- DELETE & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+ DELETE & \multicolumn{2}{|T|}{
     \makecell[l]{
       % \{
       %   "projectname": "project name (string)",
@@ -712,11 +717,262 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+  \multicolumn{4}{|F|}{
    
   移除專案
   } \\ \hline
 \end{tabularx}
+
+\subsection*{2.3 Repo管理子系統}
+
+\subsubsection*{2.3.1 外部介面}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  RMM-EI-01 & 列出所有REPO & Repo Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+     列出所有REPO
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  RMM-EI-02 & 新增 REPO & Repo Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      reponame, repourl
+    }
+   } & 
+   \makecell[X]{
+    %  列出所有REPO
+    repoid
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  RMM-EI-02 & 刪除 REPO & Repo Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      repoid
+    }
+   } & 
+   \makecell[X]{
+    %  列出所有REPO
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{2.3.2 內部介面}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  RMM-II-01 & /project/repos & Repo Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  GET & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      \{ \\
+        "projectid": "Project ID (string)" \\
+      \}
+    }
+   } & 
+   \makecell[X]{
+    \{ \\
+      "repos": "REPO列表" \\
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  RMM-II-02 & /project/repo & Repo Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  POST & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      \{ \\
+        "projectid": "Project ID (string)" \\
+        "reponame": "REPO名稱 (string)" \\
+        "repourl": "REPO URL (string)" \\
+      \}
+    }
+   } & 
+   \makecell[X]{
+    \{ \\
+      "repoid": "REPO ID (string)" \\
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+   新增 repo } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  RMM-II-03 & /project/repo & Repo Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  PUT & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      \{ \\
+        "projectid": "Project ID (string)" \\
+        "repoid": "REPO ID (string)" \\
+        "reponame": "REPO名稱 (string)" \\
+      \}
+    }
+   } & 
+   \makecell[X]{
+    \{ \\
+      "repoid": "REPO ID (string)" \\
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+   修改repo } \\ \hline
+\end{tabularx}
+
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  RMM-II-02 & /project/repo & Repo Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  DELETE & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      \{ \\
+        "projectid": "Project ID (string)" \\
+        "repoid": "Project ID (string)" \\
+      \}
+    }
+   } & 
+   \makecell[X]{
+    % \{ \\
+    %   "repos": "REPO列表" \\
+    % \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+   刪除repo } \\ \hline
+\end{tabularx}
+
+\subsection*{2.4 文件管理子系統}
+
+\subsubsection*{2.4.1 外部介面}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|T|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  DMM-EI-01 & 列出所有文件 & Doc Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+    列出所有文件
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  DMM-EI-02 & 新增文件 & Doc Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      文件類型
+    }
+   } & 
+   \makecell[X]{
+    % 列出所有文件
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  DMM-EI-03 & 編輯文件 & Doc Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      文件類型
+    }
+   } & 
+   \makecell[X]{
+    % 列出所有文件
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  DMM-EI-04 & 刪除文件 & Doc Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      文件類型
+    }
+   } & 
+   \makecell[X]{
+    % 列出所有文件
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+
 
 \section*{3. 流程設計(Process Design)}
 
