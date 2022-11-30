@@ -72,6 +72,307 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 簡
 \end{obeylines}
 
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  [介面編號] & [XXX] & [介面提供者] & [介面使用者] \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  [連結方式] & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{[輸入資料]} & [輸出資料] \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{[對應介面之要求]} \\ \hline
+\end{tabularx}
+
+\subsection*{2.1. 會員子系統}
+
+\subsubsection*{2.1.1 外部介面}
+
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-EI-01 & 登入帳號 & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{email, password} & 登入成功後跳轉頁面 \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收email及password，交由firebase驗證。驗證成功後，回傳token到前端。} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-EI-02 & 註冊帳號 & Account Management Module & Any \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{email, password} & 註冊成功後跳轉頁面 \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收email及password，交由firebase註冊。} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-EI-03 & 忘記密碼 & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{email} & 驗證完後跳回登入頁 \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收email，交由firebase驗證，並由firebase寄送驗證信到使用者上。} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-EI-04 & 修改個人資料 & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{avatar url, nickname, bio} & 顯示新的個人資料 \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-EI-05 & 修改密碼 & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{old password, new password} & 跳到登入畫面 \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-EI-06 & Google 日曆授權 & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{} &  \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-EI-07 & 取得通知 & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{} &  \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
+\subsubsection*{2.1.2 內部介面}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-II-01 & /signin & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "email": "Email (string)", \\
+        "password": "Password (string)" \\
+      \}      
+    }
+   } & 
+   \makecell[l]{
+    \{ \\
+      "status": \\ "Status (string, 200)", \\
+      "JWT": "JWT token (string)" \\
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-II-02 & /signup & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "email": "Email (string)", \\
+        "password": "Password (string)" \\
+      \}      
+    }
+   } & 
+   \makecell[l]{
+    \{ \\
+      "status": \\ "Status (string, 200)", \\
+      "JWT": "JWT token (string)" \\
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-II-03 & /forget & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "email": "Email (string)", \\
+      \}      
+    }
+   } & 
+   \makecell[l]{
+    \{ \\
+      "status": \\ "Status (string, 200)",
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-II-04 & /person & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  HTTP EDIT & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "JWT": "JWT token (string, cookie)", \\
+        "avatar": "Avatar (base64)", \\
+        "nickname": "Nickname (string)", \\
+        "bio": "bio (string)" \\
+      \}      
+    }
+   } & 
+   \makecell[l]{
+    \{ \\
+      "status": \\ "Status (string, 200)",
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-II-05 & /person & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  HTTP GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "JWT": "JWT token (string, cookie)", \\
+        "email": "Email (string)", \\
+      \}      
+    }
+   } & 
+   \makecell[l]{
+    \{ \\
+      "status": \\ "Status (string, 200)",
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    獲取資料} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-II-06 & /person/reset & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+       "JWT": "JWT token (string, cookie)", \\
+        "oldPassword": "Password (string)", \\
+        "newPassword": "Password (string)", \\
+      \}      
+    }
+   } & 
+   \makecell[l]{
+    \{ \\
+      "status": \\ "Status (string, 200)",
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    改密碼} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-II-07 & /person/calendar & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  HTTP POST & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "JWT": "JWT token (string, cookie)", \\
+        \}      
+    }
+   } & 
+   \makecell[l]{
+    \{ \\
+      "status": \\ "Status (string, 200)",
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|X|X|X|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  SCAF-II-08 & /notify & Account Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  HTTP GET & \multicolumn{2}{|>{\hsize=\dimexpr2\hsize+2\tabcolsep+\arrayrulewidth\relax}X|}{
+    \makecell[l]{
+      \{ \\
+        "JWT": "JWT token (string, cookie)", \\
+      \}      
+    }
+   } & 
+   \makecell[l]{
+    \{ \\
+      "status": \\ "Status (string, 200)",
+    \}
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|>{\hsize=\dimexpr4\hsize+4\tabcolsep+\arrayrulewidth\relax}X|}{
+    接收資料後} \\ \hline
+\end{tabularx}
+
 \section*{3. 流程設計(Process Design)}
 
 \begin{obeylines}
