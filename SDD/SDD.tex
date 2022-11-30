@@ -1001,24 +1001,6 @@
 \subsubsection*{2.4.2 內部介面}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|R|R|R|}
-  \hline
-  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-  DMM-II-01 & /project/docs & Doc Management Module & User \\ \hline
-  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-  GET & \multicolumn{2}{|T|}{
-    \makecell[l]{
-      文件類型
-    }
-   } & 
-   \makecell[X]{
-    % 列出所有文件
-    }
-   \\ \hline
-  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|F|}{
-    } \\ \hline
-\end{tabularx}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -1028,7 +1010,7 @@
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   GET & \multicolumn{2}{|T|}{
     \makecell[l]{
-      doc id
+      doc_id
     }
    } & 
    \makecell[X]{
@@ -1036,7 +1018,8 @@
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|F|}{ 輸出某個文件
+  \multicolumn{4}{|F|}{
+      doc_id為各個文件的id，根據id找到對應的文件
     } \\ \hline
 \end{tabularx}
 
@@ -1048,15 +1031,16 @@
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   POST & \multicolumn{2}{|T|}{
     \makecell[l]{
-      doc type
+      doc_type
     }
    } & 
    \makecell[X]{
-     doc id
+      doc_id
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|F|}{ 新增某個文件
+  \multicolumn{4}{|F|}{ 
+    doc_type為文件類型，根據doc_type建立對應的位置，並新增一個文件
     } \\ \hline
 \end{tabularx}
 
@@ -1068,7 +1052,7 @@
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   PUT & \multicolumn{2}{|T|}{
     \makecell[l]{
-      doc id
+      doc_id
     }
    } & 
    \makecell[X]{
@@ -1076,7 +1060,8 @@
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|F|}{ 修改某個文件
+  \multicolumn{4}{|F|}{ 
+    根據doc_id找到對應的文件，並更新文件內容
     } \\ \hline
 \end{tabularx}
 
@@ -1096,7 +1081,8 @@
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|F|}{ 刪除某個文件
+  \multicolumn{4}{|F|}{
+    根據doc_id找到對應的文件，並刪除文件
     } \\ \hline
 \end{tabularx}
 
@@ -1119,6 +1105,7 @@
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
+    顯示所有任務，包含任務名稱、任務負責人、任務結束時間、任務描述
     } \\ \hline
 \end{tabularx}
 
@@ -1129,7 +1116,9 @@
   KMM-EI-02 & 新增任務 & Kanban Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
    & \multicolumn{2}{|T|}{
-    \makecell[l]{}
+    \makecell[l]{
+      task_name, task_owner, task_end, task_description
+    }
    } & 
    \makecell[X]{
     % 列出所有任務
@@ -1137,6 +1126,7 @@
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
   \multicolumn{4}{|F|}{
+    接收task_name, task_owner, task_end, task_description後丟到firebase新增
     } \\ \hline
 \end{tabularx}
 
@@ -1147,14 +1137,16 @@
   KMM-EI-03 & 移動任務 & Kanban Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
    & \multicolumn{2}{|T|}{
-    \makecell[l]{}
+    \makecell[l]{
+    }
    } & 
    \makecell[X]{
     % 列出所有任務
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|F|}{ 調整任務狀態
+  \multicolumn{4}{|F|}{
+    拖曳之後自動變更task所屬狀態，和位置
     } \\ \hline
 \end{tabularx}
 
@@ -1167,7 +1159,9 @@
   KMM-II-01 & /project/kanbans & Kanban Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   GET & \multicolumn{2}{|T|}{
-    \makecell[l]{}
+    \makecell[l]{
+      
+    }
    } & 
    \makecell[X]{
     列出所有任務
@@ -1185,7 +1179,9 @@
   KMM-II-02 & /project/kanban & Kanban Management Module & User \\ \hline
   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
   POST & \multicolumn{2}{|T|}{
-    \makecell[l]{}
+    \makecell[l]{
+      
+    }
    } & 
    \makecell[X]{
     % 列出所有任務
@@ -1250,7 +1246,8 @@
     }
    \\ \hline
   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-  \multicolumn{4}{|F|}{ 使用gitbook
+  \multicolumn{4}{|F|}{ 
+    使用gitbook列出所有QA
     } \\ \hline
 \end{tabularx}
 
