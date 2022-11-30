@@ -25,7 +25,7 @@
 \begin{document}
 \title{%
   \fontsize{40}{60}\selectfont
-  AMM  \\ % 
+  SCAF  \\ % 
   \vspace*{2cm}%
   \fontsize{24}{30}\selectfont
   設計文件
@@ -38,7 +38,7 @@
     |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
   }
     \hline
-    \centering 專案名稱 & AMM 開發輔助工具 \\
+    \centering 專案名稱 & SCAF 開發輔助工具 \\
     \hline
     \centering 撰寫日期 & 2022 / 11 / 21 \\
     \hline
@@ -895,7 +895,7 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 \subsubsection*{2.4.1 外部介面}
 
 \subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|T|X|X|}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
   \hline
   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
   DMM-EI-01 & 列出所有文件 & Doc Management Module & User \\ \hline
@@ -972,7 +972,281 @@ APIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     } \\ \hline
 \end{tabularx}
 
+\subsubsection*{2.4.2 內部介面}
 
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  DMM-II-01 & /project/docs & Doc Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  GET & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      文件類型
+    }
+   } & 
+   \makecell[X]{
+    % 列出所有文件
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  DMM-II-02 & /project/doc & Doc Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  GET & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      doc id
+    }
+   } & 
+   \makecell[X]{
+    % 列出所有文件
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{ 輸出某個文件
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  DMM-II-03 & /project/doc & Doc Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  POST & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      doc type
+    }
+   } & 
+   \makecell[X]{
+     doc id
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{ 新增某個文件
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  DMM-II-04 & /project/doc & Doc Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  PUT & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      doc id
+    }
+   } & 
+   \makecell[X]{
+    %  doc id
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{ 修改某個文件
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  DMM-II-05 & /project/doc & Doc Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  DELETE & \multicolumn{2}{|T|}{
+    \makecell[l]{
+      doc id
+    }
+   } & 
+   \makecell[X]{
+    %  doc id
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{ 刪除某個文件
+    } \\ \hline
+\end{tabularx}
+
+\subsection*{2.5 看板子系統}
+
+\subsubsection*{2.5.1 外部介面}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  KMM-EI-01 & 顯示所有任務 & Kanban Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+    列出所有任務
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  KMM-EI-02 & 新增任務 & Kanban Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+    % 列出所有任務
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  KMM-EI-03 & 移動任務 & Kanban Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+    % 列出所有任務
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{ 調整任務狀態
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{2.5.2 內部介面}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  KMM-II-01 & /project/kanbans & Kanban Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  GET & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+    列出所有任務
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  KMM-II-02 & /project/kanban & Kanban Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  POST & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+    % 列出所有任務
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{ 新增任務
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  KMM-II-03 & /project/kanban & Kanban Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  PUT & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+    % 列出所有任務
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{ 編輯任務
+    } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  KMM-II-02 & /project/kanban & Kanban Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+  DELETE & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+    % 列出所有任務
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{ 刪除任務
+    } \\ \hline
+\end{tabularx}
+
+\subsection*{2.6 Q\&A子系統}
+
+\subsubsection*{2.6.1 外部介面}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+  \hline
+  介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+  QMM-EI-01 & 顯示所有任務 & Q\&A Management Module & User \\ \hline
+  連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+   & \multicolumn{2}{|T|}{
+    \makecell[l]{}
+   } & 
+   \makecell[X]{
+    列出所有任務
+    }
+   \\ \hline
+  \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+  \multicolumn{4}{|F|}{ 使用gitbook
+    } \\ \hline
+\end{tabularx}
+
+% \subsubsection*{2.6.2 內部介面}
+
+% \subsubsection*{}
+% \begin{tabularx}{\textwidth}{|l|R|R|R|}
+%   \hline
+%   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+%   QMM-II-01 & 顯示所有任務 & Q\&A Management Module & User \\ \hline
+%   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+%    & \multicolumn{2}{|T|}{
+%     \makecell[l]{}
+%    } & 
+%    \makecell[X]{
+%     列出所有任務
+%     }
+%    \\ \hline
+%   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+%   \multicolumn{4}{|F|}{
+%     } \\ \hline
+% \end{tabularx}
 
 \section*{3. 流程設計(Process Design)}
 
