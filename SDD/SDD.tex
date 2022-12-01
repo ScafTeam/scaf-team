@@ -1391,12 +1391,65 @@
 
 \section*{5. 資料設計(Data Design)}
 
-\begin{obeylines}
-	\parindent=0pt
-	設計此系統的資料庫schema、檔案結構、XML schema、JSON (JavaScript Object Notation)物件等。
-	NoSQL 類似json格式
-	簡
-\end{obeylines}
+% \begin{obeylines}
+% 	\parindent=0pt
+% 	設計此系統的資料庫schema、檔案結構、XML schema、JSON (JavaScript Object Notation)物件等。
+% 	NoSQL 類似json格式
+% 	簡
+% \end{obeylines}
+
+\begin{enumerate}
+  \item User \\ \\
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      \makecell[c]{欄位代碼} & \makecell[c]{欄位名稱} & \makecell[c]{欄位內容} & \makecell[c]{欄位型態} \\ \hline
+      email & 電子郵件 & User的電子郵件 & string \\ \hline
+      nikename & 姓名 & User的姓名 & string \\ \hline
+      avatar & 大頭貼 & User的大頭貼 & string \\ \hline
+      bio & 自我介紹 & User的自我介紹 & string \\ \hline
+      projects & 專案 & User的全部專案ID & Array \\ \hline
+    \end{tabular} \\
+  \item Project \\ \\
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      \makecell[c]{欄位代碼} & \makecell[c]{欄位名稱} & \makecell[c]{欄位內容} & \makecell[c]{欄位型態} \\ \hline
+      id & 專案ID & 專案的ID & string \\ \hline
+      name & 專案名稱 & 專案的名稱 & string \\ \hline
+      members & 專案成員 & 專案的成員ID & Array<User> \\ \hline
+      repositories & 專案repository & 專案的repositoryID & Array<Repo> \\ \hline
+      documents & 專案文件 & 專案的文件ID & Array<Doc> \\ \hline
+      tasks & 專案任務 & 專案的任務ID & Array<Tasks> \\ \hline
+    \end{tabular} \\
+  \item Repo \\ \\
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      \makecell[c]{欄位代碼} & \makecell[c]{欄位名稱} & \makecell[c]{欄位內容} & \makecell[c]{欄位型態} \\ \hline
+      id & repositoryID & repository的ID & string \\ \hline
+      name & repository名稱 & repository的名稱 & string \\ \hline
+      description & repository描述 & repository的描述 & string \\ \hline
+      url & repository url & repository的url & Array<string> \\ \hline
+    \end{tabular} \\
+  \item Doc \\ \\ 
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      \makecell[c]{欄位代碼} & \makecell[c]{欄位名稱} & \makecell[c]{欄位內容} & \makecell[c]{欄位型態} \\ \hline
+      id & 文件ID & 文件的ID & string \\ \hline
+      name & 文件名稱 & 文件的名稱 & string \\ \hline
+      content & 文件內容 & 文件的內容 & string \\ \hline
+    \end{tabular} \\
+  \item Tasks \\ \\
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      \makecell[c]{欄位代碼} & \makecell[c]{欄位名稱} & \makecell[c]{欄位內容} & \makecell[c]{欄位型態} \\ \hline
+      id & 任務ID & 任務的ID & string \\ \hline
+      name & 任務名稱 & 任務的名稱 & string \\ \hline
+      description & 任務描述 & 任務的描述 & string \\ \hline
+      status & 任務狀態 & 任務的狀態 & string \\ \hline
+      deadline & 任務截止日期 & 任務的截止日期 & string \\ \hline
+      assignee & 任務指派人 & 任務的指派人ID & User \\ \hline
+      % comments & 任務討論 & 任務的討論ID & Array<Comment> \\ \hline
+    \end{tabular} \\
+\end{enumerate}
 
 \section*{6. 類別圖設計(Class Diagram)}
 
