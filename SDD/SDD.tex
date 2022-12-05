@@ -545,7 +545,7 @@
 	"JWT": "JWT token (string, cookie)"  \\
 	"Name": "project name (string)", \\
 	"DevMode": "development mode (string)", \\
-	"DevTools": "development tools (string)", \\
+	"DevTools": "development tools (Array<string>)", \\
 	\}
 	}
 	} & 
@@ -601,7 +601,7 @@
 	"JWT": "JWT token (string, cookie)"  \\
 	"Name": "project name (string)", \\
 	"DevMode": "development mode (string)", \\
-	"DevTools": "development tools (string)", \\
+	"DevTools": "development tools (Array<string>)", \\
 	\}
 	}
 	} & 
@@ -1438,6 +1438,7 @@
       repositories & 專案repository & 專案的repositoryID & Array<Repo> \\ \hline
       documents & 專案文件 & 專案的文件ID & Array<Doc> \\ \hline
       tasks & 專案任務 & 專案的任務ID & Array<Tasks> \\ \hline
+      dev\_tools & 專案開發工具 & 專案的開發工具ID & Array<string> \\ \hline
     \end{tabular} \\
   \item Repo \\ \\
     \begin{tabular}{|l|l|l|l|}
