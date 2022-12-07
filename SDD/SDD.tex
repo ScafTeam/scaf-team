@@ -79,7 +79,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-01    & 登入帳號 & Account Management Module & Client端            \\ \hline
+	AMM-EI-01    & 登入帳號 & Account Management Module &  Anyone           \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{email, password} & 登入成功後跳轉頁面 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -91,7 +91,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-02    & 註冊帳號 & Account Management Module & Any             \\ \hline
+	AMM-EI-02    & 註冊帳號 & Account Management Module & Anyone             \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{email, password} & 註冊成功後跳轉頁面 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -103,7 +103,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-03    & 忘記密碼 & Account Management Module & Client端            \\ \hline
+	AMM-EI-03    & 忘記密碼 & Account Management Module & Anyone          \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{email} & 驗證完後跳回登入頁 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -115,7 +115,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱       & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-04    & 修改個人資料 & Account Management Module & Client端            \\ \hline
+	AMM-EI-04    & 修改個人資料 & Account Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{avatar, nickname, bio} & 顯示新的個人資料 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -127,7 +127,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-05    & 修改密碼 & Account Management Module & Client端            \\ \hline
+	AMM-EI-05    & 修改密碼 & Account Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{old password, new password} & 跳到登入畫面 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -139,7 +139,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱        & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-06    & Google 日曆授權 & Account Management Module & Client端            \\ \hline
+	AMM-EI-06    & Google 日曆授權 & Account Management Module & SCAF系統            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{} &  授權結果 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -151,7 +151,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-07    & 取得通知 & Account Management Module & Client端            \\ \hline
+	AMM-EI-07    & 取得通知 & Account Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{} &  顯示通知訊息 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -371,7 +371,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱       & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-01    & 列出所有專案 & Project Management Module & Client端            \\ \hline
+	PMM-EI-01    & 列出所有專案 & Project Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{}
@@ -389,7 +389,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-02    & 建立新專案 & Project Management Module & Client端            \\ \hline
+	PMM-EI-02    & 建立新專案 & Project Management Module & Member             \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -409,7 +409,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱  & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-03    & 新建 Readme & Project Management Module & Client端            \\ \hline
+	PMM-EI-03    & 新建 Readme & Project Management Module & Member              \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -429,7 +429,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱       & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-04    & 專案設定修改 & Project Management Module & Client端            \\ \hline
+	PMM-EI-04    & 專案設定修改 & Project Management Module & Project owner            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -449,7 +449,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱       & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-05    & 邀請加入專案 & Project Management Module & Client端            \\ \hline
+	PMM-EI-05    & 邀請加入專案 & Project Management Module & Project owner            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -469,7 +469,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-06    & 移除成員 & Project Management Module & Client端            \\ \hline
+	PMM-EI-06    & 移除成員 & Project Management Module & Project owner            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -489,7 +489,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-07    & 刪除專案 & Project Management Module & Client端            \\ \hline
+	PMM-EI-07    & 刪除專案 & Project Management Module & Project owner            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -736,7 +736,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱     & 介面提供者        & 介面使用者 \\ \hline
-	RMM-EI-01    & 列出所有REPO & Repo Management Module & Client端            \\ \hline
+	RMM-EI-01    & 列出所有REPO & Repo Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{}
@@ -755,7 +755,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者        & 介面使用者 \\ \hline
-	RMM-EI-02    & 新增 REPO  & Repo Management Module & Client端            \\ \hline
+	RMM-EI-02    & 新增 REPO  & Repo Management Module & Member           \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -778,7 +778,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者        & 介面使用者 \\ \hline
-	RMM-EI-02    & 刪除 REPO  & Repo Management Module & Client端            \\ \hline
+	RMM-EI-02    & 刪除 REPO  & Repo Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -922,7 +922,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱       & 介面提供者       & 介面使用者 \\ \hline
-	DMM-EI-01    & 列出所有文件 & Doc Management Module & Client端            \\ \hline
+	DMM-EI-01    & 列出所有文件 & Doc Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{}
@@ -941,7 +941,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-EI-02    & 新增文件 & Doc Management Module & Client端            \\ \hline
+	DMM-EI-02    & 新增文件 & Doc Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -962,7 +962,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-EI-03    & 編輯文件 & Doc Management Module & Client端            \\ \hline
+	DMM-EI-03    & 編輯文件 & Doc Management Module & Member           \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -983,7 +983,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-EI-04    & 刪除文件 & Doc Management Module & Client端            \\ \hline
+	DMM-EI-04    & 刪除文件 & Doc Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1124,7 +1124,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱       & 介面提供者          & 介面使用者 \\ \hline
-	KMM-EI-01    & 顯示所有任務 & Kanban Management Module & Client端            \\ \hline
+	KMM-EI-01    & 顯示所有任務 & Kanban Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{}
@@ -1143,7 +1143,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
-	KMM-EI-02    & 新增任務 & Kanban Management Module & Client端            \\ \hline
+	KMM-EI-02    & 新增任務 & Kanban Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1164,7 +1164,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
-	KMM-EI-03    & 移動任務 & Kanban Management Module & Client端            \\ \hline
+	KMM-EI-03    & 移動任務 & Kanban Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1302,7 +1302,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱       & 介面提供者        & 介面使用者 \\ \hline
-	QMM-EI-01    & 顯示所有任務 & Q\&A Management Module & Client端            \\ \hline
+	QMM-EI-01    & 顯示所有任務 & Q\&A Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{}
