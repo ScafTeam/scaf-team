@@ -74,7 +74,7 @@
 
 \subsection*{2.1 會員子系統}
 
-\subsubsection*{2.1.1 外部介面}
+\subsubsection*{2.1.1 前端介面}
 
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
@@ -159,7 +159,7 @@
 	系統上顯示傳給使用者的通知} \\ \hline
 \end{tabularx}
 
-\subsubsection*{2.1.2 內部介面}
+\subsubsection*{2.1.2 後端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -365,7 +365,7 @@
 
 \subsection*{2.2 專案管理子系統}
 
-\subsubsection*{2.2.1 外部介面}
+\subsubsection*{2.2.1 前端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -505,7 +505,7 @@
 	刪除使用者點擊的專案，並跳回專案列表。} \\ \hline
 \end{tabularx}
 
-\subsubsection*{2.2.2 內部介面}
+\subsubsection*{2.2.2 後端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -543,9 +543,9 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)"  \\
-	"Name": "project name (string)", \\
-	"DevMode": "development mode (string)", \\
-	"DevTools": "development tools (Array<string>)", \\
+	"name": "project name (string)", \\
+	"devMode": "development mode (string)", \\
+	"devTools": "development tools (Array<string>)", \\
 	\}
 	}
 	} & 
@@ -553,6 +553,7 @@
 	\{ \\
 	"status": "Status (string)", \\
 	"message": "訊息 (string)" \\
+	"name" : "專案名稱 (string)", \\
 	\}
 	}
 	\\ \hline
@@ -572,7 +573,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	\}
 	}
 	} & 
@@ -599,9 +600,9 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)"  \\
-	"Name": "project name (string)", \\
-	"DevMode": "development mode (string)", \\
-	"DevTools": "development tools (Array<string>)", \\
+	"name": "project name (string)", \\
+	"devMode": "development mode (string)", \\
+	"devTools": "development tools (Array<string>)", \\
 	\}
 	}
 	} & 
@@ -628,7 +629,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	\}
 	}
 	} & 
@@ -655,7 +656,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	"mail": "User mail (string)", \\
 	\}
 	}
@@ -683,7 +684,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	"mail": "User mail (string)", \\
 	\}
 	}
@@ -711,7 +712,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	\}
 	}
 	} & 
@@ -730,7 +731,7 @@
 
 \subsection*{2.3 Repo管理子系統}
 
-\subsubsection*{2.3.1 外部介面}
+\subsubsection*{2.3.1 前端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -795,7 +796,7 @@
 	} \\ \hline
 \end{tabularx}
 
-\subsubsection*{2.3.2 內部介面}
+\subsubsection*{2.3.2 後端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -916,7 +917,7 @@
 
 \subsection*{2.4 文件管理子系統}
 
-\subsubsection*{2.4.1 外部介面}
+\subsubsection*{2.4.1 前端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -1000,7 +1001,7 @@
 	} \\ \hline
 \end{tabularx}
 
-\subsubsection*{2.4.2 內部介面}
+\subsubsection*{2.4.2 後端介面}
 
 \subsubsection*{}
 
@@ -1014,7 +1015,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	"docid": "文件ID (string)" \\
 	\}
 	}
@@ -1042,7 +1043,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	"doctype": "文件類型 (string)" \\
 	\}
 	}
@@ -1070,7 +1071,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	"docid": "文件ID (string)" \\
 	\}
 	}
@@ -1098,7 +1099,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	"docid": "文件ID (string)" \\
 	\}
 	}
@@ -1118,7 +1119,7 @@
 
 \subsection*{2.5 看板子系統}
 
-\subsubsection*{2.5.1 外部介面}
+\subsubsection*{2.5.1 前端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -1181,7 +1182,7 @@
 	} \\ \hline
 \end{tabularx}
 
-\subsubsection*{2.5.2 內部介面}
+\subsubsection*{2.5.2 後端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -1193,7 +1194,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	\}
 	}
 	} & 
@@ -1220,7 +1221,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	"name": "任務名稱 (string)", \\
 	"owner": "任務負責人 (string)", \\
 	"end": "任務結束時間 (string)", \\
@@ -1249,7 +1250,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	"name": "任務名稱 (string)", \\
 	"owner": "任務負責人 (string)", \\
 	"end": "任務結束時間 (string)", \\
@@ -1278,7 +1279,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"ProjectID": "專案ID (string)", \\
+	"projectID": "專案ID (string)", \\
 	\}
 	}
 	} & 
@@ -1296,7 +1297,7 @@
 
 \subsection*{2.6 Q\&A子系統}
 
-\subsubsection*{2.6.1 外部介面}
+\subsubsection*{2.6.1 前端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
@@ -1317,7 +1318,7 @@
 	} \\ \hline
 \end{tabularx}
 
-% \subsubsection*{2.6.2 內部介面}
+% \subsubsection*{2.6.2 後端介面}
 
 % \subsubsection*{}
 % \begin{tabularx}{\textwidth}{|l|R|R|R|}
