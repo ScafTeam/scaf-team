@@ -627,7 +627,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	傳projectname、developmentmode給firebase，firebase更新專案資訊。
+	傳project name、development mode給firebase，firebase更新專案資訊。
 	projectname 對於每個使用者都是唯一的。
 
 	} \\ \hline
@@ -791,7 +791,7 @@
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	repoid      
+	repo id      
 	}
 	} & 
 	\makecell[X]{
@@ -800,7 +800,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	接收repoid，刪除REPO。
+	接收repo id，刪除REPO。
 	} \\ \hline
 \end{tabularx}
 
@@ -843,8 +843,8 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"reponame": "REPO名稱 (string)" \\
-	"repourl": "REPO URL (string)" \\
+	"name": "REPO名稱 (string)" \\
+	"url": "REPO URL (string)" \\
 	\}
 	}
 	} & 
@@ -852,13 +852,13 @@
 	\{ \\
 	"status": "Status (string)", \\
 	"message": "訊息 (string)", \\
-	"repoid": "REPO ID (string)" \\
+	"id": "REPO ID (string)" \\
 	\}
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	傳projectname給firebase找到對應的project，並把reponame, repourl給firebase儲存，並回傳repoid
+	傳project name給firebase找到對應的project，並把repo name, repo url給firebase儲存，並回傳repo id
 	} \\ \hline
 \end{tabularx}
 
@@ -872,8 +872,8 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"reponame": "REPO名稱 (string)", \\
-	"repourl": "REPO URL (string)" \\
+	"name": "REPO名稱 (string)", \\
+	"url": "REPO URL (string)" \\
 	\}
 	}
 	} & 
@@ -886,7 +886,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	傳projectname給firebase找到對應的project，並把reponame, repourl給firebase更新，並回傳repoid
+	傳project name給firebase找到對應的project，並把repo name, repo url給firebase更新，並回傳repo id
 	} \\ \hline
 \end{tabularx}
 
@@ -913,7 +913,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	傳projectname、repoid給firebase找到對應的repo，最後刪除repo
+	傳project name、repo id給firebase找到對應的repo，最後刪除repo
 	} \\ \hline
 \end{tabularx}
 
@@ -936,7 +936,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	firebase根據projectname找到對應的project，並回傳所有文件
+	firebase根據project name找到對應的project，並回傳所有文件
 	} \\ \hline
 \end{tabularx}
 
@@ -1044,7 +1044,7 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"doctype": "文件類型 (string)" \\
+	"docType": "文件類型 (string)" \\
 	\}
 	}
 	} & 
@@ -1057,7 +1057,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{ 
-	doctype為文件類型，根據doctype建立對應的位置，並新增一個文件
+	doc type為文件類型，根據doc type建立對應的位置，並新增一個文件
 	} \\ \hline
 \end{tabularx}
 
@@ -1109,7 +1109,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	根據docid找到對應的文件，並刪除文件
+	根據doc id找到對應的文件，並刪除文件
 	} \\ \hline
 \end{tabularx}
 
@@ -1144,7 +1144,7 @@
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	taskname, taskowner, taskend, taskdescription
+	taskName, taskOwner, taskEnd, taskDescription
 	}
 	} & 
 	\makecell[X]{
@@ -1153,7 +1153,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	接收taskname, taskowner, taskend, taskdescription後丟到firebase新增
+	接收task name, task owner, task end, task description後丟到firebase新增
 	} \\ \hline
 \end{tabularx}
 
