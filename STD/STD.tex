@@ -1,0 +1,1050 @@
+\documentclass{report}
+\usepackage[margin=2cm, bottom=1.5cm]{geometry}
+\usepackage{type1cm}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[shortlabels]{enumitem}
+\setlength{\columnsep}{1pt}
+\setlist[enumerate]{nosep}
+
+\makeatletter
+\newenvironment{myalign*}{\ifvmode\else\hfil\null\linebreak\fi
+  \hspace*{-\leftmargin}\minipage\textwidth
+  \setlength{\abovedisplayskip}{0pt}%
+  \setlength{\abovedisplayshortskip}{\abovedisplayskip}%
+  \start@align\@ne\st@rredtrue\m@ne}%
+{\endalign\endminipage\linebreak}
+
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans TC}
+
+\begin{document}
+\title{%
+  \fontsize{40}{60}\selectfont
+  SCAF  \\ % 
+  \vspace*{2cm}%
+  \fontsize{24}{30}\selectfont
+  測試文件
+}
+
+\author{
+  \fontsize{18}{28}\selectfont
+  \begin{tabularx}{0.9\textwidth}{
+    |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+    |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+    \hline
+    \centering 專案名稱 & SCAF 開發輔助工具 \\
+    \hline
+    \centering 撰寫日期 & 2022 / 12 / 22 \\
+    \hline
+    \centering 發展者 & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+    \hline
+  \end{tabularx}
+}
+\date{}
+\usetikzlibrary{automata, positioning, arrows}
+\maketitle
+\tikzset{every state, accepting/.style={double distance=2pt}}
+
+\fontsize{12}{18}\selectfont
+\section*{1. 接測試目的與接受準則(Objectives and Acceptance Criteria)}
+\subsection*{1.1 系統範圍(System Scope)}
+  \begin{itemize}
+    \item 完成進度
+  \end{itemize}
+
+\subsection*{1.2 測試接受準則(Test Acceptance Criteria)}
+本測試計劃需要滿足下面的測試接受準則：\\
+測試程序需要依照本測試計劃所訂定的程序進行，所有測試結果需要能符合預期測試結果方能接受。
+  \begin{itemize}
+    \item 當測試案例未通過時，相關模組開發之負責人需要進行程式修改(修復bug或改動功能)，以能讓此案例重新通過測試。
+    \item 重新進行測試時，測試人員需確認其他可能受影響的案例仍可正確執行。
+  \end{itemize}
+
+
+\section*{2. 測試環境(Testing Environment)}
+\subsection*{2.1硬體需求(Hardware Specification and Configuration)}
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.4\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.3\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+}
+  \hline
+  項次 &  名稱 & 數量 & 規格  & 備註  \\ \hline
+  1 & TUF Gaming FX507ZM & 1 & 16G RAM, 512G SSD & window系統  \\ \hline
+  2 & ROG Zephyrus GA503QS & 1 & 16G RAM, 512G SSD & window系統  \\ \hline
+  3 & ThinkPad E15 Gen 4 & 1 & 8G RAM, 512G SSD & window系統  \\ \hline
+  4 & ThinkPad E15 Gen 4 & 1 & 16G RAM, 512G SSD & window系統  \\ \hline
+  
+\end{tabularx}
+
+\subsection*{2.2軟體需求(Hardware Specification and Configuration)}
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.4\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.3\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+}
+  \hline
+  項次 &  名稱 & 數量 & 規格  & 備註  \\ \hline
+  1 & chrome & 1 & 版本 108.0.5359.125 & clinet端瀏覽器  \\ \hline
+  2 & Firebase & 1 & 版本 11.4.0 & server端資料庫  \\ \hline
+\end{tabularx}
+
+\section*{3. 測試案例(Test Cases)}
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-01 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-01 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 輸入網址進入SCAF系統 \\
+    2. 輸入已註冊過的使用者信箱及密碼 \\
+    3. 點擊 Sign in
+  }\\
+  \hline
+  \centering Expected result & 成功登入系統，並能在setting頁面看到正確使用者資訊 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-02 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-01 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 輸入網址進入SCAF系統 \\
+    2. 輸入存在可未註冊的使用者信箱及密碼 EX: Gmail + 密碼 \\
+    3. 點擊 Sign in
+  }\\
+  \hline
+  \centering Expected result & 系統提示帳戶未註冊 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-03 \\
+  \hline
+  \centering Name & 註冊帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-02 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 在登入頁面點選Sign Up進入註冊頁面 \\
+    2. 輸入存在可未註冊的使用者信箱及密碼 EX: Gmail + 密碼 \\
+    3. 點擊 Sign Up
+    4. 輸入剛註冊完的信箱及密碼
+    5. 點擊 Sign in
+  }\\
+  \hline
+  \centering Expected result & 系統顯示註冊成功，並成功登入系統 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-04 \\
+  \hline
+  \centering Name & 註冊帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-02 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 在登入頁面點選Sign Up進入註冊頁面 \\
+    2. 輸入不符合格式的信箱或已被註冊過的信箱  \\
+    3. 點擊 Sign Up
+  }\\
+  \hline
+  \centering Expected result & 系統顯示註冊失敗，要求使用者重新輸入 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-05 \\
+  \hline
+  \centering Name & 忘記密碼測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 在登入頁面點選Forgot Password?進入重設密碼頁面 \\
+    2. 輸入已註冊過的信箱  \\
+    3. 點擊Submit \\
+    4. 在信箱中確認Firebase發送的重設密碼信件 \\
+    5. 輸入新的密碼 \\
+    6. 回到登入頁面輸入更改後的密碼  \\
+    7. 點擊 Sign in
+  }\\
+  \hline
+  \centering Expected result & 在信箱中成功接收Firebase的信件，並在修改過後成功登入系統 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-06 \\
+  \hline
+  \centering Name & 忘記密碼測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 在登入頁面點選Forgot Password?進入重設密碼頁面 \\
+    2. 輸入未註冊過的信箱  \\
+    3. 點擊Submit
+    4. 在信箱中確認Firebase發送的重設密碼信件
+  }\\
+  \hline
+  \centering Expected result & 系統提示帳號未註冊，並確認信箱中未出現信件 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-07 \\
+  \hline
+  \centering Name & 共用專案測試 \\
+  \hline
+  \centering Reference & SCAF-FR-04 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 專案擁有者點擊My project到專案列表頁面 \\
+    2. 點選隨意一個專案進入到專案中
+    3. 專案擁有者點擊Project名稱下方的Setting \\
+    4. 輸入已註冊過的使用者信箱 \\
+    5. 接收者點擊通知中的專案邀請訊息 \\
+    6. 接收者點擊確認加入專案 \\
+    7. 接收者點擊navrbar的My project回到專案列表 \\
+    8. 進入專案查看其他專案資訊
+  }\\
+  \hline
+  \centering Expected result & 接收者的專案列表中，成功出現接收邀請的專案，且專案內容皆與擁有者相同 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-08 \\
+  \hline
+  \centering Name & 更改專案內容測試 \\
+  \hline
+  \centering Reference & SCAF-FR-04 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 點擊My project到專案列表頁面 \\
+    2. 點選隨意一個專案進入到專案中 \\
+    3. 點擊專案名稱下方的documnet \\
+    4. 按下edit \\
+    5. 在codimd中編輯檔案
+  }\\
+  \hline
+  \centering Expected result & 其餘專案成員皆能看見檔案的變更 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-09 \\
+  \hline
+  \centering Name & 刪除專案測試 \\
+  \hline
+  \centering Reference & SCAF-FR-04 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 專案擁有者點擊My project到專案列表頁面 \\
+    2. 專案擁有者點擊專案的X進行刪除專案 \\
+    3. 專案內的成員查看專案列表頁面 
+  }\\
+  \hline
+  \centering Expected result & 專案內的所有成員此專案皆被刪除(未再顯示在專案列表上) \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-10 \\
+  \hline
+  \centering Name & 刪除專案測試 \\
+  \hline
+  \centering Reference & SCAF-FR-04 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 專案成員點擊My project到專案列表頁面 \\
+    2. 專案成員點擊專案的X進行刪除專案 \\
+    3. 專案內的成員查看專案列表頁面  
+  }\\
+  \hline
+  \centering Expected result & 系統顯示使用者並非專案擁有者不可刪除專案，且專案成員的專案列表上此專案並未被刪除 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-11 \\
+  \hline
+  \centering Name & 開發流程測試 \\
+  \hline
+  \centering Reference & SCAF-FR-05 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 專案擁有者點擊Project名稱下方的Setting \\
+    2. 專案成員選擇瀑布式開發或敏捷式開發 \\
+  }\\
+  \hline
+  \centering Expected result & 系統跳出兩個流程的的執行方法，並舉例設定流程日期的方式 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-12 \\
+  \hline
+  \centering Name & 專案初始化測試 \\
+  \hline
+  \centering Reference & SCAF-FR-06 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 點擊My project到專案列表頁面  \\
+    2. 點擊+號創建一個新的專案  \\
+    3. 輸入名稱、選擇加入README檔  \\
+    4. 按下Create
+  }\\
+  \hline
+  \centering Expected result & 專案內document有README檔、專案列表有新增該檔案 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-13 \\
+  \hline
+  \centering Name & 專案初始化測試 \\
+  \hline
+  \centering Reference & SCAF-FR-06 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 點擊My project到專案列表頁面  \\
+    2. 點擊+號創建一個新的專案  \\
+    3. 輸入名稱、不選擇加入README檔  \\
+    4. 按下Create
+  }\\
+  \hline
+  \centering Expected result & 專案內document沒有README檔、專案列表有新增該檔案 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-14 \\
+  \hline
+  \centering Name & 新增repository \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 點擊專案列表隨意一個專案 \\
+    2. 點擊專案名稱下方的repositories \\
+    3. 點擊+號創建一個新的repository \\
+    3. 輸入名稱、不選擇加入README檔  \\
+    4. 按下Create
+  }\\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-13 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-14 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-15 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-16 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-17 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-18 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-19 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-20 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-21 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-22 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-23 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-24 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-25 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-26 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-27 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-28 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-29 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-30 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-31 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-32 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-33 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-34 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-35 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 1.a
+                            2. \\
+  \hline
+  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+
+\subsection*{5. 非功能需求(Non-functional Requirements)}
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.3\linewidth-2\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.7\linewidth-2\tabcolsep-2\arrayrulewidth}|%
+}
+  \hline
+  功能編號 &  功能說明 \\ \hline
+  SCAF-NFP-01 & 系統人數同時負荷 1000 人 \\ \hline
+  SCAF-NFP-02 & 回應時間在 1 秒內 \\ \hline
+  SCAF-NFP-03 & 使用 Https 加密傳輸 \\ \hline
+  SCAF-NFP-04 & CSRF 防護 \\ \hline
+  SCAF-NFP-05 & 防止 DDoS 攻擊 \\ \hline
+  SCAF-NFP-06 & Q\&A 搜尋結果在 1 秒內回應 \\ \hline
+\end{tabularx}
+
+\end{document}
+
+
+
+
