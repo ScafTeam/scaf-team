@@ -486,57 +486,11 @@
     1. 點擊專案列表隨意一個專案 \\
     2. 點擊專案名稱下方的repositories \\
     3. 點擊+號創建一個新的repository \\
-    3. 輸入名稱、不選擇加入README檔  \\
+    3. 輸入repository 名稱、對應的github網址  \\
     4. 按下Create
   }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
-  \hline
-  \centering Cleanup & 無 \\
-  \hline
-\end{tabularx}
-\newline\newline
-
-\begin{tabularx}{0.9\textwidth}{
-  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
-  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
-  }
-  \hline
-  \centering Identification &  SCAF-TC-13 \\
-  \hline
-  \centering Name & 登入帳號測試 \\
-  \hline
-  \centering Reference & SCAF-FR-03 \\
-  \hline
-  \centering Severity & 1 \\
-  \hline
-  \centering Instructions & 1.a
-                            2. \\
-  \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
-  \hline
-  \centering Cleanup & 無 \\
-  \hline
-\end{tabularx}
-\newline\newline
-
-\begin{tabularx}{0.9\textwidth}{
-  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
-  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
-  }
-  \hline
-  \centering Identification &  SCAF-TC-14 \\
-  \hline
-  \centering Name & 登入帳號測試 \\
-  \hline
-  \centering Reference & SCAF-FR-03 \\
-  \hline
-  \centering Severity & 1 \\
-  \hline
-  \centering Instructions & 1.a
-                            2. \\
-  \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & repository列表應新增此repository，點擊連結能夠跳轉到對應的網址 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -550,16 +504,22 @@
   \hline
   \centering Identification &  SCAF-TC-15 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 新增repository \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-07 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊專案列表隨意一個專案 \\
+    2. 點擊專案名稱下方的repositories \\
+    3. 點擊+號創建一個新的repository \\
+    3. 輸入repository 名稱、不存在的github網址  \\
+    4. 按下Create
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 系統顯示此連結網址無效，請重新輸入 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -573,16 +533,19 @@
   \hline
   \centering Identification &  SCAF-TC-16 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 刪除repository \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-07 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊專案名稱下方的repositories \\
+    2. 點擊repository旁邊的X刪除repository \\
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 此repository在repositories列表中消失 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -596,16 +559,19 @@
   \hline
   \centering Identification &  SCAF-TC-17 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 預覽文件測試 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-08 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+ \centering Instructions & 
+  \makecell{
+    1. 點擊專案名稱下方的documnet \\
+    2. 在畫面中瀏覽已存在的檔案
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 檔案呈現唯獨狀態，顯示在頁面上 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -619,16 +585,19 @@
   \hline
   \centering Identification &  SCAF-TC-18 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 預覽文件測試 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-08 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+ \centering Instructions & 
+  \makecell{
+    1. 點擊專案名稱下方的documnet \\
+    2. 在畫面中瀏覽尚未建立的檔案
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 預覽區塊為空，提示專案人員尚未建立檔案 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -642,16 +611,21 @@
   \hline
   \centering Identification &  SCAF-TC-19 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 編輯文件測試 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-08 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊documnet頁面中需求文件的edit(若不存在會直接建立) \\
+    2. 更改該文件內容  \\
+    3. 存檔  \\
+    4. 返回document頁面
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 預覽頁面應顯示更動內容 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -665,16 +639,21 @@
   \hline
   \centering Identification &  SCAF-TC-20 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 編輯文件測試 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-08 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊documnet頁面中需求文件的edit(若不存在會直接建立) \\
+    2. 更改該文件內容  \\
+    3. 不存檔直接退出  \\
+    4. 返回document頁面
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 預覽頁面應顯示未修改的畫面 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -688,21 +667,27 @@
   \hline
   \centering Identification &  SCAF-TC-21 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 新增一個任務至看板中 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-09 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊專案名稱下方的Kanban  \\
+    2. 按下 TO DO 旁邊的+  \\
+    3. 填入任務名稱、選擇分配人員  \\
+    4. 按下Create
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & TO DO下方應增加一個任務，包含名稱和其分配人員 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
 \newline\newline
+
 
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
@@ -711,16 +696,21 @@
   \hline
   \centering Identification &  SCAF-TC-22 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 新增一個任務至看板中 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-09 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊專案名稱下方的Kanban  \\
+    2. 按下 TO DO 旁邊的+  \\
+    3. 填入任務名稱、未選擇分配人員  \\
+    4. 按下Create
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 系統應提示請分派人員負責此工作，且不會出現在看板中 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -734,16 +724,19 @@
   \hline
   \centering Identification &  SCAF-TC-23 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 移動看板中的任務 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-09 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 拖曳Doing下方任一個任務  \\
+    2. 在Done的位置放開滑鼠 
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 此任務消失在Doing欄位，並出現在Done \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -757,16 +750,19 @@
   \hline
   \centering Identification &  SCAF-TC-24 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 移動看板中的任務 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-09 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 拖曳Doing下方任一個任務  \\
+    2. 在Doing的位置放開滑鼠  \\
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 此頁面應無任何改變 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -780,16 +776,81 @@
   \hline
   \centering Identification &  SCAF-TC-25 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 接收通知 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-10 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊documnet頁面中需求文件的edit \\
+    2. 更改該文件內容  \\
+    3. 存檔  \\
+    4. 點擊Navrbar中的鈴鐺
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 需求文件更動的通知應顯示 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-25 \\
+  \hline
+  \centering Name & 專案邀請 \\
+  \hline
+  \centering Reference & SCAF-FR-10 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 專案擁有者點擊My project到專案列表頁面 \\
+    2. 點選隨意一個專案進入到專案中
+    3. 專案擁有者點擊Project名稱下方的Setting \\
+    4. 輸入已註冊過的使用者信箱 \\
+    5. 點擊Navrbar中的鈴鐺
+    6. 點擊專案邀請的訊息
+  }\\
+  \hline
+  \centering Expected result & 顯示專案名稱、邀請人、是否加入的選項 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\newline\newline
+
+\begin{tabularx}{0.9\textwidth}{
+  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-25 \\
+  \hline
+  \centering Name & 專案邀請 \\
+  \hline
+  \centering Reference & SCAF-FR-10 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell{
+    1. 專案擁有者點擊My project到專案列表頁面 \\
+    2. 點選隨意一個專案進入到專案中
+    3. 專案擁有者點擊Project名稱下方的Setting \\
+    4. 輸入已註冊過的使用者信箱 \\
+    5. 接收者點擊Navrbar中的鈴鐺
+    6. 點擊專案邀請的訊息
+  }\\
+  \hline
+  \centering Expected result & 顯示專案名稱、邀請人、是否加入的選項 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -803,16 +864,21 @@
   \hline
   \centering Identification &  SCAF-TC-26 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 變更名稱、自介 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-11 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊Navrbar中的Setting \\
+    2. 填入新的名稱、自介 \\
+    3. 點擊Save \\
+    3. 重新點擊Setting頁面
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 顯示修改後的資料 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -826,16 +892,22 @@
   \hline
   \centering Identification &  SCAF-TC-27 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 變更密碼 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-11 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊Navrbar中的Setting \\
+    2. 填入新的密碼 \\
+    3. 點擊Save \\
+    4. 登出 \\
+    5. 輸入信箱、修改過後的密碼
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 成功登入系統 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -847,18 +919,24 @@
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-28 \\
+  \centering Identification &  SCAF-TC-27 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 變更密碼 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-11 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊Navrbar中的Setting \\
+    2. 填入新的密碼 \\
+    3. 點擊Save \\
+    4. 登出 \\
+    5. 輸入信箱、原始的密碼
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 系統顯示密碼錯誤 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -870,23 +948,80 @@
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-29 \\
+  \centering Identification &  SCAF-TC-27 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 查看Q\&A \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-12 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊Navrbar中的Q\&A
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 顯示GitBook的內容 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
 \newline\newline
+
+
+% \begin{tabularx}{0.9\textwidth}{
+%   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+%   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+%   }
+%   \hline
+%   \centering Identification &  SCAF-TC-28 \\
+%   \hline
+%   \centering Name & Google 日曆授權 \\
+%   \hline
+%   \centering Reference & SCAF-FR-13 \\
+%   \hline
+%   \centering Severity & 1 \\
+%   \hline
+%   \centering Instructions & 
+%   \makecell{
+%     1. 點擊Navrbar中的Setting \\
+%     2. 點擊Google日曆旁的授權按鈕 \\
+%     3. 按下授權 
+%   }\\
+%   \hline
+%   \centering Expected result & 成功連結Google日曆 \\
+%   \hline
+%   \centering Cleanup & 無 \\
+%   \hline
+% \end{tabularx}
+% \newline\newline
+
+% \begin{tabularx}{0.9\textwidth}{
+%   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
+%   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
+%   }
+%   \hline
+%   \centering Identification &  SCAF-TC-29 \\
+%   \hline
+%   \centering Name & Google 日曆授權 \\
+%   \hline
+%   \centering Reference & SCAF-FR-13 \\
+%   \hline
+%   \centering Severity & 1 \\
+%   \hline
+%   \centering Instructions & 
+%   \makecell{
+%     1. 點擊Navrbar中的Setting \\
+%     2. 點擊Google日曆旁的授權按鈕 \\
+%     3. 按下取消 
+%   }\\
+%   \hline
+%   \centering Expected result & 未連結Google日曆 \\
+%   \hline
+%   \centering Cleanup & 無 \\
+%   \hline
+% \end{tabularx}
+% \newline\newline
 
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
@@ -895,16 +1030,21 @@
   \hline
   \centering Identification &  SCAF-TC-30 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 變更專案名稱 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-14 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 點擊專案名稱下方的setting \\
+    2. 點擊general頁面 \\
+    3. 輸入新的專案名稱 \\
+    4. 按下Update 
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 頁面、專案列表名稱皆更動成新的名稱 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -918,16 +1058,22 @@
   \hline
   \centering Identification &  SCAF-TC-31 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 新增專案成員 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-14 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 專案擁有者點擊Project名稱下方的Setting \\
+    2. 輸入已註冊過的使用者信箱 \\
+    3. 接收者點擊通知中的專案邀請訊息 \\
+    4. 接收者點擊確認加入專案 \\
+    5. 專案擁有者確認member頁面
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 應增加加入者之訊息 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -941,107 +1087,26 @@
   \hline
   \centering Identification &  SCAF-TC-32 \\
   \hline
-  \centering Name & 登入帳號測試 \\
+  \centering Name & 剔除專案成員 \\
   \hline
-  \centering Reference & SCAF-FR-03 \\
+  \centering Reference & SCAF-FR-14 \\
   \hline
   \centering Severity & 1 \\
   \hline
-  \centering Instructions & 1.a
-                            2. \\
+  \centering Instructions & 
+  \makecell{
+    1. 專案擁有者點擊Project名稱下方的Setting \\
+    2. 點擊任一位專案成員旁的X
+    3. 被剔除人員確認專案列表
+  }\\
   \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
+  \centering Expected result & 此專案應消失在專案列表中 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
 \newline\newline
 
-\begin{tabularx}{0.9\textwidth}{
-  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
-  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
-  }
-  \hline
-  \centering Identification &  SCAF-TC-33 \\
-  \hline
-  \centering Name & 登入帳號測試 \\
-  \hline
-  \centering Reference & SCAF-FR-03 \\
-  \hline
-  \centering Severity & 1 \\
-  \hline
-  \centering Instructions & 1.a
-                            2. \\
-  \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
-  \hline
-  \centering Cleanup & 無 \\
-  \hline
-\end{tabularx}
-\newline\newline
-
-\begin{tabularx}{0.9\textwidth}{
-  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
-  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
-  }
-  \hline
-  \centering Identification &  SCAF-TC-34 \\
-  \hline
-  \centering Name & 登入帳號測試 \\
-  \hline
-  \centering Reference & SCAF-FR-03 \\
-  \hline
-  \centering Severity & 1 \\
-  \hline
-  \centering Instructions & 1.a
-                            2. \\
-  \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
-  \hline
-  \centering Cleanup & 無 \\
-  \hline
-\end{tabularx}
-\newline\newline
-
-\begin{tabularx}{0.9\textwidth}{
-  |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
-  |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
-  }
-  \hline
-  \centering Identification &  SCAF-TC-35 \\
-  \hline
-  \centering Name & 登入帳號測試 \\
-  \hline
-  \centering Reference & SCAF-FR-03 \\
-  \hline
-  \centering Severity & 1 \\
-  \hline
-  \centering Instructions & 1.a
-                            2. \\
-  \hline
-  \centering Expected result & 簡蔚驊 \! 鄧暐宣 \! 余威霆 \! 林佳何 \! 唐劭賢 \\
-  \hline
-  \centering Cleanup & 無 \\
-  \hline
-\end{tabularx}
-\newline\newline
-
-
-\subsection*{5. 非功能需求(Non-functional Requirements)}
-
-\begin{tabularx}{\textwidth}{
-  |p{\dimexpr.3\linewidth-2\tabcolsep-2\arrayrulewidth}%
-  |p{\dimexpr.7\linewidth-2\tabcolsep-2\arrayrulewidth}|%
-}
-  \hline
-  功能編號 &  功能說明 \\ \hline
-  SCAF-NFP-01 & 系統人數同時負荷 1000 人 \\ \hline
-  SCAF-NFP-02 & 回應時間在 1 秒內 \\ \hline
-  SCAF-NFP-03 & 使用 Https 加密傳輸 \\ \hline
-  SCAF-NFP-04 & CSRF 防護 \\ \hline
-  SCAF-NFP-05 & 防止 DDoS 攻擊 \\ \hline
-  SCAF-NFP-06 & Q\&A 搜尋結果在 1 秒內回應 \\ \hline
-\end{tabularx}
 
 \end{document}
 
