@@ -20,7 +20,7 @@
 {\endalign\endminipage\linebreak}
 
 \usepackage{xeCJK}
-\setCJKmainfont{Noto Sans TC}
+\setCJKmainfont{標楷體}
 
 \begin{document}
 \title{%
@@ -71,10 +71,10 @@
 \subsection*{2.1硬體需求(Hardware Specification and Configuration)}
 \begin{tabularx}{\textwidth}{
   |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
-  |p{\dimexpr.4\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
-  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
   |p{\dimexpr.3\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
   |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.3\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.2\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
 }
   \hline
   項次 &  名稱 & 數量 & 規格  & 備註  \\ \hline
@@ -86,17 +86,20 @@
 \end{tabularx}
 
 \subsection*{2.2軟體需求(Hardware Specification and Configuration)}
-\begin{tabularx}{\textwidth}{
-  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
-  |p{\dimexpr.4\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+\begin{tabularx}{\textwidth}{ 
   |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
   |p{\dimexpr.3\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
   |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.3\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.2\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
 }
   \hline
-  項次 &  名稱 & 數量 & 規格  & 備註  \\ \hline
-  1 & chrome & 1 & 版本 108.0.5359.125 & clinet端瀏覽器  \\ \hline
-  2 & Firebase & 1 & 版本 11.4.0 & server端資料庫  \\ \hline
+  項次 &  名稱 & 數量 & 規格  & 備註  \\
+  \hline
+  1 & chrome & 1 & 版本 108.0.5359.125 & clinet端瀏覽器  \\
+  \hline
+  2 & Firebase & 1 & 版本 11.4.0 & server端資料庫  \\
+  \hline
 \end{tabularx}
 
 \section*{3. 測試案例(Test Cases)}
@@ -114,7 +117,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 輸入網址進入SCAF系統 \\
     2. 輸入已註冊過的使用者信箱及密碼 \\
     3. 點擊 Sign in
@@ -126,7 +129,6 @@
   \hline
 \end{tabularx}
 \newline\newline
-
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -141,7 +143,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 輸入網址進入SCAF系統 \\
     2. 輸入存在可未註冊的使用者信箱及密碼 EX: Gmail + 密碼 \\
     3. 點擊 Sign in
@@ -152,8 +154,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -168,7 +171,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 在登入頁面點選Sign Up進入註冊頁面 \\
     2. 輸入存在可未註冊的使用者信箱及密碼 EX: Gmail + 密碼 \\
     3. 點擊 Sign Up
@@ -181,8 +184,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -197,7 +201,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 在登入頁面點選Sign Up進入註冊頁面 \\
     2. 輸入不符合格式的信箱或已被註冊過的信箱  \\
     3. 點擊 Sign Up
@@ -208,8 +212,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -224,7 +229,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 在登入頁面點選Forgot Password?進入重設密碼頁面 \\
     2. 輸入已註冊過的信箱  \\
     3. 點擊Submit \\
@@ -239,8 +244,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -255,7 +261,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 在登入頁面點選Forgot Password?進入重設密碼頁面 \\
     2. 輸入未註冊過的信箱  \\
     3. 點擊Submit
@@ -267,8 +273,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -283,7 +290,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 專案擁有者點擊My project到專案列表頁面 \\
     2. 點選隨意一個專案進入到專案中
     3. 專案擁有者點擊Project名稱下方的Setting \\
@@ -299,8 +306,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -315,7 +323,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊My project到專案列表頁面 \\
     2. 點選隨意一個專案進入到專案中 \\
     3. 點擊專案名稱下方的documnet \\
@@ -328,8 +336,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -344,7 +353,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 專案擁有者點擊My project到專案列表頁面 \\
     2. 專案擁有者點擊專案的X進行刪除專案 \\
     3. 專案內的成員查看專案列表頁面 
@@ -355,9 +364,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -372,7 +381,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 專案成員點擊My project到專案列表頁面 \\
     2. 專案成員點擊專案的X進行刪除專案 \\
     3. 專案內的成員查看專案列表頁面  
@@ -383,9 +392,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -400,7 +409,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 專案擁有者點擊Project名稱下方的Setting \\
     2. 專案成員選擇瀑布式開發或敏捷式開發 \\
   }\\
@@ -410,8 +419,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -426,7 +436,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊My project到專案列表頁面  \\
     2. 點擊+號創建一個新的專案  \\
     3. 輸入名稱、選擇加入README檔  \\
@@ -438,8 +448,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -454,7 +465,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊My project到專案列表頁面  \\
     2. 點擊+號創建一個新的專案  \\
     3. 輸入名稱、不選擇加入README檔  \\
@@ -466,8 +477,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -482,7 +494,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊專案列表隨意一個專案 \\
     2. 點擊專案名稱下方的repositories \\
     3. 點擊+號創建一個新的repository \\
@@ -495,8 +507,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -511,7 +524,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊專案列表隨意一個專案 \\
     2. 點擊專案名稱下方的repositories \\
     3. 點擊+號創建一個新的repository \\
@@ -524,8 +537,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -540,7 +554,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊專案名稱下方的repositories \\
     2. 點擊repository旁邊的X刪除repository \\
   }\\
@@ -550,8 +564,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -566,7 +581,7 @@
   \centering Severity & 1 \\
   \hline
  \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊專案名稱下方的documnet \\
     2. 在畫面中瀏覽已存在的檔案
   }\\
@@ -576,8 +591,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -592,7 +608,7 @@
   \centering Severity & 1 \\
   \hline
  \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊專案名稱下方的documnet \\
     2. 在畫面中瀏覽尚未建立的檔案
   }\\
@@ -602,8 +618,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -618,7 +635,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊documnet頁面中需求文件的edit(若不存在會直接建立) \\
     2. 更改該文件內容  \\
     3. 存檔  \\
@@ -630,8 +647,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -646,7 +664,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊documnet頁面中需求文件的edit(若不存在會直接建立) \\
     2. 更改該文件內容  \\
     3. 不存檔直接退出  \\
@@ -658,8 +676,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -674,7 +693,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊專案名稱下方的Kanban  \\
     2. 按下 TO DO 旁邊的+  \\
     3. 填入任務名稱、選擇分配人員  \\
@@ -686,9 +705,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -703,7 +722,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊專案名稱下方的Kanban  \\
     2. 按下 TO DO 旁邊的+  \\
     3. 填入任務名稱、未選擇分配人員  \\
@@ -715,8 +734,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -731,7 +751,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 拖曳Doing下方任一個任務  \\
     2. 在Done的位置放開滑鼠 
   }\\
@@ -741,8 +761,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -757,7 +778,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 拖曳Doing下方任一個任務  \\
     2. 在Doing的位置放開滑鼠  \\
   }\\
@@ -767,8 +788,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -783,7 +805,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊documnet頁面中需求文件的edit \\
     2. 更改該文件內容  \\
     3. 存檔  \\
@@ -795,8 +817,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -811,7 +834,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 專案擁有者點擊My project到專案列表頁面 \\
     2. 點選隨意一個專案進入到專案中
     3. 專案擁有者點擊Project名稱下方的Setting \\
@@ -825,8 +848,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -841,7 +865,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 專案擁有者點擊My project到專案列表頁面 \\
     2. 點選隨意一個專案進入到專案中
     3. 專案擁有者點擊Project名稱下方的Setting \\
@@ -855,8 +879,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -871,7 +896,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊Navrbar中的Setting \\
     2. 填入新的名稱、自介 \\
     3. 點擊Save \\
@@ -883,8 +908,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -899,7 +925,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊Navrbar中的Setting \\
     2. 填入新的密碼 \\
     3. 點擊Save \\
@@ -912,8 +938,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -928,7 +955,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊Navrbar中的Setting \\
     2. 填入新的密碼 \\
     3. 點擊Save \\
@@ -941,8 +968,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -957,7 +985,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊Navrbar中的Q\&A
   }\\
   \hline
@@ -966,9 +994,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
-
+\\
+\newline
+\\
 % \begin{tabularx}{0.9\textwidth}{
 %   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
 %   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -983,7 +1011,7 @@
 %   \centering Severity & 1 \\
 %   \hline
 %   \centering Instructions & 
-%   \makecell{
+%   \makecell[l]{
 %     1. 點擊Navrbar中的Setting \\
 %     2. 點擊Google日曆旁的授權按鈕 \\
 %     3. 按下授權 
@@ -994,8 +1022,9 @@
 %   \centering Cleanup & 無 \\
 %   \hline
 % \end{tabularx}
-% \newline\newline
-
+%\\
+%\newline
+%\\
 % \begin{tabularx}{0.9\textwidth}{
 %   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
 %   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -1010,7 +1039,7 @@
 %   \centering Severity & 1 \\
 %   \hline
 %   \centering Instructions & 
-%   \makecell{
+%   \makecell[l]{
 %     1. 點擊Navrbar中的Setting \\
 %     2. 點擊Google日曆旁的授權按鈕 \\
 %     3. 按下取消 
@@ -1021,8 +1050,9 @@
 %   \centering Cleanup & 無 \\
 %   \hline
 % \end{tabularx}
-% \newline\newline
-
+%\\
+%\newline
+%\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -1037,7 +1067,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 點擊專案名稱下方的setting \\
     2. 點擊general頁面 \\
     3. 輸入新的專案名稱 \\
@@ -1049,8 +1079,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -1065,7 +1096,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 專案擁有者點擊Project名稱下方的Setting \\
     2. 輸入已註冊過的使用者信箱 \\
     3. 接收者點擊通知中的專案邀請訊息 \\
@@ -1078,8 +1109,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
+\\
+\newline
+\\
 \begin{tabularx}{0.9\textwidth}{
   |p{\dimexpr.25\linewidth-6\tabcolsep-2\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-6\tabcolsep-2\arrayrulewidth}|%
@@ -1094,7 +1126,7 @@
   \centering Severity & 1 \\
   \hline
   \centering Instructions & 
-  \makecell{
+  \makecell[l]{
     1. 專案擁有者點擊Project名稱下方的Setting \\
     2. 點擊任一位專案成員旁的X
     3. 被剔除人員確認專案列表
@@ -1105,9 +1137,9 @@
   \centering Cleanup & 無 \\
   \hline
 \end{tabularx}
-\newline\newline
-
-
+\\
+\newline
+\\
 \end{document}
 
 
