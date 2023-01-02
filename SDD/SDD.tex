@@ -108,26 +108,38 @@
 	& \multicolumn{2}{|T|}{email} & 驗證完後跳回登入頁 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	接收email，交由firebase驗證，並由firebase寄送驗證信到使用者上。} \\ \hline
+	接收email，交由firebase驗證，並由firebase寄送驗證信到使用者的信箱裡。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱       & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-04    & 修改個人資料 & Account Management Module & Member            \\ \hline
+	AMM-EI-04    & 取得個人資料 & Account Management Module & Member            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{} & 顯示個人資料 \\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	取得個人資料。} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱       & 介面提供者           & 介面使用者 \\ \hline
+	AMM-EI-05    & 修改個人資料 & Account Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{avatar, nickname, bio} & 顯示新的個人資料 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	接收收avatar、nickname、bio，將資料交給firebase儲存。} \\ \hline
+	接收avatar、nickname、bio，將資料交給firebase儲存。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-05    & 修改密碼 & Account Management Module & Member            \\ \hline
+	AMM-EI-06    & 修改密碼 & Account Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{old password, new password} & 跳到登入畫面 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -139,7 +151,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱        & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-06    & Google 日曆授權 & Account Management Module & SCAF系統            \\ \hline
+	AMM-EI-07    & Google 日曆授權 & Account Management Module & SCAF系統            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{} &  授權結果 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -151,7 +163,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-EI-07    & 取得通知 & Account Management Module & Member            \\ \hline
+	AMM-EI-08    & 取得通知 & Account Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{} &  顯示通知訊息 \\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
@@ -165,7 +177,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-II-01    & /signin      & Account Management Module & Client端            \\ \hline
+	AMM-II-01    & /signin/      & Account Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -192,7 +204,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-II-02    & /signup      & Account Management Module & Client端            \\ \hline
+	AMM-II-02    & /signup/      & Account Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -219,7 +231,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-II-03    & /forget      & Account Management Module & Client端            \\ \hline
+	AMM-II-03    & /forgot/      & Account Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -244,35 +256,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-II-04    & /user      & Account Management Module & Client端            \\ \hline
-	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-	PUT & \multicolumn{2}{|T|}{
-	\makecell[l]{
-	\{ \\
-	"JWT": "JWT token (string, cookie)", \\
-	"avatar": "Avatar (base64)", \\
-	"nickname": "Nickname (string)", \\
-	"bio": "bio (string)" \\
-	\}      
-	}
-	} & 
-	\makecell[X]{
-	\{ \\
-	"status": "Status (string, 200)" \\
-	"message": "訊息 (string)" \\
-	\}
-	}
-	\\ \hline
-	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{
-	將個人資訊傳給firebase，根據 JWT 找到帳戶進行儲存，回傳狀態} \\ \hline
-\end{tabularx}
-
-\subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|R|R|R|}
-	\hline
-	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-II-05    & /user/*uid     & Account Management Module & Client端            \\ \hline
+	AMM-II-04    & /user:user\_email/     & Account Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -299,10 +283,38 @@
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
-	介面編號 & 介面名稱  & 介面提供者           & 介面使用者 \\ \hline
-	AMM-II-06    & /user/reset & Account Management Module & Client端            \\ \hline
+	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
+	AMM-II-05    & /user/:user\_email/      & Account Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-	POST & \multicolumn{2}{|T|}{
+	PUT & \multicolumn{2}{|T|}{
+	\makecell[l]{
+	\{ \\
+	"JWT": "JWT token (string, cookie)", \\
+	"avatar": "Avatar (base64)", \\
+	"nickname": "Nickname (string)", \\
+	"bio": "bio (string)" \\
+	\}      
+	}
+	} & 
+	\makecell[X]{
+	\{ \\
+	"status": "Status (string, 200)" \\
+	"message": "訊息 (string)" \\
+	\}
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	將個人資訊傳給firebase，根據 JWT 找到帳戶進行儲存，回傳狀態} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱  & 介面提供者           & 介面使用者 \\ \hline
+	AMM-II-06    & /user/:user\_email \newline /reset & Account Management Module & Client端            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	PUT & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)", \\
@@ -398,12 +410,31 @@
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
+	介面編號 & 介面名稱       & 介面提供者           & 介面使用者 \\ \hline
+	PMM-EI-02    & 取得專案資訊 & Project Management Module & Member            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{
+	\makecell[l]{}
+	} & 
+	\makecell[X]{
+	取得專案資訊
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	根據登入的帳戶及project name，回傳對應的專案資訊} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
 	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-02    & 建立新專案 & Project Management Module & Member             \\ \hline
+	PMM-EI-03    & 建立新專案 & Project Management Module & Member             \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	Project Name, Development Mode
+	Project Name, Development Tools, \\
+   Development Mode
 	}
 	} & 
 	\makecell[X]{
@@ -412,27 +443,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	接收Project Name、Development mode，將資料丟給firebase儲存，並跳轉頁面} \\ \hline
-\end{tabularx}
-
-\subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|R|R|R|}
-	\hline
-	介面編號 & 介面名稱  & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-03    & 新建 Readme & Project Management Module & Member              \\ \hline
-	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-	& \multicolumn{2}{|T|}{
-	\makecell[l]{
-	% 
-	}
-	} & 
-	\makecell[X]{
-	建立 Readme 檔案
-	}
-	\\ \hline
-	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{
-	當有選則要建立Readme時，會自動建立Readme} \\ \hline
+	接收Project Name、Development Tools、Development mode，將資料丟給firebase儲存，並跳轉頁面} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
@@ -443,7 +454,7 @@
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	Project Name, Development Mode
+	Development Tools, Development Mode
 	}
 	} & 
 	\makecell[X]{
@@ -452,14 +463,53 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	接收Project Name、Development Mode，交給firebase，跳轉頁面} \\ \hline
+	接收Development Tools、Development Mode，交給firebase，跳轉頁面} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
+	PMM-EI-05    & 刪除專案 & Project Management Module & Project owner            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{
+	\makecell[l]{
+	%  
+	}
+	} & 
+	\makecell[X]{
+	刪除完專案，跳回到專案列表。
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	刪除使用者點擊的專案，並跳回專案列表。} \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱       & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-05    & 邀請加入專案 & Project Management Module & Project owner            \\ \hline
+	PMM-EI-06    & 取得成員列表 & Project Management Module & Project owner            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{
+	\makecell[l]{
+	}
+	} & 
+	\makecell[X]{
+	顯示專案的所有成員
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	成功取得後，顯示專案的所有成員。} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱       & 介面提供者           & 介面使用者 \\ \hline
+	PMM-EI-07    & 邀請加入專案 & Project Management Module & Project owner            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -479,7 +529,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-06    & 移除成員 & Project Management Module & Project owner            \\ \hline
+	PMM-EI-08    & 移除成員 & Project Management Module & Project owner            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -495,35 +545,35 @@
 	接收User Mail並交給Firebase，Firebase移除專案中成員。} \\ \hline
 \end{tabularx}
 
-\subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|R|R|R|}
-	\hline
-	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-EI-07    & 刪除專案 & Project Management Module & Project owner            \\ \hline
-	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-	& \multicolumn{2}{|T|}{
-	\makecell[l]{
-	%  
-	}
-	} & 
-	\makecell[X]{
-	刪除完專案，跳回到專案列表。
-	}
-	\\ \hline
-	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{
-	刪除使用者點擊的專案，並跳回專案列表。} \\ \hline
-\end{tabularx}
+% \subsubsection*{}
+% \begin{tabularx}{\textwidth}{|l|R|R|R|}
+% 	\hline
+% 	介面編號 & 介面名稱  & 介面提供者           & 介面使用者 \\ \hline
+% 	PMM-EI-09    & 新建 Readme & Project Management Module & Member              \\ \hline
+% 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+% 	& \multicolumn{2}{|T|}{
+% 	\makecell[l]{
+% 	% 
+% 	}
+% 	} & 
+% 	\makecell[X]{
+% 	建立 Readme 檔案
+% 	}
+% 	\\ \hline
+% 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+% 	\multicolumn{4}{|F|}{
+% 	當有選則要建立Readme時，會自動建立Readme} \\ \hline
+% \end{tabularx}
 
 \subsubsection*{2.2.2 後端介面}
 
-註: 前綴 /project 前包含 /user/:uid
+註: 前綴 /project 前包含 /user/:user\_email
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-01    & /projects    & Project Management Module & Client端            \\ \hline
+	PMM-II-01    & /project/    & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -536,7 +586,7 @@
 	\{ \\
 	"status" : "Status (string)", \\
 	"message": "訊息 (string)" \\
-	"projects": "專案列表 (Array<{string, projectname}>)" \\
+	"projects": "專案列表 (Array<{string, project}>)" \\
 	\}
 	}
 	\\ \hline
@@ -549,7 +599,33 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-02    & /project     & Project Management Module & Client端            \\ \hline
+	PMM-II-02    & /project/:pn/    & Project Management Module & Client端            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	GET & \multicolumn{2}{|T|}{
+	\makecell[l]{
+	\{ \\
+	"JWT": "JWT token (string, cookie)"  \\
+	\} 
+	}
+	} & 
+	\makecell[X]{
+	\{ \\
+	"status" : "Status (string)", \\
+	"message": "訊息 (string)" \\
+	"projects": "專案列表 (ProjectObject)" \\
+	\}
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	根據登入的帳戶及projectname，取得firebase回傳的專案。若 JWT 代表的 user token 與 uid 不符，則回傳錯誤訊息。} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
+	PMM-II-03    & /project/:pn/     & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -565,40 +641,14 @@
 	\{ \\
 	"status": "Status (string)", \\
 	"message": "訊息 (string)" \\
-	"name" : "專案名稱 (string)", \\
+	"id" : "專案id (string)", \\
 	\}
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	傳projectname、developmentmode給firebase，firebase新增專案資訊。
-	projectname 對於每個使用者都是唯一的。
-	} \\ \hline
-\end{tabularx}
-
-\subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|R|R|R|}
-	\hline
-	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-03    & /project/:pn/readme & Project Management Module & Client端            \\ \hline
-	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-	POST & \multicolumn{2}{|T|}{
-	\makecell[l]{
-	\{ \\
-	"JWT": "JWT token (string, cookie)",  \\  
-	\}
-	}
-	} & 
-	\makecell[X]{
-	\{ \\
-	"status": "Status (string)", \\
-	"message": "訊息 (string)" \\
-	\}
-	}
-	\\ \hline
-	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{
-	若有選擇加入readme，則在firebase中建立readme資訊
+	傳project name、development mode、development tools給firebase，firebase新增專案資訊。
+	project name 對於每個使用者都是唯一的。
 	} \\ \hline
 \end{tabularx}
 
@@ -612,7 +662,6 @@
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)"  \\
-	"name": "project name (string)", \\
 	"devMode": "development mode (string)", \\
 	"devTools": "development tools (Array<string>)", \\
 	\}
@@ -627,8 +676,8 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	傳project name、development mode給firebase，firebase更新專案資訊。
-	projectname 對於每個使用者都是唯一的。
+	傳development tools、development mode給firebase，firebase更新專案資訊。
+	development tools 對於每個使用者都是唯一的。
 
 	} \\ \hline
 \end{tabularx}
@@ -636,8 +685,34 @@
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
+	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
+	PMM-II-05    & /project/:pn/     & Project Management Module & Client端            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	DELETE & \multicolumn{2}{|T|}{
+	\makecell[l]{
+	\{ \\
+	"JWT": "JWT token (string, cookie)",  \\
+	\}
+	}
+	} & 
+	\makecell[X]{
+	\{ \\
+	"status": "Status (string)", \\
+	"message": "訊息 (string)" \\
+	\}
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	刪除專案資訊，並刪除firebase專案資訊。
+	} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
 	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-05    & /project/:pn/member & Project Management Module & Client端            \\ \hline
+	PMM-II-06    & /project/:pn/member/ & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -649,6 +724,7 @@
 	\makecell[X]{
 	\{ \\
 	"status": "Status (string)", \\
+	"members": "Members (Array<{string, email}>)" \\
 	"message": "訊息 (string)" \\
 	\}
 	}
@@ -663,12 +739,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-06    & \makecell[X]{/project/:pn/member\\/:uid} & Project Management Module & Client端            \\ \hline
+	PMM-II-07    & \makecell[X]{/project/:pn/member/} & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
+	"email": "user email (string)"
 	\}
 	}
 	} & 
@@ -681,7 +758,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	傳mail給firebase，firebase發送邀請決定。，是否讓firebase新增專案成員資訊。 
+	將user email加入firebase專案中成員列表。
 	} \\ \hline
 \end{tabularx}
 
@@ -689,12 +766,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-07    & \makecell[X]{/project/:pn/member\\/:uid} & Project Management Module & Client端            \\ \hline
+	PMM-II-08    & \makecell[X]{/project/:pn/member/} & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
+	"email": "user email (string)" \\ 
 	\}
 	}
 	} & 
@@ -711,31 +789,31 @@
 	} \\ \hline
 \end{tabularx}
 
-\subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|R|R|R|}
-	\hline
-	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-03    & /project/:pn/     & Project Management Module & Client端            \\ \hline
-	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-	DELETE & \multicolumn{2}{|T|}{
-	\makecell[l]{
-	\{ \\
-	"JWT": "JWT token (string, cookie)",  \\  
-	\}
-	}
-	} & 
-	\makecell[X]{
-	\{ \\
-	"status": "Status (string)", \\
-	"message": "訊息 (string)" \\
-	\}
-	}
-	\\ \hline
-	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{
-	刪除專案資訊，並刪除firebase專案資訊。
-	} \\ \hline
-\end{tabularx}
+% \subsubsection*{}
+% \begin{tabularx}{\textwidth}{|l|R|R|R|}
+% 	\hline
+% 	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
+% 	PMM-II-03    & /project/:pn/readme & Project Management Module & Client端            \\ \hline
+% 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+% 	POST & \multicolumn{2}{|T|}{
+% 	\makecell[l]{
+% 	\{ \\
+% 	"JWT": "JWT token (string, cookie)",  \\  
+% 	\}
+% 	}
+% 	} & 
+% 	\makecell[X]{
+% 	\{ \\
+% 	"status": "Status (string)", \\
+% 	"message": "訊息 (string)" \\
+% 	\}
+% 	}
+% 	\\ \hline
+% 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+% 	\multicolumn{4}{|F|}{
+% 	若有選擇加入readme，則在firebase中建立readme資訊
+% 	} \\ \hline
+% \end{tabularx}
 
 \subsection*{2.3 Repo管理子系統}
 
@@ -768,18 +846,16 @@
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	reponame, repourl
+	repo name, repo url
 	}
 	} & 
 	\makecell[X]{
-	%  列出所有REPO
-	% repoid
 	顯示新增成功，並回到REPO列表頁面
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	接收reponame, repourl，新增REPO，回傳repoid到前端。
+	接收repo name, repo url，新增REPO，回傳repoid到前端。
 	} \\ \hline
 \end{tabularx}
 
@@ -787,7 +863,28 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者        & 介面使用者 \\ \hline
-	RMM-EI-02    & 刪除 REPO  & Repo Management Module & Member            \\ \hline
+	RMM-EI-03    & 更新REPO  & Repo Management Module & Member            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{
+	\makecell[l]{
+	repo id, repo name, repo url
+	}
+	} & 
+	\makecell[X]{
+	顯示更新成功，並回到REPO列表頁面
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	接收repo id，更新REPO。
+	} \\ \hline
+\end{tabularx}
+\subsubsection*{}
+
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱 & 介面提供者        & 介面使用者 \\ \hline
+	RMM-EI-04    & 刪除REPO  & Repo Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -810,7 +907,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱   & 介面提供者        & 介面使用者 \\ \hline
-	RMM-II-01    & /project/:pn/repos & Repo Management Module & Client端            \\ \hline
+	RMM-II-01    & /project/:pn/repo/ & Repo Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -823,13 +920,13 @@
 	\{ \\
 	"status": "Status (string)", \\
 	"message": "訊息 (string)", \\
-	"repos": "REPO列表" \\
+	"repos": "REPO列表 (Array<{repo}>)" \\
 	\}
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	接收projectname，傳projectname給firebase，並接收repos
+	接收project name，傳project name給firebase，並接收repos
 	} \\ \hline
 \end{tabularx}
 
@@ -837,7 +934,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱  & 介面提供者        & 介面使用者 \\ \hline
-	RMM-II-02    & /project/:pn/repo & Repo Management Module & Client端            \\ \hline
+	RMM-II-02    & /project/:pn/repo/ & Repo Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -866,12 +963,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱  & 介面提供者        & 介面使用者 \\ \hline
-	RMM-II-03    & \makecell[X]{/project/:pn\\/repo/:rid} & Repo Management Module & Client端            \\ \hline
+	RMM-II-03    & \makecell[X]{/project/:pn/repo/} & Repo Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	PUT & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
+	"id": "REPO ID (string)", \\
 	"name": "REPO名稱 (string)", \\
 	"url": "REPO URL (string)" \\
 	\}
@@ -895,12 +993,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱  & 介面提供者        & 介面使用者 \\ \hline
-	RMM-II-02    & \makecell[X]{/project/:pn\\/repo/:rid} & Repo Management Module & Client端            \\ \hline
+	RMM-II-04    & \makecell[X]{/project/:pn/repo/} & Repo Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
-	"JWT": "JWT token (string, cookie)",  \\  
+	"JWT": "JWT token (string, cookie)",  \\ 
+	"id": "REPO ID (string)", \\
 	\}
 	}
 	} & 
@@ -948,7 +1047,7 @@
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	文件類型
+		Doc title, Doc content
 	}
 	} & 
 	\makecell[X]{
@@ -957,7 +1056,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	根據文件類型，開啟新的文件
+	根據Doc title和Doc content，開啟新的文件
 	} \\ \hline
 \end{tabularx}
 
@@ -969,7 +1068,7 @@
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	文件類型
+		Doc id, Doc title, Doc content
 	}
 	} & 
 	\makecell[X]{
@@ -990,7 +1089,7 @@
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	文件類型
+		Doc id
 	}
 	} & 
 	\makecell[X]{
@@ -999,19 +1098,17 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	firebase根據文件類型找到對應的文件，並刪除後更新頁面。
+	firebase根據Doc id找到對應的文件，並刪除後更新頁面。
 	} \\ \hline
 \end{tabularx}
 
 \subsubsection*{2.4.2 後端介面}
 
 \subsubsection*{}
-
-\subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-II-01    & /project/:pn/doc/*did & Doc Management Module & Client端            \\ \hline
+	DMM-II-01    & /project/:pn/docs/ & Doc Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1024,13 +1121,13 @@
 	\{ \\
 	"status": "Status (string)", \\
 	"message": "訊息 (string)", \\
-	"doc": "文件 (DocObject)" \\
+	"docs": "文件 (DocObject)" \\
 	\}
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	did 為各個文件的id，根據id找到對應的文件。若 did 為空，則回傳所有文件。
+	接收project name，再由firebase找出對應的project id，最後找到此project id的所有文件。
 	} \\ \hline
 \end{tabularx}
 
@@ -1038,18 +1135,20 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-II-03    & /project/:pn/doc/:did & Doc Management Module & Client端            \\ \hline
+	DMM-II-02    & /project/:pn/docs/ & Doc Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"docType": "文件類型 (string)" \\
+	"title": "doc title (string)", \\
+    "content": "doc content (string)" \\
 	\}
 	}
 	} & 
 	\makecell[X]{
 	\{ \\
+	"id": "doc id (string)", \\
 	"status": "Status (string)", \\
 	"message": "訊息 (string)" \\
 	\}
@@ -1057,7 +1156,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{ 
-	doc type為文件類型，根據doc type建立對應的位置，並新增一個文件
+	接收project name，再由firebase找出對應的project id後建立文件。
 	} \\ \hline
 \end{tabularx}
 
@@ -1065,12 +1164,15 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-II-04    & /project/:pn/doc/:did & Doc Management Module & Client端            \\ \hline
+	DMM-II-03    & /project/:pn/docs/ & Doc Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	PUT & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
-	"JWT": "JWT token (string, cookie)",  \\  
+	"JWT": "JWT token (string, cookie)",  \\
+	"id": "doc id (string)", \\
+    "title": "doc title (string)", \\
+    "content": "doc content (string)" \\ 
 	\}
 	}
 	} & 
@@ -1083,7 +1185,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{ 
-	根據did找到對應的文件，並更新文件內容
+	根據doc id找到對應的文件，並更新文件內容
 	} \\ \hline
 \end{tabularx}
 
@@ -1091,12 +1193,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-II-05    & /project/:pn/doc/:did & Doc Management Module & Client端            \\ \hline
+	DMM-II-04    & /project/:pn/docs/ & Doc Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
-	"JWT": "JWT token (string, cookie)",  \\  
+	"JWT": "JWT token (string, cookie)",  \\
+	"id": "doc id (string)" \\
 	\}
 	}
 	} & 
@@ -1132,7 +1235,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	顯示所有任務，包含任務名稱、任務負責人、任務結束時間、任務描述
+	顯示所有工作流及任務，包含工作流名稱、工作流ID、任務名稱、任務ID、任務描述
 	} \\ \hline
 \end{tabularx}
 
@@ -1140,32 +1243,11 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
-	KMM-EI-02    & 新增任務 & Kanban Management Module & Member            \\ \hline
+	KMM-EI-02 & 新增工作流 & Kanban Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	taskName, taskOwner, taskEnd, taskDescription
-	}
-	} & 
-	\makecell[X]{
-	顯示新增成功，並顯示新增的任務
-	}
-	\\ \hline
-	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{
-	接收task name, task owner, task end, task description後丟到firebase新增
-	} \\ \hline
-\end{tabularx}
-
-\subsubsection*{}
-\begin{tabularx}{\textwidth}{|l|R|R|R|}
-	\hline
-	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
-	KMM-EI-03 & 新增工作流 & Kanban Management Module & Member            \\ \hline
-	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-	& \multicolumn{2}{|T|}{
-	\makecell[l]{
-	columnname
+	workflow name
 	}
 	} & 
 	\makecell[X]{
@@ -1174,7 +1256,7 @@
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	接收columnname後丟到firebase新增
+	接收workflow name後firebase新增。
 	} \\ \hline
 \end{tabularx}
 
@@ -1182,20 +1264,125 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
-	KMM-EI-04    & 移動任務 & Kanban Management Module & Member            \\ \hline
+	KMM-EI-03 & 更新工作流 & Kanban Management Module & Member            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	& \multicolumn{2}{|T|}{
 	\makecell[l]{
-	oldstate, newstate, taskid
+	workflow ID, workflow name
 	}
 	} & 
 	\makecell[X]{
-	顯示移動成功，並顯示移動後的任務
+	顯示更新成功
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	拖曳之後自動變更task所屬狀態，和位置
+	接收workflow ID後firebase更新workflow name。
+	} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
+	KMM-EI-04 & 刪除工作流 & Kanban Management Module & Member            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{
+	\makecell[l]{
+	workflow ID
+	}
+	} & 
+	\makecell[X]{
+	顯示刪除成功
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	接收workflow ID後firebase刪除workflow。
+	} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
+	KMM-EI-05    & 新增任務 & Kanban Management Module & Member            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{
+	\makecell[l]{
+	task name, workflow ID, task description
+	}
+	} & 
+	\makecell[X]{
+	顯示新增成功
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	接收task name, workflow ID, task description後firebase新增。
+	} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
+	KMM-EI-06    & 更新任務 & Kanban Management Module & Member            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{
+	\makecell[l]{
+	task ID, task name, task description \\
+	}
+	} & 
+	\makecell[X]{
+	顯示更新成功
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	接收task ID, task name, task description後firebase更新。
+	} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
+	KMM-EI-07    & 移動任務 & Kanban Management Module & Member            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{
+	\makecell[l]{
+	task ID, new workflow ID
+	}
+	} & 
+	\makecell[X]{
+	顯示移動成功
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	拖曳之後自動變更task所屬workflow
+	} \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱 & 介面提供者          & 介面使用者 \\ \hline
+	KMM-EI-08    & 刪除任務 & Kanban Management Module & Member            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	& \multicolumn{2}{|T|}{
+	\makecell[l]{
+	task ID 
+	}
+	} & 
+	\makecell[X]{
+	顯示刪除成功
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{
+	根據task ID找到對應的task並刪除
 	} \\ \hline
 \end{tabularx}
 
@@ -1205,7 +1392,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱     & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-01    & /project/:pn/kanban & Kanban Management Module & Client端            \\ \hline
+	KMM-II-01    & /project/:pn/kanban/ & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1218,13 +1405,13 @@
 	\{ \\
 	"status": "Status (string)", \\
 	"message": "訊息 (string)", \\
-	"kanban": "看板 (array)", \\
+	"kanban": "看板 (KanbanObject)", \\
 	\}
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
 	\multicolumn{4}{|F|}{
-	顯示所有任務，包含任務名稱、任務負責人、任務結束時間、任務描述
+	顯示所有任務及工作流，包含工作流ID、工作流名稱、任務名稱、任務ID、任務描述
 	} \\ \hline
 \end{tabularx}
 
@@ -1232,17 +1419,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-02    & /project/:pn/kanban & Kanban Management Module & Client端            \\ \hline
+	KMM-II-02    & /project/:pn/kanban/ & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"name": "任務名稱 (string)", \\
-	"owner": "任務負責人 (string)", \\
-	"end": "任務結束時間 (string)", \\
-	"description": "任務描述 (string)", \\
-	"status": "任務狀態 (string)", \\
+	"name": "workflow name (string)", \\
 	\}
 	}
 	} & 
@@ -1250,53 +1433,104 @@
 	\{ \\
 	"status": "Status (string)", \\
 	"message": "訊息 (string)", \\
-	"taskid": "任務ID (string)", \\
 	\}
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{ 新增任務，並且顯示新增的任務 } \\ \hline
+	\multicolumn{4}{|F|}{ 新增工作流，並且顯示新增的工作流ID工作流名稱 } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-03    & \makecell[X]{/project/:pn\\/kanban/:tid} & Kanban Management Module & Client端            \\ \hline
+	KMM-II-03    & /project/:pn/kanban/ & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	PUT & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"name": "任務名稱 (string)", \\
-	"owner": "任務負責人 (string)", \\
-	"end": "任務結束時間 (string)", \\
-	"description": "任務描述 (string)", \\
-	"status": "任務狀態 (string)", \\
+	"id": "workflow ID (string)", \\
+	"name": "workflow name (string)", \\
 	\}
 	}
 	} & 
 	\makecell[X]{
 	\{ \\
 	"status": "Status (string)", \\
-	"message": "訊息 (string)" \\
+	"message": "訊息 (string)", \\
 	\}
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{ 編輯任務，並且顯示編輯後的任務 } \\ \hline
+	\multicolumn{4}{|F|}{ 更新工作流，並且顯示更新過的工作流名稱 } \\ \hline
 \end{tabularx}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-02    & \makecell[X]{/project/:pn\\/kanban/:tid} & Kanban Management Module & Client端            \\ \hline
+	KMM-II-04    & /project/:pn/kanban/ & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
+	"id": "workflow ID (string)", \\
+	\}
+	}
+	} & 
+	\makecell[X]{
+	\{ \\
+	"status": "Status (string)", \\
+	"message": "訊息 (string)", \\
+	\}
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{ 刪除工作流，並且顯示刪除的工作流ID } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
+	KMM-II-05    & \makecell[X]{/project/:pn\\/kanban/task/} & Kanban Management Module & Client端            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	POST & \multicolumn{2}{|T|}{
+	\makecell[l]{
+	\{ \\
+	"JWT": "JWT token (string, cookie)",  \\  
+	"name": "task name (string)", \\
+	"workflowId": "workflow ID (string)", \\
+	"description": "task description (string)" \\
+	\}
+	}
+	} & 
+	\makecell[X]{
+	\{ \\
+	"status": "Status (string)", \\
+	"message": "訊息 (string)", \\
+	\}
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{ 新增任務，並且顯示新增成功 } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
+	KMM-II-06    & \makecell[X]{/project/:pn\\/kanban/task/} & Kanban Management Module & Client端            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	PUT & \multicolumn{2}{|T|}{
+	\makecell[l]{
+	\{ \\
+	"JWT": "JWT token (string, cookie)",  \\  
+	"id": "task ID (string)", \\
+    "name": "task name (string)", \\
+    "description": "task description (string)" \\
 	\}
 	}
 	} & 
@@ -1308,52 +1542,103 @@
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{ 刪除任務
-	} \\ \hline
+	\multicolumn{4}{|F|}{ 編輯任務，並且顯示編輯成功 } \\ \hline
 \end{tabularx}
-
-\subsection*{2.6 Q\&A子系統}
-
-\subsubsection*{2.6.1 前端介面}
 
 \subsubsection*{}
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
-	介面編號 & 介面名稱       & 介面提供者        & 介面使用者 \\ \hline
-	QMM-EI-01    & 顯示所有任務 & Q\&A Management Module & Member            \\ \hline
+	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
+	KMM-II-07    & \makecell[X]{/project/:pn\\/kanban/task/} & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-	& \multicolumn{2}{|T|}{
-	\makecell[l]{}
+	PATCH & \multicolumn{2}{|T|}{
+	\makecell[l]{
+	\{ \\
+	"JWT": "JWT token (string, cookie)",  \\  
+	"id": "task ID (string)", \\
+    "newWorkflowId": "new workflow ID (string)"
+	\}
+	}
 	} & 
 	\makecell[X]{
-	列出所有Q\&A
+	\{ \\
+	"status": "Status (string)", \\
+	"message": "訊息 (string)" \\
+	\}
 	}
 	\\ \hline
 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-	\multicolumn{4}{|F|}{ 
-	使用gitbook列出所有Q\&A
+	\multicolumn{4}{|F|}{ 移動任務，並且顯示移動成功 } \\ \hline
+\end{tabularx}
+
+\subsubsection*{}
+\begin{tabularx}{\textwidth}{|l|R|R|R|}
+	\hline
+	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
+	KMM-II-07    & \makecell[X]{/project/:pn\\/kanban/task/} & Kanban Management Module & Client端            \\ \hline
+	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+	DELETE & \multicolumn{2}{|T|}{
+	\makecell[l]{
+	\{ \\
+	"JWT": "JWT token (string, cookie)",  \\  
+	"id": "task ID (string)", \\
+	\}
+	}
+	} & 
+	\makecell[X]{
+	\{ \\
+	"status": "Status (string)", \\
+	"message": "訊息 (string)" \\
+	\}
+	}
+	\\ \hline
+	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+	\multicolumn{4}{|F|}{ 刪除任務，並顯示刪除成功
 	} \\ \hline
 \end{tabularx}
 
-% \subsubsection*{2.6.2 後端介面}
+% \subsection*{2.6 Q\&A子系統}
+
+% \subsubsection*{2.6.1 前端介面}
 
 % \subsubsection*{}
 % \begin{tabularx}{\textwidth}{|l|R|R|R|}
-%   \hline
-%   介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
-%   QMM-II-01 & 顯示所有任務 & Q\&A Management Module & Client端 \\ \hline
-%   連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
-%    & \multicolumn{2}{|T|}{
-%     \makecell[l]{}
-%    } & 
-%    \makecell[X]{
-%     列出所有任務
-%     }
-%    \\ \hline
-%   \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
-%   \multicolumn{4}{|F|}{
-%     } \\ \hline
+% 	\hline
+% 	介面編號 & 介面名稱       & 介面提供者        & 介面使用者 \\ \hline
+% 	QMM-EI-01    & 顯示所有任務 & Q\&A Management Module & Member            \\ \hline
+% 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+% 	& \multicolumn{2}{|T|}{
+% 	\makecell[l]{}
+% 	} & 
+% 	\makecell[X]{
+% 	列出所有Q\&A
+% 	}
+% 	\\ \hline
+% 	\multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+% 	\multicolumn{4}{|F|}{ 
+% 	使用gitbook列出所有Q\&A
+% 	} \\ \hline
 % \end{tabularx}
+
+%  \subsubsection*{2.6.2 後端介面}
+
+%  \subsubsection*{}
+%  \begin{tabularx}{\textwidth}{|l|R|R|R|}
+%    \hline
+%    介面編號 & 介面名稱 & 介面提供者 & 介面使用者 \\ \hline
+%    QMM-II-01 & 顯示所有任務 & Q\&A Management Module & Client端 \\ \hline
+%    連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
+%     & \multicolumn{2}{|T|}{
+%      \makecell[l]{}
+%     } & 
+%     \makecell[X]{
+%      列出所有任務
+%      }
+%     \\ \hline
+%    \multicolumn{4}{|c|}{對應介面之要求} \\ \hline
+%    \multicolumn{4}{|F|}{
+%      } \\ \hline
+%  \end{tabularx}
 
 \section*{3. 流程設計(Process Design)}
 
