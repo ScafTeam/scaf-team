@@ -102,6 +102,13 @@
   \hline
 \end{tabularx}
 
+\subsection*{2.3測試資料來源(Test Data Sources)}
+自行開發測試資料
+
+
+\subsection*{2.4測試工具與設備(Tools and Equipment)}
+postman
+
 \section*{3. 測試案例(Test Cases)}
 \begin{tabularx}{\textwidth}{
   |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
@@ -1128,7 +1135,7 @@
   \centering Instructions & 
   \makecell[l]{
     1. 專案擁有者點擊Project名稱下方的Setting \\
-    2. 點擊任一位專案成員旁的X
+    2. 點擊任一位專案成員旁的X\\
     3. 被剔除人員確認專案列表
   }\\
   \hline
@@ -1140,6 +1147,387 @@
 \\
 \newline
 \\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-01 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-01 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf signin  \\
+    2. 輸入信箱1@test.gmail(已註冊帳號) \\
+    3. 輸入密碼123456 \\
+  }\\
+  \hline
+  \centering Expected result & 顯示Sigin Success \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-02 \\
+  \hline
+  \centering Name & 註冊帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-02 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf signup\\
+    2. 輸入符合格式的信箱註冊 \\
+    3. 輸入至少6碼的密碼 \\
+    4. 在終端機中輸入scaf signin  \\
+    6. 輸入剛註冊帳號 \\
+    7. 輸入密碼 \\
+  }\\
+  \hline
+  \centering Expected result & 顯示Sigin Success \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-03 \\
+  \hline
+  \centering Name & 忘記密碼測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf forgotpas\\
+    2. 輸入已註冊信箱
+    3. 在信箱中確認Firebase發送的重設密碼信件 \\
+    4. 輸入新的密碼 \\
+    5. 在終端機中輸入scaf signin\\
+    6. 輸入信箱 \\
+    7. 輸入新的密碼 \\
+  }\\
+  \hline
+  \centering Expected result & 顯示Sigin Success \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-04 \\
+  \hline
+  \centering Name & 共用專案測試 \\
+  \hline
+  \centering Reference & SCAF-FR-04 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf project clone \\
+    2. 輸入 project author
+    3. 輸入 project name
+    4. cd project name\\
+    5. 輸入scaf repo list查看有哪些repo \\
+    6. 另一位專案成員用網頁端刪除一項repo \\
+    7. 在終端機中輸入scaf project pull \\ 
+    8. 輸入scaf repo list查看有哪些repo \\
+  }\\
+  \hline
+  \centering Expected result & 顯示除了刪除的其他repo \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-05 \\
+  \hline
+  \centering Name & 專案初始化測試 \\
+  \hline
+  \centering Reference & SCAF-FR-05 \& SCAF-FR-06 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf project create \\
+    2. 選擇開發模式 \\
+    3. 選擇是否授權google日歷、要不要看板功能 \\
+    4. 在終端機中輸入scaf project list [ --oneline ]  \\
+    5. 輸入 useremail \\
+  }\\
+  \hline
+  \centering Expected result & 剛剛選擇的專案資訊符合列表中的資訊 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-06 \\
+  \hline
+  \centering Name & 建立repository \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf repo list查看原本的有哪寫 \\
+    2. scaf repo add <repo name> <repo url>
+    3. 輸入 repo name \\
+    4. 輸入 repo url \\
+    5. 輸入scaf repo list查看有哪些repo \\
+  }\\
+  \hline
+  \centering Expected result & 增加剛剛創立的repo \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-06 \\
+  \hline
+  \centering Name & 建立repository \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf repo list查看原本的有哪寫 \\
+    2. scaf repo add <repo name> <repo url>
+    3. 輸入 repo name \\
+    4. 輸入 repo url \\
+    5. 輸入scaf repo list查看有哪些repo \\
+  }\\
+  \hline
+  \centering Expected result & 增加剛剛創立的repo \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-07 \\
+  \hline
+  \centering Name & 設定個人資料 \\
+  \hline
+  \centering Reference & SCAF-FR-11 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf config set  \\
+    2. 選擇user(<category>) \\
+    3. 輸入bio(<field>) \\
+    4. 輸入自界 \\
+    5. 輸入scaf user \\
+    6. 輸入信箱  \\
+  }\\
+  \hline
+  \centering Expected result & bio被更新 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\section*{4. 測試工作指派與時程(Personnel and Schedule)}
+\subsection*{4.1測試成員(Personnel)}
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.5\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.5\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering 姓名 &  
+  \makecell[c]{
+    職責\\
+  }\\
+  \hline
+  \centering 簡蔚驊 &  
+  \makecell[c]{
+    測試規劃 \\
+  }\\
+  \hline
+  \centering 唐劭賢 &  
+  \makecell[c]{
+    測試案例撰寫\\
+  }\\
+  \hline
+  \centering 林佳何 &  
+  \makecell[c]{
+    測試案例撰寫\\
+  }\\
+  \hline
+  \centering 唐劭賢 &  
+  \makecell[c]{
+    執行測試 \\
+  }\\
+  \hline
+  \centering 林佳何 &  
+  \makecell[c]{
+    執行測試 \\
+  }\\
+  \hline
+  \centering 余waiting &  
+  \makecell[c]{
+    執行測試 \\
+  }\\
+  \hline
+  \centering 唐劭賢 &  
+  \makecell[c]{
+    測試報告彙整 \\
+  }\\
+  \hline
+\end{tabularx}
+
+\section*{5. 測試結果與分析(Test Results and Analysis)}
+\subsection*{5.1 測試結果(Test Results)}
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.5\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering 測試案例編號 &  
+  \makecell[c]{
+    測試結果(Pass/Fail)\\
+  } &
+  \makecell[c]{
+    註解\\
+  }\\
+  \hline
+  \centering SCAF-TC-001 &  
+  \makecell[c]{
+    \\
+  } &
+  \makecell[c]{
+    \\
+  }\\
+  \hline
+\end{tabularx}
+
+\subsection*{5.2 缺失報告(Defect Tracking)}
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.14\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.14\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.14\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.14\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.14\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.14\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.16\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering 缺失標號 &  
+  \makecell[c]{
+    缺失嚴重性 \\
+  } &
+  \makecell[c]{
+    缺失說明 \\
+  } &
+  \makecell[c]{
+    測試\\
+    案例編號 \\
+  } &
+  \makecell[c]{
+    缺失負責人 \\
+  } &
+  \makecell[c]{
+    修復狀態 \\
+  } &
+  \makecell[c]{
+    修復說明 
+  } \\
+  \hline
+\end{tabularx}
+
+\section*{6 追溯表(Traceability Matrix)}
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.5\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Req. No. &  
+  \makecell[c]{
+    Test Case \# \\ 
+  } &
+  \makecell[c]{
+    Verification 
+  }\\
+  \hline
+\end{tabularx}
+
+
 \end{document}
 
 
