@@ -946,7 +946,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-27 \\
+  \centering Identification &  SCAF-TC-28 \\
   \hline
   \centering Name & 變更密碼 \\
   \hline
@@ -976,7 +976,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-27 \\
+  \centering Identification &  SCAF-TC-29 \\
   \hline
   \centering Name & 查看Q\&A \\
   \hline
@@ -1140,6 +1140,330 @@
 \\
 \newline
 \\
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-33 \\
+  \hline
+  \centering Name & 專案初始化測試 \\
+  \hline
+  \centering Reference & SCAF-FR-06 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 點擊 My project 到專案列表頁面 \\
+    2. 點擊 + 號創建一個新的專案 \\
+    3. 輸入重複的專案名稱 \\
+    4. 按下 Create
+  }\\
+  \hline
+  \centering Expected result & 系統提示專案名稱已存在，專案列表未新增專案 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-34 \\
+  \hline
+  \centering Name & 專案初始化測試 \\
+  \hline
+  \centering Reference & SCAF-FR-06 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 點擊 My project 到專案列表頁面 \\
+    2. 點擊 + 號創建一個新的專案 \\
+    3. 輸入含非法字元的專案名稱 
+    (如：/ \textbackslash ? \% * : |  " < >) \\
+    4. 按下 Create
+  }\\
+  \hline
+  \centering Expected result & 系統提示專案名稱不能有特殊字元，專案列表未新增專案 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-35 \\
+  \hline
+  \centering Name & issue37第五點 \\
+  \hline
+  \centering Reference &  \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+  }\\
+  \hline
+  \centering Expected result &  \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-36 \\
+  \hline
+  \centering Name & issue37第六點 \\
+  \hline
+  \centering Reference &  \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. \\
+    2. 
+    3. 
+  }\\
+  \hline
+  \centering Expected result &  \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-37 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-01 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 輸入網址進入SCAF系統 \\
+    2. 不輸入使用者信箱及密碼 \\
+    3. 點擊 Sign in
+  }\\
+  \hline
+  \centering Expected result & 系統顯示登入錯誤 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-38 \\
+  \hline
+  \centering Name & 註冊帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-02 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在登入頁面點選Sign Up進入註冊頁面 \\
+    2. 不輸入使用者信箱及密碼  \\
+    3. 點擊 Sign Up
+  }\\
+  \hline
+  \centering Expected result & 系統顯示註冊錯誤 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-39 \\
+  \hline
+  \centering Name & 忘記密碼測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在登入頁面點選Forgot Password?進入重設密碼頁面 \\
+    2. 不輸入信箱  \\
+    3. 點擊Submit \\
+  }\\
+  \hline
+  \centering Expected result & 系統顯示錯誤 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-40 \\
+  \hline
+  \centering Name & 專案初始化測試 \\
+  \hline
+  \centering Reference & SCAF-FR-06 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 點擊My project到專案列表頁面  \\
+    2. 點擊+號創建一個新的專案  \\
+    3. 不輸入名稱  \\
+    4. 按下Create
+  }\\
+  \hline
+  \centering Expected result & 系統顯示錯誤，專案列表未出現新專案 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TC-41 \\
+  \hline
+  \centering Name & 新增repository \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 點擊專案列表隨意一個專案 \\
+    2. 點擊專案名稱下方的repositories \\
+    3. 點擊+號創建一個新的repository \\
+    3. 不輸入repository 名稱、對應的github網址  \\
+    4. 按下Create
+  }\\
+  \hline
+  \centering Expected result & 系統顯示錯誤，並不新增repository \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+\section*{4. 測試結果與分析(Test Results and Analysis)}
+\subsection*{4.1測試結果(Test Results)}
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.2\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.2\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.6\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+}
+  \hline
+  測試案例編號 & 測試結果(Pass/Fail) & 註解 \\ \hline
+  SCAF-TC-01 & Pass &  \\ \hline
+  SCAF-TC-02 & Fail & 顯示錯誤的使用者名稱和密碼，而非帳戶未註冊 \\ \hline
+  SCAF-TC-03 & Pass &  \\ \hline
+  SCAF-TC-04 & Pass &  \\ \hline
+  SCAF-TC-05 & Pass &  \\ \hline
+  SCAF-TC-06 & Fail & 信箱未出現郵件但提示顯示寄出成功 \\ \hline
+  SCAF-TC-07 & Fail & 邀請成功，但無是否確認邀請，強制成功，前端member未正確顯示成員 \\ \hline
+  SCAF-TC-08 & Fail & 沒互動 \\ \hline
+  SCAF-TC-09 & Pass &  \\ \hline
+  SCAF-TC-10 & Fail & 非擁有者也可以刪 \\ \hline
+  SCAF-TC-11 & Fail & 無舉例設定流程日期的方式 \\ \hline
+  SCAF-TC-12 & Fail & 沒有README檔 \\ \hline
+  SCAF-TC-13 & Pass &  \\ \hline
+  SCAF-TC-14 & Pass &  \\ \hline
+  SCAF-TC-15 & Fail & 沒有顯示此連結網址無效，請重新輸入 \\ \hline
+  SCAF-TC-16 & Pass &  \\ \hline
+  SCAF-TC-17 & Fail & 沒有顯示文件 \\ \hline
+  SCAF-TC-18 & Fail & 沒有顯示提示 \\ \hline
+  SCAF-TC-19 & Fail & 無法使用 \\ \hline
+  SCAF-TC-20 & Fail & 無法使用 \\ \hline
+  SCAF-TC-21 & Fail & 無法使用 \\ \hline
+  SCAF-TC-22 & Fail & 無法使用 \\ \hline
+  SCAF-TC-23 & Fail & 無法使用 \\ \hline
+  SCAF-TC-24 & Fail & 無法使用 \\ \hline
+  SCAF-TC-25 & Fail & 無法使用，與07相似的測試案例 \\ \hline
+  SCAF-TC-26 & Fail & 無法儲存 \\ \hline
+  SCAF-TC-27 & Fail & 測試案例應該要是寄送電子郵件 \\ \hline
+  SCAF-TC-28 & Fail & 測試案例應該要是寄送電子郵件 \\ \hline
+  SCAF-TC-29 & Fail & 未出現GitBook \\ \hline
+  SCAF-TC-30 & Fail & 沒有改變專案名稱 \\ \hline
+  SCAF-TC-31 & Fail & 無法使用，與07相似的測試案例 \\ \hline
+  SCAF-TC-32 & Fail & 無法顯示正確人員名單 \\ \hline
+  SCAF-TC-33 & Fail & 可新增重複名稱的專案 \\ \hline
+  SCAF-TC-34 & Fail & 仍可輸入非法字元 \\ \hline
+  SCAF-TC-35 &  &  \\ \hline
+  SCAF-TC-36 &  &  \\ \hline
+  SCAF-TC-37 & Pass &  \\ \hline
+  SCAF-TC-38 & Pass &  \\ \hline
+  SCAF-TC-39 & Fail & 顯示寄送成功 \\ \hline
+  SCAF-TC-40 & Fail & 未新增專案，但未出現錯誤提示 \\ \hline
+  SCAF-TC-41 & Fail & 仍可新增空的repository \\ \hline
+
+\end{tabularx}
+\\
+\newline
+\\
+\subsection*{4.2缺失報告(Defect Tracking)}
+\begin{tabularx}{\textwidth}{ 
+  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.5\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.2\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.1\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+}
+  \hline
+  缺失標號 & 缺失嚴重性 & 缺失說明 & 測試案例編號 & 狀態\\
+  \hline
+  001 & 未知 & AAAAAAA & DSADADASD & ongoing  \\
+  \hline
+\end{tabularx}
 \end{document}
 
 
