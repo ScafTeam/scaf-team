@@ -102,6 +102,13 @@
   \hline
 \end{tabularx}
 
+\subsection*{2.3測試資料來源(Test Data Sources)}
+自行開發測試資料
+
+
+\subsection*{2.4測試工具與設備(Tools and Equipment)}
+Postman、Jmeter
+
 \section*{3. 測試案例(Test Cases)}
 \begin{tabularx}{\textwidth}{
   |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
@@ -327,8 +334,8 @@
     1. 點擊My project到專案列表頁面 \\
     2. 點選隨意一個專案進入到專案中 \\
     3. 點擊專案名稱下方的documnet \\
-    4. 按下edit \\
-    5. 在codimd中編輯檔案
+    4. 編輯文件內容 \\
+    5. 點擊Save
   }\\
   \hline
   \centering Expected result & 其餘專案成員皆能看見檔案的變更 \\
@@ -594,6 +601,7 @@
 \\
 \newline
 \\
+
 \begin{tabularx}{\textwidth}{
   |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
@@ -601,19 +609,20 @@
   \hline
   \centering Identification &  SCAF-TC-18 \\
   \hline
-  \centering Name & 預覽文件測試 \\
+  \centering Name & 編輯文件測試 \\
   \hline
   \centering Reference & SCAF-FR-08 \\
   \hline
-  \centering Severity & 中 \\
+  \centering Severity & 高 \\
   \hline
- \centering Instructions & 
+  \centering Instructions & 
   \makecell[l]{
-    1. 點擊專案名稱下方的documnet \\
-    2. 在畫面中瀏覽尚未建立的檔案
+    1. 點擊documnet頁面中需求文件 \\
+    2. 更改該文件內容  \\
+    3. 點擊Save 
   }\\
   \hline
-  \centering Expected result & 預覽區塊為空，提示專案人員尚未建立檔案 \\
+  \centering Expected result & 其他使用者頁面應顯示更動內容 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -632,17 +641,16 @@
   \hline
   \centering Reference & SCAF-FR-08 \\
   \hline
-  \centering Severity & 高 \\
+  \centering Severity & 低 \\
   \hline
   \centering Instructions & 
   \makecell[l]{
-    1. 點擊documnet頁面中需求文件的edit(若不存在會直接建立) \\
+    1. 點擊documnet頁面中需求文件 \\
     2. 更改該文件內容  \\
-    3. 存檔  \\
-    4. 返回document頁面
+    3. 點擊其他頁面 
   }\\
   \hline
-  \centering Expected result & 預覽頁面應顯示更動內容 \\
+  \centering Expected result & 預覽頁面應顯示未修改的畫面 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -657,21 +665,21 @@
   \hline
   \centering Identification &  SCAF-TC-20 \\
   \hline
-  \centering Name & 編輯文件測試 \\
+  \centering Name & 新增一個任務至看板中 \\
   \hline
-  \centering Reference & SCAF-FR-08 \\
+  \centering Reference & SCAF-FR-09 \\
   \hline
-  \centering Severity & 低 \\
+  \centering Severity & 高 \\
   \hline
   \centering Instructions & 
   \makecell[l]{
-    1. 點擊documnet頁面中需求文件的edit(若不存在會直接建立) \\
-    2. 更改該文件內容  \\
-    3. 不存檔直接退出  \\
-    4. 返回document頁面
+    1. 點擊專案名稱下方的Kanban  \\
+    2. 按下 TO DO 旁邊的+  \\
+    3. 填入任務名稱、任務敘述  \\
+    4. 按下Create
   }\\
   \hline
-  \centering Expected result & 預覽頁面應顯示未修改的畫面 \\
+  \centering Expected result & TO DO下方應增加一個任務 \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -690,17 +698,17 @@
   \hline
   \centering Reference & SCAF-FR-09 \\
   \hline
-  \centering Severity & 高 \\
+  \centering Severity & 低 \\
   \hline
   \centering Instructions & 
   \makecell[l]{
     1. 點擊專案名稱下方的Kanban  \\
     2. 按下 TO DO 旁邊的+  \\
-    3. 填入任務名稱、選擇分配人員  \\
+    3. 填入任務名稱、不填入任務敘述  \\
     4. 按下Create
   }\\
   \hline
-  \centering Expected result & TO DO下方應增加一個任務，包含名稱和其分配人員 \\
+  \centering Expected result & TO DO下方應增加一個任務(無描述) \\
   \hline
   \centering Cleanup & 無 \\
   \hline
@@ -714,35 +722,6 @@
   }
   \hline
   \centering Identification &  SCAF-TC-22 \\
-  \hline
-  \centering Name & 新增一個任務至看板中 \\
-  \hline
-  \centering Reference & SCAF-FR-09 \\
-  \hline
-  \centering Severity & 低 \\
-  \hline
-  \centering Instructions & 
-  \makecell[l]{
-    1. 點擊專案名稱下方的Kanban  \\
-    2. 按下 TO DO 旁邊的+  \\
-    3. 填入任務名稱、未選擇分配人員  \\
-    4. 按下Create
-  }\\
-  \hline
-  \centering Expected result & 系統應提示請分派人員負責此工作，且不會出現在看板中 \\
-  \hline
-  \centering Cleanup & 無 \\
-  \hline
-\end{tabularx}
-\\
-\newline
-\\
-\begin{tabularx}{\textwidth}{
-  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
-  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
-  }
-  \hline
-  \centering Identification &  SCAF-TC-23 \\
   \hline
   \centering Name & 移動看板中的任務 \\
   \hline
@@ -769,7 +748,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-24 \\
+  \centering Identification &  SCAF-TC-23 \\
   \hline
   \centering Name & 移動看板中的任務 \\
   \hline
@@ -796,7 +775,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-25 \\
+  \centering Identification &  SCAF-TC-24 \\
   \hline
   \centering Name & 接收通知 \\
   \hline
@@ -825,7 +804,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-26 \\
+  \centering Identification &  SCAF-TC-25 \\
   \hline
   \centering Name & 專案邀請 \\
   \hline
@@ -856,7 +835,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-27 \\
+  \centering Identification &  SCAF-TC-26 \\
   \hline
   \centering Name & 變更名稱、自介 \\
   \hline
@@ -885,7 +864,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-28 \\
+  \centering Identification &  SCAF-TC-27 \\
   \hline
   \centering Name & 變更密碼 \\
   \hline
@@ -896,12 +875,11 @@
   \centering Instructions & 
   \makecell[l]{
     1. 點擊Navrbar中的Setting \\
-    2. 點擊變更密碼 \\
-    3. 在信箱中確認Firebase發送的重設密碼信件 \\
-    4. 輸入新的密碼 \\
-    5. 在終端機中輸入scaf signin\\
-    6. 輸入信箱 \\
-    7. 輸入新的密碼 \\
+    2. 填入舊密碼
+    3. 新密碼 \\
+    4. 點擊Save \\
+    5. 登出系統 \\
+    6. 重新登入系統
   }\\
   \hline
   \centering Expected result & 成功登入系統 \\
@@ -917,7 +895,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-29 \\
+  \centering Identification &  SCAF-TC-28 \\
   \hline
   \centering Name & 變更密碼 \\
   \hline
@@ -928,10 +906,11 @@
   \centering Instructions & 
   \makecell[l]{
     1. 點擊Navrbar中的Setting \\
-    2. 填入新的密碼 \\
-    3. 點擊Save \\
-    4. 登出 \\
-    5. 輸入信箱、原始的密碼
+    2. 填入舊密碼
+    3. 新密碼 \\
+    4. 點擊Save \\
+    5. 登出系統 \\
+    6. 輸入信箱、原始的密碼
   }\\
   \hline
   \centering Expected result & 系統顯示密碼錯誤 \\
@@ -947,7 +926,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-30 \\
+  \centering Identification &  SCAF-TC-29 \\
   \hline
   \centering Name & 查看Q\&A \\
   \hline
@@ -1029,7 +1008,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-31 \\
+  \centering Identification &  SCAF-TC-30 \\
   \hline
   \centering Name & 變更專案名稱 \\
   \hline
@@ -1058,7 +1037,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-32 \\
+  \centering Identification &  SCAF-TC-31 \\
   \hline
   \centering Name & 新增專案成員 \\
   \hline
@@ -1088,7 +1067,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-33 \\
+  \centering Identification &  SCAF-TC-32 \\
   \hline
   \centering Name & 剔除專案成員 \\
   \hline
@@ -1116,7 +1095,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-34 \\
+  \centering Identification &  SCAF-TC-33 \\
   \hline
   \centering Name & 專案初始化測試 \\
   \hline
@@ -1145,7 +1124,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-35 \\
+  \centering Identification &  SCAF-TC-34 \\
   \hline
   \centering Name & 專案初始化測試 \\
   \hline
@@ -1175,63 +1154,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-36\\
-  \hline
-  \centering Name & 登入帳號測試 \\
-  \hline
-  \centering Reference & SCAF-FR-01 \\
-  \hline
-  \centering Severity & 低 \\
-  \hline
-  \centering Instructions & 
-  \makecell[l]{
-    1. 輸入網址進入SCAF系統 \\
-    2. 不輸入使用者信箱及密碼 \\
-    3. 點擊 Sign in
-  }\\
-  \hline
-  \centering Expected result & 系統顯示登入錯誤 \\
-  \hline
-  \centering Cleanup & 無 \\
-  \hline
-\end{tabularx}
-\\
-\newline
-\\
-\begin{tabularx}{\textwidth}{
-  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
-  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
-  }
-  \hline
-  \centering Identification &  SCAF-TC-37 \\
-  \hline
-  \centering Name & 註冊帳號測試 \\
-  \hline
-  \centering Reference & SCAF-FR-02 \\
-  \hline
-  \centering Severity & 低 \\
-  \hline
-  \centering Instructions & 
-  \makecell[l]{
-    1. 在登入頁面點選Sign Up進入註冊頁面 \\
-    2. 不輸入使用者信箱及密碼  \\
-    3. 點擊 Sign Up
-  }\\
-  \hline
-  \centering Expected result & 系統顯示註冊錯誤 \\
-  \hline
-  \centering Cleanup & 無 \\
-  \hline
-\end{tabularx}
-\\
-\newline
-\\
-\begin{tabularx}{\textwidth}{
-  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
-  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
-  }
-  \hline
-  \centering Identification &  SCAF-TC-38 \\
+  \centering Identification &  SCAF-TC-35 \\
   \hline
   \centering Name & 忘記密碼測試 \\
   \hline
@@ -1259,7 +1182,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-39 \\
+  \centering Identification &  SCAF-TC-36 \\
   \hline
   \centering Name & 專案初始化測試 \\
   \hline
@@ -1288,7 +1211,7 @@
   |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
   }
   \hline
-  \centering Identification &  SCAF-TC-40 \\
+  \centering Identification &  SCAF-TC-37 \\
   \hline
   \centering Name & 新增repository \\
   \hline
@@ -1313,6 +1236,230 @@
 \\
 \newline
 \\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-01 \\
+  \hline
+  \centering Name & 登入帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-01 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf signin  \\
+    2. 輸入信箱1@test.gmail(已註冊帳號) \\
+    3. 輸入密碼123456 \\
+  }\\
+  \hline
+  \centering Expected result & 顯示Sigin Success \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-02 \\
+  \hline
+  \centering Name & 註冊帳號測試 \\
+  \hline
+  \centering Reference & SCAF-FR-02 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf signup\\
+    2. 輸入符合格式的信箱註冊 \\
+    3. 輸入至少6碼的密碼 \\
+    4. 在終端機中輸入scaf signin  \\
+    6. 輸入剛註冊帳號 \\
+    7. 輸入密碼 \\
+  }\\
+  \hline
+  \centering Expected result & 顯示Sigin Success \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-03 \\
+  \hline
+  \centering Name & 忘記密碼測試 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf forgotpas\\
+    2. 輸入已註冊信箱
+    3. 在信箱中確認Firebase發送的重設密碼信件 \\
+    4. 輸入新的密碼 \\
+    5. 在終端機中輸入scaf signin\\
+    6. 輸入信箱 \\
+    7. 輸入新的密碼 \\
+  }\\
+  \hline
+  \centering Expected result & 顯示Sigin Success \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-04 \\
+  \hline
+  \centering Name & 共用專案測試 \\
+  \hline
+  \centering Reference & SCAF-FR-04 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf project clone \\
+    2. 輸入 project author
+    3. 輸入 project name
+    4. cd project name\\
+    5. 輸入scaf repo list查看有哪些repo \\
+    6. 另一位專案成員用網頁端刪除一項repo \\
+    7. 在終端機中輸入scaf project pull \\ 
+    8. 輸入scaf repo list查看有哪些repo \\
+  }\\
+  \hline
+  \centering Expected result & 顯示除了刪除的其他repo \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-05 \\
+  \hline
+  \centering Name & 專案初始化測試 \\
+  \hline
+  \centering Reference & SCAF-FR-05 \& SCAF-FR-06 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf project create \\
+    2. 選擇開發模式 \\
+    3. 選擇是否授權google日歷、要不要看板功能 \\
+    4. 在終端機中輸入scaf project list [ --oneline ]  \\
+    5. 輸入 useremail \\
+  }\\
+  \hline
+  \centering Expected result & 剛剛選擇的專案資訊符合列表中的資訊 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-06 \\
+  \hline
+  \centering Name & 建立repository \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf repo list查看原本的有哪寫 \\
+    2. scaf repo add <repo name> <repo url>
+    3. 輸入 repo name \\
+    4. 輸入 repo url \\
+    5. 輸入scaf repo list查看有哪些repo \\
+  }\\
+  \hline
+  \centering Expected result & 增加剛剛創立的repo \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-07 \\
+  \hline
+  \centering Name & 設定個人資料 \\
+  \hline
+  \centering Reference & SCAF-FR-11 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf config set  \\
+    2. 選擇user(<category>) \\
+    3. 輸入bio(<field>) \\
+    4. 輸入自界 \\
+    5. 輸入scaf user \\
+    6. 輸入信箱  \\
+  }\\
+  \hline
+  \centering Expected result & bio被更新 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
 \section*{4. 測試結果與分析(Test Results and Analysis)}
 \subsection*{4.1測試結果(Test Results)}
 \begin{tabularx}{\textwidth}{
@@ -1328,28 +1475,27 @@
   SCAF-TC-04 & Pass &  \\ \hline
   SCAF-TC-05 & Pass &  \\ \hline
   SCAF-TC-06 & Pass &  \\ \hline
-  SCAF-TC-07 & Fail & 邀請成功，但無是否確認邀請，強制成功，前端member未正確顯示成員 \\ \hline
-  SCAF-TC-08 & Fail & 無法使用 \\ \hline
+  SCAF-TC-07 & Fail &  邀請成功，但無是否確認邀請，強制成功，前端member未正確顯示成員 \\ \hline
+  SCAF-TC-08 & Pass &  \\ \hline
   SCAF-TC-09 & Pass &  \\ \hline
-  SCAF-TC-10 & Fail & 非擁有者也可以刪 \\ \hline
-  SCAF-TC-11 & Fail & 無舉例設定流程日期的方式 \\ \hline
-  SCAF-TC-12 & Fail & 沒有README檔 \\ \hline
+  SCAF-TC-10 & Pass &  \\ \hline
+  SCAF-TC-11 & Fail &  無舉例設定流程日期的方式 \\ \hline
+  SCAF-TC-12 & Fail &  沒有README檔 \\ \hline
   SCAF-TC-13 & Pass &  \\ \hline
   SCAF-TC-14 & Pass &  \\ \hline
-  SCAF-TC-15 & Fail & 沒有顯示此連結網址無效，請重新輸入 \\ \hline
+  SCAF-TC-15 & Fail &  沒有顯示此連結網址無效，請重新輸入 \\ \hline
   SCAF-TC-16 & Pass &  \\ \hline
-  SCAF-TC-17 & Fail & 沒有顯示文件 \\ \hline
-  SCAF-TC-18 & Fail & 沒有顯示提示 \\ \hline
-  SCAF-TC-19 & Fail & 無法使用 \\ \hline
-  SCAF-TC-20 & Fail & 無法使用 \\ \hline
-  SCAF-TC-21 & Fail & 無法使用 \\ \hline
+  SCAF-TC-17 & Fail &  沒有預覽的功能 \\ \hline
+  SCAF-TC-18 & Pass &  \\ \hline
+  SCAF-TC-19 & Pass &  \\ \hline
+  SCAF-TC-20 & Pass &  \\ \hline
+  SCAF-TC-21 & Pass &  \\ \hline
   SCAF-TC-22 & Fail & 無法使用 \\ \hline
   SCAF-TC-23 & Fail & 無法使用 \\ \hline
-  SCAF-TC-24 & Fail & 無法使用 \\ \hline
-  SCAF-TC-25 & Fail & 無法使用\\ \hline
-  SCAF-TC-26 & Fail & 未出現專案邀請，強制加入 \\ \hline
-  SCAF-TC-27 & Fail & 無法儲存 \\ \hline
-  SCAF-TC-28 & Fail & Setting頁面沒有功能 \\ \hline
+  SCAF-TC-24 & Fail & 無法使用\\ \hline
+  SCAF-TC-25 & Fail & 未出現專案邀請，強制加入 \\ \hline
+  SCAF-TC-26 & Pass &  \\ \hline
+  SCAF-TC-27 & Pass &  \\ \hline
 \end{tabularx}
 \\
 \newline
@@ -1361,18 +1507,23 @@
   |p{\dimexpr.6\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
 }
   \hline
-  SCAF-TC-29 & Fail & Setting頁面沒有功能 \\ \hline
-  SCAF-TC-30 & Fail & 未出現GitBook \\ \hline
-  SCAF-TC-31 & Fail & 沒有改變專案名稱 \\ \hline
-  SCAF-TC-32 & Fail & 無法使用 \\ \hline
-  SCAF-TC-33 & Fail & 無法顯示正確人員名單 \\ \hline
-  SCAF-TC-34 & Fail & 可新增重複名稱的專案 \\ \hline
-  SCAF-TC-35 & Fail & 仍可輸入非法字元 \\ \hline
-  SCAF-TC-36 & Pass &  \\ \hline
-  SCAF-TC-37 & Pass &  \\ \hline
-  SCAF-TC-38 & Fail & 顯示寄送成功 \\ \hline
-  SCAF-TC-39 & Fail & 未新增專案，但未出現錯誤提示 \\ \hline
-  SCAF-TC-40 & Fail & 仍可新增空的repository \\ \hline
+  SCAF-TC-28 & Pass &  \\ \hline
+  SCAF-TC-29 & Pass &  \\ \hline
+  SCAF-TC-30 & Fail & 沒有改變專案名稱 \\ \hline
+  SCAF-TC-31 & Fail & 無法使用 \\ \hline
+  SCAF-TC-32 & Fail & 無法顯示正確人員名單 \\ \hline
+  SCAF-TC-33 & Fail & 可新增重複名稱的專案 \\ \hline
+  SCAF-TC-34 & Fail & 仍可輸入非法字元 \\ \hline
+  SCAF-TC-35 & Fail & 顯示寄送成功 \\ \hline
+  SCAF-TC-36 & Fail & 未新增專案，但未出現錯誤提示 \\ \hline
+  SCAF-TC-37 & Fail & 仍可新增空的repository \\ \hline
+  SCAF-TCCLI-01 & Pass &  \\ \hline
+  SCAF-TCCLI-02 & Pass &  \\ \hline
+  SCAF-TCCLI-03 & Pass &  \\ \hline
+  SCAF-TCCLI-04 & Pass &  \\ \hline
+  SCAF-TCCLI-05 & Pass &  \\ \hline
+  SCAF-TCCLI-06 & Pass &  \\ \hline
+  SCAF-TCCLI-07 & Pass &  \\ \hline
 \end{tabularx}
 \\
 \newline
@@ -1393,39 +1544,21 @@
   \hline
   001 & 中 & 邀請成功，但無是否確認邀請，強制成功，前端 member 未正確顯示成員 & SCAF-TC-07 & 唐劭賢 &ongoing & \\
   \hline
-  002 & 高 & 無法編輯檔案 & SCAF-TC-08 & 簡蔚驊 & ongoing & \\
+  002 & 低 & 無法設定流程日期 & SCAF-TC-11 & 余威霆 & ongoing & \\
   \hline
-  003 & 中 & 非專案擁有者可刪除專案 & SCAF-TC-10 & 林佳何 & ongoing &  \\
+  003 & 中 & 專案內文件沒有README檔 & SCAF-TC-12 & 唐劭賢 & ongoing & \\
   \hline
-  004 & 低 & 無法設定流程日期 & SCAF-TC-11 & 余威霆 & ongoing & \\
+  004 & 低 & 沒有顯示無效仍可新增 & SCAF-TC-15 & 唐劭賢 & ongoing & \\
   \hline
-  005 & 中 & 專案內文件沒有README檔 & SCAF-TC-12 & 唐劭賢 & ongoing & \\
+  005 & 中 & 無法瀏覽已存在的檔案 & SCAF-TC-17 & 林佳何 & ongoing & \\
   \hline
-  006 & 低 & 沒有顯示無效仍可新增 & SCAF-TC-15 & 唐劭賢 & ongoing & \\
+  006 & 高 & 無法使用看板 & SCAF-TC-22 & 唐劭賢 & closed & 改用箭頭做移動 \\
   \hline
-  007 & 中 & 無法瀏覽已存在的檔案 & SCAF-TC-17 & 林佳何 & ongoing & \\
+  007 & 低 & 無法使用看板 & SCAF-TC-23 & 唐劭賢 & closed & 改用箭頭做移動 \\
   \hline
-  008 & 中 & 無法瀏覽尚未建立的檔案 & SCAF-TC-18 & 林佳何 & ongoing & \\
+  008 & 低 & 無法更改文件內容 & SCAF-TC-24 & 余威霆 & ongoing & \\
   \hline
-  009 & 高 & 無法更改文件內容 & SCAF-TC-19 & 簡蔚驊 & ongoing  & \\
-  \hline
-  010 & 低 & 無法更改文件內容 & SCAF-TC-20 & 簡蔚驊 & ongoing & \\
-  \hline
-  011 & 高 & 無法使用看板 & SCAF-TC-21 & 林佳何 & ongoing & \\
-  \hline
-  012 & 低 & 無法使用看板 & SCAF-TC-22 & 林佳何 & ongoing & \\
-  \hline
-  013 & 高 & 無法使用看板 & SCAF-TC-23 & 唐劭賢 & ongoing & \\
-  \hline
-  014 & 低 & 無法使用看板 & SCAF-TC-24 & 唐劭賢 & ongoing & \\
-  \hline
-  015 & 低 & 無法更改文件內容 & SCAF-TC-25 & 余威霆 & ongoing & \\
-  \hline
-  016 & 中 & 未顯示邀請，強制加入 & SCAF-TC-26 & 簡蔚驊 & ongoing & \\
-  \hline
-  017 & 低 & 無法儲存變更 & SCAF-TC-27 & 林佳何 & ongoing & \\
-  \hline
-  018 & 中 & Setting頁面沒有功能 & SCAF-TC-28 & 余威霆 & ongoing & \\
+  009 & 中 & 未顯示邀請，強制加入 & SCAF-TC-25 & 簡蔚驊 & ongoing & \\
   \hline
 \end{tabularx}
 \\
@@ -1441,25 +1574,21 @@
   |p{\dimexpr.2\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
 }
   \hline
-  019 & 中 & Setting頁面沒有功能 & SCAF-TC-29 & 余威霆 & ongoing & \\
+  010 & 低 & 無法變更專案名稱 & SCAF-TC-30 & 簡蔚驊 & ongoing & \\
   \hline
-  020 & 高 & 無法顯示GitBook & SCAF-TC-30 & 唐劭賢 & ongoing & \\
+  011 & 中 & 無法確認成員名單 & SCAF-TC-31 & 林佳何 & ongoing & \\
   \hline
-  021 & 低 & 無法變更專案名稱 & SCAF-TC-31 & 簡蔚驊 & ongoing & \\
+  012 & 低 & 無法確認成員名單 & SCAF-TC-32 & 林佳何 & ongoing & \\
   \hline
-  022 & 中 & 無法確認成員名單 & SCAF-TC-32 & 林佳何 & ongoing & \\
+  013 & 低 & 可新增重複名稱的專案 & SCAF-TC-34 & 余威霆 & closed & 已加入判斷專案名稱是否重複 \\
   \hline
-  023 & 低 & 無法確認成員名單 & SCAF-TC-33 & 林佳何 & ongoing & \\
+  014 & 低 & 可新增含非法字元名稱的專案 & SCAF-TC-35 & 唐劭賢  & closed & 已加入判斷非法字元，若有非法字元則不能建立 \\
   \hline
-  024 & 低 & 可新增重複名稱的專案 & SCAF-TC-34 & 余威霆 & ongoing & \\
+  015 & 低 & 顯示寄送成功 & SCAF-TC-36 & 簡蔚驊 & closed & 加入判斷欄位不得為空 \\
   \hline
-  025 & 低 & 可新增含非法字元名稱的專案 & SCAF-TC-35 & 唐劭賢  & ongoing & \\
+  016 & 低 & 未新增專案，但未出現錯誤提示 & SCAF-TC-37 & 林佳何 & closed & 新增錯誤提示 \\
   \hline
-  026 & 低 & 顯示寄送成功 & SCAF-TC-38 & 簡蔚驊 & ongoing & \\
-  \hline
-  027 & 低 & 未新增專案，但未出現錯誤提示 & SCAF-TC-39 & 林佳何 & ongoing & \\
-  \hline
-  028 & 低 & 仍可新增空的repository & SCAF-TC-40 & 余威霆 & ongoing & \\
+  017 & 低 & 仍可新增空的repository & SCAF-TC-38 & 余威霆 & closed & 加入判斷欄位不得為空 \\
   \hline
 \end{tabularx}
 \\
@@ -1533,7 +1662,7 @@
   \hline
   SCAF-FR-08 & SCAF-TC-19 & Verified \\
   \hline
-  SCAF-FR-08 & SCAF-TC-20 & Verified \\
+  SCAF-FR-09 & SCAF-TC-20 & Verified \\
   \hline
   SCAF-FR-09 & SCAF-TC-21 & Verified \\
   \hline
@@ -1541,29 +1670,29 @@
   \hline
   SCAF-FR-09 & SCAF-TC-23 & Verified \\
   \hline
-  SCAF-FR-09 & SCAF-TC-24 & Verified \\
+  SCAF-FR-10 & SCAF-TC-24 & Verified \\
   \hline
   SCAF-FR-10 & SCAF-TC-25 & Verified \\
   \hline
-  SCAF-FR-10 & SCAF-TC-26 & Verified \\
+  SCAF-FR-11 & SCAF-TC-26 & Verified \\
   \hline
   SCAF-FR-11 & SCAF-TC-27 & Verified \\
   \hline
   SCAF-FR-11 & SCAF-TC-28 & Verified \\
   \hline
-  SCAF-FR-11 & SCAF-TC-29 & Verified \\
+  SCAF-FR-12 & SCAF-TC-29 & Verified \\
   \hline
-  SCAF-FR-12 & SCAF-TC-30 & Verified \\
+  SCAF-FR-14 & SCAF-TC-30 & Verified \\
   \hline
   SCAF-FR-14 & SCAF-TC-31 & Verified \\
   \hline
   SCAF-FR-14 & SCAF-TC-32 & Verified \\
   \hline
-  SCAF-FR-14 & SCAF-TC-33 & Verified \\
+  SCAF-FR-06 & SCAF-TC-33 & Verified \\
   \hline
   SCAF-FR-06 & SCAF-TC-34 & Verified \\
   \hline
-  SCAF-FR-06 & SCAF-TC-35 & Verified \\
+  SCAF-FR-03 & SCAF-TC-35 & Verified \\
   \hline
 \end{tabularx}
 \newpage
@@ -1573,15 +1702,21 @@
   |p{\dimexpr.2\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
 }
   \hline
-  SCAF-FR-01 & SCAF-TC-36 & Verified \\
+  SCAF-FR-06 & SCAF-TC-36 & Verified \\
   \hline
-  SCAF-FR-02 & SCAF-TC-37 & Verified \\
+  SCAF-FR-07 & SCAF-TC-37 & Verified \\
   \hline
-  SCAF-FR-03 & SCAF-TC-38 & Verified \\
+  SCAF-FR-01 & SCAF-TCCLI-01 & Verified \\
   \hline
-  SCAF-FR-06 & SCAF-TC-39 & Verified \\
+  SCAF-FR-02 & SCAF-TCCLI-02 & Verified \\
   \hline
-  SCAF-FR-07 & SCAF-TC-40 & Verified \\
+  SCAF-FR-03 & SCAF-TCCLI-03 & Verified \\
+  \hline
+  SCAF-FR-04 & SCAF-TCCLI-04 & Verified \\
+  \hline
+  SCAF-FR-05 、SCAF-FR-06 & SCAF-TCCLI-05 & Verified \\
+  \hline
+  SCAF-FR-07 & SCAF-TCCLI-06 & Verified \\
   \hline
 \end{tabularx}
 \end{document}
