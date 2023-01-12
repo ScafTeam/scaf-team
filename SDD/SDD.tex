@@ -53,6 +53,59 @@
 
 \fontsize{12}{18}\selectfont
 
+\section*{版次變更記錄}
+\begin{tabularx}{\textwidth}{ 
+  |p{\dimexpr.4\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.4\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.2\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+}
+  \hline
+  版次 & 變更項目 & 變更日期 \\
+  \hline
+  1.0 & 初版 & 2022 / 12 / 1 \\
+  \hline
+  1.1 & 
+  \makecell[l]{
+	1.將API設計中的 User 重新命\\
+	名為 Client 端 \\
+	2.將 dev\_tools 的數據類型修改為\\
+	 Array<string>\\ 
+	3.補上 .scaf 文件夾的資料內容\\
+	}
+  & 2022 / 12 / 5 \\
+  \hline
+  1.2 & 
+	設計問題中埔上使用快照紀錄歷史版本
+  & 2022 / 12 / 6 \\
+  \hline
+  1.3 & 修改外部介面  & 2022 / 12 / 7 \\
+  \hline
+  1.4 & 
+  \makecell[l]{
+	1.將API設計中使用路徑參數決定\\文件\\
+	2.設計問題格式化\\
+	}
+	 & 2022 / 12 / 8 \\
+  \hline
+  1.5 & 
+  \makecell[l]{
+	1.完成資料設計\\
+	2.修改API設計(重構主邏輯)\\
+	}
+	 & 2023 / 1 / 2 \\
+  \hline
+  1.6 & 補上 UML & 2023 / 1 / 3 \\
+  \hline
+  1.7 & 
+  \makecell[l]{
+	1.補上CLI流程設計\\
+	2.補上CLI UML\\
+	3.修改API設計(修改格式)\\
+	}
+	 & 2023 / 1 / 12 \\
+  \hline
+\end{tabularx}
+
 \section*{1. 系統模型與架構(System Model/System Architecture)}
 
 % \begin{obeylines}
@@ -263,7 +316,7 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	AMM-II-04    & /user:user\_email/     & Account Management Module & Client端            \\ \hline
+	AMM-II-04    & /user/:user\_email/     & Account Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -346,7 +399,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱     & 介面提供者           & 介面使用者 \\ \hline
-	AMM-II-07    & /user/calendar & Account Management Module & Client端            \\ \hline
+	AMM-II-07    & 
+	\makecell[l]{
+	/user/:user\_email/\\
+	calendar\\
+	 }
+	  & Account Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -580,7 +638,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-01    & /project/    & Project Management Module & Client端            \\ \hline
+	PMM-II-01    &
+	\makecell[l]{
+		 /user/:user\_email/\\
+		 project/ \\
+	   }
+	      & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -606,7 +669,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-02    & /project/:pn/    & Project Management Module & Client端            \\ \hline
+	PMM-II-02    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name/\\
+	    }    
+		& Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -632,7 +700,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-03    & /project/:pn/     & Project Management Module & Client端            \\ \hline
+	PMM-II-03    & 
+	\makecell[X]{
+		/user/:user\_email/\\
+		project/\\
+	     }
+		      & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -663,7 +736,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-04    & /project/:pn/  & Project Management Module & Client端            \\ \hline
+	PMM-II-04    & 
+	\makecell[X]{
+		/user/:user\_email/\\
+	project/:project\_name/\\
+	}
+	  & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	PUT & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -693,7 +771,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-05    & /project/:pn/     & Project Management Module & Client端            \\ \hline
+	PMM-II-05    & 
+	\makecell[X]{
+		/user/:user\_email/\\
+	project/:project\_name/\\
+	}
+	     & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -719,7 +802,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-06    & /project/:pn/member/ & Project Management Module & Client端            \\ \hline
+	PMM-II-06    & 
+	\makecell[l]{
+	/user/:user\_email/\\
+	project/:project\_name/\\
+	member/\\
+	}
+	 & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -746,13 +835,17 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-07    & \makecell[X]{/project/:pn/member/} & Project Management Module & Client端            \\ \hline
+	PMM-II-07    & 	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name/\\
+		member/\\
+		} & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"email": "user email (string)"
+	"email": "member email (string)"
 	\}
 	}
 	} & 
@@ -773,7 +866,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者           & 介面使用者 \\ \hline
-	PMM-II-08    & \makecell[X]{/project/:pn/member/} & Project Management Module & Client端            \\ \hline
+	PMM-II-08    & 	
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name/\\
+		member/\\
+		} & Project Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -914,7 +1012,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱   & 介面提供者        & 介面使用者 \\ \hline
-	RMM-II-01    & /project/:pn/repo/ & Repo Management Module & Client端            \\ \hline
+	RMM-II-01    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/repo/\\
+	 } & Repo Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -941,13 +1044,18 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱  & 介面提供者        & 介面使用者 \\ \hline
-	RMM-II-02    & /project/:pn/repo/ & Repo Management Module & Client端            \\ \hline
+	RMM-II-02    & 	
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/repo/\\
+	 } & Repo Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
-	"name": "REPO名稱 (string)" \\
+	"name": "REPO name (string)" \\
 	"url": "REPO URL (string)" \\
 	\}
 	}
@@ -970,14 +1078,19 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱  & 介面提供者        & 介面使用者 \\ \hline
-	RMM-II-03    & \makecell[X]{/project/:pn/repo/} & Repo Management Module & Client端            \\ \hline
+	RMM-II-03    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/repo/\\
+	 } & Repo Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	PUT & \multicolumn{2}{|T|}{
 	\makecell[l]{
 	\{ \\
 	"JWT": "JWT token (string, cookie)",  \\  
 	"id": "REPO ID (string)", \\
-	"name": "REPO名稱 (string)", \\
+	"name": "REPO name (string)", \\
 	"url": "REPO URL (string)" \\
 	\}
 	}
@@ -1000,7 +1113,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱  & 介面提供者        & 介面使用者 \\ \hline
-	RMM-II-04    & \makecell[X]{/project/:pn/repo/} & Repo Management Module & Client端            \\ \hline
+	RMM-II-04    & 	
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/repo/\\
+	 } & Repo Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1115,7 +1233,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-II-01    & /project/:pn/docs/ & Doc Management Module & Client端            \\ \hline
+	DMM-II-01    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/docs/\\
+	 } & Doc Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1142,7 +1265,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-II-02    & /project/:pn/docs/ & Doc Management Module & Client端            \\ \hline
+	DMM-II-02    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/docs/\\
+	 } & Doc Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1171,7 +1299,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-II-03    & /project/:pn/docs/ & Doc Management Module & Client端            \\ \hline
+	DMM-II-03    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/docs/\\
+	 } & Doc Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	PUT & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1200,7 +1333,12 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱 & 介面提供者       & 介面使用者 \\ \hline
-	DMM-II-04    & /project/:pn/docs/ & Doc Management Module & Client端            \\ \hline
+	DMM-II-04    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/docs/\\
+	 } & Doc Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1399,7 +1537,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱     & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-01    & /project/:pn/kanban/ & Kanban Management Module & Client端            \\ \hline
+	KMM-II-01    &
+	\makecell[l]{
+	/user/:user\_email/\\
+	project/:project\_name\\
+	/kanban/\\
+	}
+	& Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	GET & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1426,7 +1570,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-02    & /project/:pn/kanban/ & Kanban Management Module & Client端            \\ \hline
+	KMM-II-02    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/kanban/\\
+		}
+		 & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1451,7 +1601,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-03    & /project/:pn/kanban/ & Kanban Management Module & Client端            \\ \hline
+	KMM-II-03    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/kanban/\\
+		}
+		 & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	PUT & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1477,7 +1633,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-04    & /project/:pn/kanban/ & Kanban Management Module & Client端            \\ \hline
+	KMM-II-04    &
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/kanban/\\
+		}
+		 & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1502,7 +1664,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-05    & \makecell[X]{/project/:pn\\/kanban/task/} & Kanban Management Module & Client端            \\ \hline
+	KMM-II-05    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/kanban/task\\
+		}
+		 & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	POST & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1529,7 +1697,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-06    & \makecell[X]{/project/:pn\\/kanban/task/} & Kanban Management Module & Client端            \\ \hline
+	KMM-II-06    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/kanban/task\\
+		}
+		 & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	PUT & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1556,7 +1730,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-07    & \makecell[X]{/project/:pn\\/kanban/task/} & Kanban Management Module & Client端            \\ \hline
+	KMM-II-07    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/kanban/task\\
+		}
+		 & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	PATCH & \multicolumn{2}{|T|}{
 	\makecell[l]{
@@ -1582,7 +1762,13 @@
 \begin{tabularx}{\textwidth}{|l|R|R|R|}
 	\hline
 	介面編號 & 介面名稱    & 介面提供者          & 介面使用者 \\ \hline
-	KMM-II-07    & \makecell[X]{/project/:pn\\/kanban/task/} & Kanban Management Module & Client端            \\ \hline
+	KMM-II-07    & 
+	\makecell[l]{
+		/user/:user\_email/\\
+		project/:project\_name\\
+		/kanban/task\\
+		}
+		 & Kanban Management Module & Client端            \\ \hline
 	連結方式 & \multicolumn{2}{|c|}{輸入資料} & 輸出資料 \\ \hline
 	DELETE & \multicolumn{2}{|T|}{
 	\makecell[l]{
