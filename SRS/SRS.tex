@@ -352,45 +352,62 @@
 \subsection*{3. 操作概念(Operation
  Concept)}
 
+兩張圖的操作概念，第一張為網站的操作，第二張為CLI工具的操作
+
 \begin{enumerate}[label=(\Alph*)]
   \item 會員註冊: 小林進入了這個 SCAF 平台,輸入名稱、信箱、密碼,註冊了一個帳號。 \\
   \includegraphics[width=\textwidth]{assets/wireframe/sign_up.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/sign_up_CLI.png}
   \item 會員登入: 小林辦好帳號後,馬上試著登入平台來開始自己的軟體開發流程。 \\
   \includegraphics[width=\textwidth]{assets/wireframe/Login.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/Login_CLI.png}
   \item 忘記密碼: 登入時卻發現,輸入好多次密碼都是錯的,只好重設密碼,輸入信箱之後,查看了自己的信箱,並點擊 Link 去重新設定密碼。\\
   \includegraphics[width=\textwidth]{assets/wireframe/forgot_password.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/forgot_password_CLI.png}
   \item 新建專案: 小林進入系統之後立刻想要開始第一個專案，於是按下了+號鍵。\\
   \includegraphics[width=\textwidth]{assets/wireframe/My_Projects.png}
   \item 專案初始化: 小林將自己的第一個專案命名為dian，並將專案設成Public，讓大家都能看見自己的專案，並加入README方便第一次進入專案的人，可以瞭解這個專案在做什麼和使用的流程。\\
   \includegraphics[width=\textwidth]{assets/wireframe/init_project.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/init_project_CLI.png}
   \item 建立repository: 小林因為想將前端和後端分開來放，所以按下new repository，建立兩個repository，repository3拿來放其他資料，分別在裡面放置前端和後端的檔案。\\
   \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_repositories.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_repositories_CLI.png}
   \item 在repository新增file: 小林使用HTML建立好了頁面的基本框架，repository1中可以點擊Add file，將自己的檔案上傳到網頁上。\\
   \includegraphics[width=\textwidth]{assets/wireframe/My_projects_add_file.png }
   \item 需求、設計、開發環境設定、命名規範、git commit format文件: 小林現在想要來建立文件，於是他按下了documents，然後再document頁面中選擇需求文件，並按下edit(若是檔案已經存在，會顯示預覽畫面)。\\
   \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_documents_requirement_dev_environment_naming_convention_git commit format.png }
+  \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_documents_requirement_dev_environment_naming_convention_git commit format_CLI.png }
   \item hackmd: 小林進入到hackmd中編輯需求文件。\\
   \includegraphics[width=\textwidth]{assets/wireframe/hackmd.png}
-  \item 看板: 小林這時想記錄每個工作的完成進度，於是點擊kanban按鈕進入到kanban頁面，按下New task建立新的task，並設定任務標籤、任務描述、dayline與分配負責成員。\\
+  \item 看板: 小林這時想記錄每個工作的完成進度，於是點擊kanban按鈕進入到kanban頁面，按下New task建立新的task，並設定任務標籤、任務描述、deadline與分配負責成員。\\
   \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_kanban.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_kanban_CLI.png}
   \item 更改專案名稱: 小林這時發現自己的專案名稱太中二了，於是按下setting按鈕(project bar)進入到setting頁面，並點選general去更新自己的專案名稱。\\
   \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_setting_general.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_setting_general_CLI.png}
   \item 變更專案成員: 小林因為發現自己的組員都在耍廢，好像做完這份專案分錢的人太多了，於是他按下setting把所有人都踢出了，並按下invite邀請了一個大腿。\\
   \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_setting_members.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_setting_members_CLI.png}
   \item 處理加入專案申請: 小林覺得自己的專案很牛逼，於是想看看有沒有人提出申請加入專案，按下了pending invitation來看看有哪些有用的人，並按下YES確認了他們的申請。\\
   \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_setting_pending_invitation.png}
   \item 刪除專案: 小林覺得這個專案真的是太麻煩了，於是按下了delete project把整個專案給刪除了。\\
   \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_setting_pending_invitation.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/My_Projects_setting_delete_CLI.png}
   \item QA文件: 小林想要看看測試和部屬階段有沒有什麼常見的疑問，於是按下了QA，並按下testing or deployment。\\
   \includegraphics[width=\textwidth]{assets/wireframe/QA_testing_deployment.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/QA_testing_deployment_CLI.png}
   \item gitbook: 小林可以直接在下方的頁面中瀏覽gitbook。 \\
   \includegraphics[width=\textwidth]{assets/wireframe/gitbook.png}
   \item 上傳自己的傳片: 小林覺得自己太帥了想要讓大家都看到自己的照片，所以按下了main bar中的setting按鈕，並按下ADD your photo新增自己的照片。\\
   \includegraphics[width=\textwidth]{assets/wireframe/setting.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/setting_photo_CLI.png}
   \item 更改自己的名稱: 小林因為覺得中二的專案名稱被刪掉了很可惜，所以想要把自己的名稱搞的中二一點來平衡一下。\\
   \includegraphics[width=\textwidth]{assets/wireframe/setting.png}
+  \includegraphics[width=\textwidth]{assets/wireframe/setting_name_CLI.png}
   \item 授權帳號: 小林想利用自己的Google日曆來分配自己開發階段的期限，於是按下授權鍵給Google日曆授權。\\
   \includegraphics[width=\textwidth]{assets/wireframe/setting.png}
+  \item 使用CLI工具: 小林想了解該如何使用CLI工具，所以在終端機使用scaf的指令，就可以進一步了解如何使用子指令。\\
+  \includegraphics[width=\textwidth]{assets/wireframe/cli.png}
 \end{enumerate}
 
 \subsection*{4. 功能需求(Feature Requirements)}               
