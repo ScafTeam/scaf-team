@@ -876,7 +876,7 @@ Postman、Jmeter
   \centering Instructions & 
   \makecell[l]{
     1. 點擊Navrbar中的Setting \\
-    2. 填入舊密碼
+    2. 填入舊密碼 \\
     3. 新密碼 \\
     4. 點擊Save \\
     5. 登出系統 \\
@@ -907,7 +907,7 @@ Postman、Jmeter
   \centering Instructions & 
   \makecell[l]{
     1. 點擊Navrbar中的Setting \\
-    2. 填入舊密碼
+    2. 填入舊密碼 \\
     3. 新密碼 \\
     4. 點擊Save \\
     5. 登出系統 \\
@@ -1079,7 +1079,7 @@ Postman、Jmeter
   \centering Instructions & 
   \makecell[l]{
     1. 專案擁有者點擊Project名稱下方的Setting \\
-    2. 點擊任一位專案成員旁的X
+    2. 點擊任一位專案成員旁的X \\
     3. 被剔除人員確認專案列表
   }\\
   \hline
@@ -1137,7 +1137,7 @@ Postman、Jmeter
   \makecell[l]{
     1. 點擊 My project 到專案列表頁面 \\
     2. 點擊 + 號創建一個新的專案 \\
-    3. 輸入含非法字元的專案名稱 
+    3. 輸入含非法字元的專案名稱
     (如：/ \textbackslash ? \% * : |  " < >) \\
     4. 按下 Create
   }\\
@@ -1348,8 +1348,8 @@ Postman、Jmeter
   \centering Instructions & 
   \makecell[l]{
     1. 在終端機中輸入scaf project clone \\
-    2. 輸入 project author
-    3. 輸入 project name
+    2. 輸入 project author \\
+    3. 輸入 project name \\
     4. cd project name\\
     5. 輸入scaf repo list查看有哪些repo \\
     6. 另一位專案成員用網頁端刪除一項repo \\
@@ -1414,7 +1414,7 @@ Postman、Jmeter
   \centering Instructions & 
   \makecell[l]{
     1. 在終端機中輸入scaf repo list查看原本的有哪寫 \\
-    2. scaf repo add <repo name> <repo url>
+    2. scaf repo add <repo name> <repo url> \\
     3. 輸入 repo name \\
     4. 輸入 repo url \\
     5. 輸入scaf repo list查看有哪些repo \\
@@ -1436,7 +1436,7 @@ Postman、Jmeter
   \hline
   \centering Identification &  SCAF-TCCLI-07 \\
   \hline
-  \centering Name & 設定個人資料 \\
+  \centering Name & 設定自我介紹 \\
   \hline
   \centering Reference & SCAF-FR-11 \\
   \hline
@@ -1447,7 +1447,7 @@ Postman、Jmeter
     1. 在終端機中輸入scaf config set  \\
     2. 選擇user(<category>) \\
     3. 輸入bio(<field>) \\
-    4. 輸入自界 \\
+    4. 輸入自介 \\
     5. 輸入scaf user \\
     6. 輸入信箱  \\
   }\\
@@ -1461,6 +1461,796 @@ Postman、Jmeter
 \newline
 \\
 
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-08 \\
+  \hline
+  \centering Name & 設定nickname \\
+  \hline
+  \centering Reference & SCAF-FR-11 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf config set  \\
+    2. 選擇user(<category>) \\
+    3. 選擇nickname(<field>) \\
+    5. 輸入欲更改的nickname \\
+    6. 輸入scaf user \\
+    7. 輸入信箱  \\
+  }\\
+  \hline
+  \centering Expected result & nickname被更新 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-09 \\
+  \hline
+  \centering Name & 將遠端專案下載至本地端 \\
+  \hline
+  \centering Reference & SCAF-FR-06 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf project clone <user email> <project name>\\
+    2. 在終端機中輸入ls查看目錄中是否有專案資料夾 \\
+    3. 進入專案資料夾查看project.json是否完整
+  }\\
+  \hline
+  \centering Expected result & project.json是完整的 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-10 \\
+  \hline
+  \centering Name & 與遠端專案同步 \\
+  \hline
+  \centering Reference & SCAF-FR-04 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf project clone <user email> <project name>\\
+    2. 進入專案資料夾 \\
+    3. 修改project.json \\
+    4. 在終端機中輸入scaf project pull \\
+    5. 查看project.json是否恢復原狀 \\
+  }\\
+  \hline
+  \centering Expected result & project.json恢復原狀 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-11 \\
+  \hline
+  \centering Name & 加入未註冊的使用者到專案 \\
+  \hline
+  \centering Reference & SCAF-FR-14 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf config set \\
+    2. 選擇project(<category>) \\
+    3. 選擇addMember(<field>)\\
+    4. 輸入未註冊的email \\
+  }\\
+  \hline
+  \centering Expected result & 回傳無法加入使用者 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-12 \\
+  \hline
+  \centering Name & 新增專案成員 \\
+  \hline
+  \centering Reference & SCAF-FR-14 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf config set \\
+    2. 選擇project(<category>) \\
+    3. 選擇addMember(<field>)\\
+    4. 輸入已註冊但未加入專案的email \\
+    5. 輸入scaf project list查看成員列表 \\
+  }\\
+  \hline
+  \centering Expected result & 回傳新增成員在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-13 \\
+  \hline
+  \centering Name & 新增已存在的專案成員 \\
+  \hline
+  \centering Reference & SCAF-FR-14 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf config set \\
+    2. 選擇project(<category>) \\
+    3. 選擇addMember(<field>)\\
+    4. 輸入已加入專案的email \\
+  }\\
+  \hline
+  \centering Expected result & 回傳使用者已存在 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-14 \\
+  \hline
+  \centering Name & 剔除專案成員 \\
+  \hline
+  \centering Reference & SCAF-FR-14 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf config set \\
+    2. 選擇project \\
+    3. 選擇deleteMember \\
+    4. 選擇要剔除成員的email \\
+    5. 輸入scaf project list查看成員列表 \\
+  }\\
+  \hline
+  \centering Expected result & 使用者不在成員列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-15 \\
+  \hline
+  \centering Name & 更新密碼 \\
+  \hline
+  \centering Reference & SCAF-FR-03 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf config password \\
+    2. 輸入舊密碼 \\
+    3. 輸入新密碼 \\
+    4. 重新登入系統 \\
+  }\\
+  \hline
+  \centering Expected result & 登入成功 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-16 \\
+  \hline
+  \centering Name & 新增專案文件 \\
+  \hline
+  \centering Reference & SCAF-FR-08 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf doc add \\
+    2. 輸入文件標題 \\
+    3. 按enter編輯文件\\
+    4. 儲存並離開文件 \\
+    5. 輸入scaf doc show \\
+    6. 選擇剛新增的文件 \\
+  }\\
+  \hline
+  \centering Expected result & 顯示文件內容 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-16 \\
+  \hline
+  \centering Name & 更新專案文件 \\
+  \hline
+  \centering Reference & SCAF-FR-08 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf doc update\\
+    2. 選擇要更新的文件 \\
+    3. 輸入文件標題 \\
+    4. 按enter編輯文件\\
+    5. 儲存並離開文件 \\
+    6. 輸入scaf doc show \\
+    7. 選擇剛更新的文件 \\
+  }\\
+  \hline
+  \centering Expected result & 顯示更新過的文件內容 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-17 \\
+  \hline
+  \centering Name & 刪除專案文件 \\
+  \hline
+  \centering Reference & SCAF-FR-08 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf doc delete\\
+    2. 選擇要刪除的文件 \\
+    3. 輸入scaf doc show \\
+  }\\
+  \hline
+  \centering Expected result & 剛刪除的文件不在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-18 \\
+  \hline
+  \centering Name & 新增工作流 \\
+  \hline
+  \centering Reference & SCAF-FR-09 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf kanban add\\
+    2. 輸入scaf kanban list [--oneline] \\
+  }\\
+  \hline
+  \centering Expected result & 剛新增的工作流在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-19 \\
+  \hline
+  \centering Name & 更新工作流 \\
+  \hline
+  \centering Reference & SCAF-FR-09 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf kanban update\\
+    2. 選擇要更新的工作流 \\
+    3. 輸入工作流名稱 \\
+    2. 輸入scaf kanban list [--oneline] \\
+  }\\
+  \hline
+  \centering Expected result & 剛更新的工作流在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-20 \\
+  \hline
+  \centering Name & 刪除工作流 \\
+  \hline
+  \centering Reference & SCAF-FR-09 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf kanban delete \\
+    2. 選擇要刪除的工作流 \\
+    3. 輸入工作流名稱 \\
+    2. 輸入scaf kanban list [--oneline] \\
+  }\\
+  \hline
+  \centering Expected result & 剛刪除的工作流不在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-21 \\
+  \hline
+  \centering Name & 列出工作流中所有任務 \\
+  \hline
+  \centering Reference & SCAF-FR-09 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf kanban task list \\
+    2. 選擇要顯示的工作流 \\
+  }\\
+  \hline
+  \centering Expected result & 列出工作流中所有任務 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-22 \\
+  \hline
+  \centering Name & 在工作流中新增任務 \\
+  \hline
+  \centering Reference & SCAF-FR-09 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf kanban task add \\
+    2. 選擇工作流 \\
+    3. 輸入任務名稱 \\
+    4. 輸入任務描述 \\
+    5. 輸入scaf kanban task list \\
+    6. 選擇剛剛的工作流 \\
+  }\\
+  \hline
+  \centering Expected result & 新的任務在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-23 \\
+  \hline
+  \centering Name & 在工作流中更新任務 \\
+  \hline
+  \centering Reference & SCAF-FR-09 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf kanban task update \\
+    2. 選擇工作流 \\
+    3. 選擇要更新的任務 \\
+    3. 輸入任務名稱 \\
+    4. 輸入任務描述 \\
+    5. 輸入scaf kanban task list \\
+    6. 選擇剛剛的工作流 \\
+  }\\
+  \hline
+  \centering Expected result & 更新過的任務在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-24 \\
+  \hline
+  \centering Name & 在工作流中刪除任務 \\
+  \hline
+  \centering Reference & SCAF-FR-09 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf kanban task delete \\
+    2. 選擇工作流 \\
+    3. 選擇要刪除的任務 \\
+    4. 輸入scaf kanban task list \\
+    5. 選擇剛剛的工作流 \\
+  }\\
+  \hline
+  \centering Expected result & 刪除過的任務不在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-25 \\
+  \hline
+  \centering Name & 移動任務至新的工作流 \\
+  \hline
+  \centering Reference & SCAF-FR-09 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf kanban task move \\
+    2. 選擇工作流 \\
+    3. 選擇要移動的任務 \\
+    4. 選擇要移動到的工作流 \\
+    5. 輸入scaf kanban task list \\
+    6. 選擇新的工作流 \\
+  }\\
+  \hline
+  \centering Expected result & 移動過的任務在新的工作流中\\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-26 \\
+  \hline
+  \centering Name & 移動任務至新的工作流 \\
+  \hline
+  \centering Reference & SCAF-FR-09 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf kanban task move \\
+    2. 選擇工作流 \\
+    3. 選擇要移動的任務 \\
+    4. 選擇要移動到的工作流 \\
+    5. 輸入scaf kanban task list \\
+    6. 選擇剛剛的工作流 \\
+  }\\
+  \hline
+  \centering Expected result & 刪除過的任務不在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-27 \\
+  \hline
+  \centering Name & 新增專案repo \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf repo add \\
+    2. 輸入repo名稱 \\
+    3. 輸入url \\
+    4. 輸入scaf repo list \\
+  }\\
+  \hline
+  \centering Expected result & 新的repo在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-28 \\
+  \hline
+  \centering Name & 更新專案repo \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf repo update \\
+    2. 選擇要更新的repo \\
+    3. 輸入repo名稱 \\
+    4. 輸入url \\
+    5. 輸入scaf repo list \\
+  }\\
+  \hline
+  \centering Expected result & 更新過的repo在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-29 \\
+  \hline
+  \centering Name & 列出專案repo \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf repo list \\
+    2. 列出所有repo \\
+  }\\
+  \hline
+  \centering Expected result & 列出所有repo \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-30 \\
+  \hline
+  \centering Name & 同步所有repo \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf repo pull \\
+    2. 同步所有repo \\
+  }\\
+  \hline
+  \centering Expected result & 所有repo與遠端同步 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-31 \\
+  \hline
+  \centering Name & 刪除專案repo \\
+  \hline
+  \centering Reference & SCAF-FR-07 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf repo delete \\
+    2. 選擇repo \\
+    3. 輸入scaf repo list \\
+  }\\
+  \hline
+  \centering Expected result & 刪除過的repo不在列表中 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
+
+\begin{tabularx}{\textwidth}{
+  |p{\dimexpr.25\linewidth-2\tabcolsep-1.33333\arrayrulewidth}%
+  |p{\dimexpr.75\linewidth-2\tabcolsep-1.33333\arrayrulewidth}|%
+  }
+  \hline
+  \centering Identification &  SCAF-TCCLI-32 \\
+  \hline
+  \centering Name & Q\&A \\
+  \hline
+  \centering Reference & SCAF-FR-12 \\
+  \hline
+  \centering Severity & 1 \\
+  \hline
+  \centering Instructions & 
+  \makecell[l]{
+    1. 在終端機中輸入scaf qa \\
+    2. 顯示QA文件網址 \\
+  }\\
+  \hline
+  \centering Expected result & 顯示QA文件網址 \\
+  \hline
+  \centering Cleanup & 無 \\
+  \hline
+\end{tabularx}
+\\
+\newline
+\\
 \section*{4. 測試結果與分析(Test Results and Analysis)}
 \subsection*{4.1測試結果(Test Results)}
 \begin{tabularx}{\textwidth}{
